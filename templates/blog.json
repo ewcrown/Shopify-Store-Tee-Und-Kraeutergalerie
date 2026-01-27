@@ -1,0 +1,451 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_UteraY": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/Header_Blog_Tee_und_Kraeutergalerie.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "rich_text_N9nzWF": {
+      "type": "rich-text",
+      "blocks": {
+        "title_qcL7he": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Talk about your brand",
+            "title_size": "heading-size--regular",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_BVcJJ3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements or welcome customers to your store.</p>",
+            "text_size": "regular"
+          }
+        },
+        "button_3hj37r": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Show more",
+            "link": "",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "title_qcL7he",
+        "text_BVcJJ3",
+        "button_3hj37r"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/1.jpg",
+        "image_position": "top",
+        "height": "regular",
+        "image_crop": true,
+        "is_fullwidth": true,
+        "text_alignment": "horizontal-left",
+        "spacing": 24,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": false,
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "info": {
+          "type": "info",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comments_number": false
+          }
+        },
+        "summary": {
+          "type": "summary",
+          "settings": {
+            "excerpt_limit": 15
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "info",
+        "summary"
+      ],
+      "settings": {
+        "enable_tags": false,
+        "layout": "grid-2 grid-lap-1",
+        "post_limit": 12,
+        "blog_show_image": true,
+        "image_aspect_ratio": "1.33333",
+        "image_border_radius": 0
+      }
+    },
+    "promotion_cards_jbqc9J": {
+      "type": "promotion-cards",
+      "blocks": {
+        "card_kGefhM": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_Dquadrat_-_2025-10-16T102313.890.png",
+            "caption": "Blog",
+            "title": "Rezept mit Pumpkin Spice Latte",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/pumpkin-spice-fruchtetee-herbstliches-rezept",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_fyXJPk": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_07482b53-0bb4-4ac6-9a83-65fb5af362ee.jpg",
+            "caption": "Blog",
+            "title": "Rezept für Matcha Iced Latte",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/presseberichte",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "card_kGefhM",
+        "card_fyXJPk"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-4 grid-portable-2 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "100%",
+        "subtitle_size": "regular",
+        "spacing": 18,
+        "button_style": "outline",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "promotion_cards_4aCQCc": {
+      "type": "promotion-cards",
+      "blocks": {
+        "card_pzitXp": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_Dquadrat_78.png",
+            "caption": "Blog",
+            "title": "Eistee zubereiten - Erfrischend",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/eistee-leicht-gemacht",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_CY3XyX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_7.png",
+            "caption": "Blog",
+            "title": "Tee bei Menstruationsstörungen",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/tee-bei-menstruationsstorungen",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_kwehhT": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_6.png",
+            "caption": "Blog",
+            "title": "Tee und seine guten Eigenschaften",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/tee-und-seine-eigenschaften",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_kf3hpx": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_4.png",
+            "caption": "Blog",
+            "title": "Kindertee - Einfach immer gut",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/kindertee-mehr-als-nur-tee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_gzjq3c": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_8.png",
+            "caption": "Blog",
+            "title": "Kleiner Teeratgeber - Wissenswertes",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/was-sie-uber-tee-wissen-sollten",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_NJUiTT": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_9.png",
+            "caption": "Blog",
+            "title": "Tee als individuelle Geschenkidee",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/tee-als-geschenkidee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_pqgVt4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "caption": "Blog",
+            "title": "Rezept Mango Lassi - Vitamine pur",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/rezept-mango-lassi",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_9mPzgX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_1.png",
+            "caption": "Blog",
+            "title": "Teegeschirr & Geschenke für Teeliebhaber",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/teegeschirr-und-geschenke-fur-teeliebhaber",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_eP4a4R": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Unbenannt-1_9059776c-b865-4c61-81c9-71ac52ae2196.jpg",
+            "caption": "Blog",
+            "title": "Teatime - Die genussvolle Auszeit",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/teatime",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_j6e7wy": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Groesse_Angebotsbild_BreulaLB_1305_x_1305_px_1080_x_1080_px.webp",
+            "caption": "Blog",
+            "title": "Tee lagern - Das sollten Sie beachten",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/wie-lagere-ich-meinen-tee-am-besten",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_qU6wKP": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_2.png",
+            "caption": "Blog",
+            "title": "Rezept Schwarztee-Limonade",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/rezept-fur-eine-erfrischenden-schwarztee-limonade",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_Ex4LQy": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Blogteaserbild_400_x_225_px_10.png",
+            "caption": "Blog",
+            "title": "Rezept für Tee-Orange-Mischung",
+            "subtitle": "",
+            "button_label": "Jetzt lesen",
+            "button_link": "shopify://blogs/news/das-trend-getrank-fur-den-sommer-matcha-iced-latte",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "card_pzitXp",
+        "card_CY3XyX",
+        "card_kwehhT",
+        "card_kf3hpx",
+        "card_gzjq3c",
+        "card_NJUiTT",
+        "card_pqgVt4",
+        "card_9mPzgX",
+        "card_eP4a4R",
+        "card_j6e7wy",
+        "card_qU6wKP",
+        "card_Ex4LQy"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Blogbeiträge",
+        "subheading": "für Teeliebhaber",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-4 grid-portable-2 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "100%",
+        "subtitle_size": "regular",
+        "spacing": 18,
+        "button_style": "outline",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "blog_posts_rk7Jr7": {
+      "type": "blog-posts",
+      "blocks": {
+        "info_xXXQja": {
+          "type": "info",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comments_number": false
+          }
+        },
+        "title_RgRcEw": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "info_xXXQja",
+        "title_RgRcEw"
+      ],
+      "disabled": true,
+      "name": "t:sections.blog-posts.presets.name",
+      "settings": {
+        "title": "Latest articles",
+        "subheading": "Share your <strong>best</strong> offers",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "blog": "",
+        "show_view_all": true,
+        "blog_show_image": true,
+        "image_aspect_ratio": "1.33333",
+        "image_border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_UteraY",
+    "rich_text_N9nzWF",
+    "main",
+    "promotion_cards_jbqc9J",
+    "promotion_cards_4aCQCc",
+    "blog_posts_rk7Jr7"
+  ]
+}

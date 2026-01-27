@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_EPptRD": {
+          "type": "collection",
+          "settings": {
+            "collection": "gruner-tee"
+          }
+        },
+        "collection_xmMbQR": {
+          "type": "collection",
+          "settings": {
+            "collection": "aroma-gruntee"
+          }
+        },
+        "collection_tYM9b8": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-gruntee"
+          }
+        },
+        "collection_DmWRYU": {
+          "type": "collection",
+          "settings": {
+            "collection": "china-gruntee"
+          }
+        },
+        "collection_N6fpiQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "japan-gruntee"
+          }
+        },
+        "collection_dPJzRQ": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "korea-gruntee"
+          }
+        },
+        "collection_RJ6mdW": {
+          "type": "collection",
+          "settings": {
+            "collection": "nepal-gruntee"
+          }
+        },
+        "collection_VLW6qE": {
+          "type": "collection",
+          "settings": {
+            "collection": "matcha"
+          }
+        },
+        "collection_mCaFDG": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-gruntee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_EPptRD",
+        "collection_xmMbQR",
+        "collection_tYM9b8",
+        "collection_DmWRYU",
+        "collection_N6fpiQ",
+        "collection_dPJzRQ",
+        "collection_RJ6mdW",
+        "collection_VLW6qE",
+        "collection_mCaFDG"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Grüntee",
+        "subheading": "Zum Grüntee und seinem Anbau gibt es viele Geschichten, Mythen und Sagen. Das romantische Märchen, rund um den Mao-Feng-Tee, erzählt beispielsweise eine dramatische Liebesgeschichte, in der ein Mädchen aus einer Teeplantage um ihren Geliebten trauert. Noch heute gilt diese Geschichte als der Grund, weshalb es in der Anbauregion des Mao-Feng-Tees das ganze Jahr feucht und wolkig ist. Denn die Tränen des Mädchens sind laut des Märchens nie versiegt. Genießen Sie die authentische Grünteeerfahrung mit unseren exquisiten Sorten aus China, Japan und Nepal. Grüner Tee, ein Getränk, das für seine zahlreichen gesundheitlichen Vorteile bekannt ist, hat seinen Ursprung in China und hat sich seitdem weltweit verbreitet. Hergestellt aus den Blättern der Camellia sinensis, unterscheidet sich grüner Tee von schwarzem und Oolong-Tee durch seinen Herstellungsprozess. Während die Blätter für schwarzen Tee fermentiert werden, bleiben die Blätter für grünen Tee unfermentiert. Dieser Unterschied in der Verarbeitung trägt dazu bei, dass grüner Tee einen höheren Gehalt an Antioxidantien und polyphenolischen Verbindungen behält, die ihm seine gesundheitsfördernden Eigenschaften verleihen.Unter den vielen Vorteilen, die dem grünen Tee zugeschrieben werden, sticht besonders seine Rolle bei der Förderung der Herzgesundheit hervor. Studien haben gezeigt, dass regelmäßiger Konsum von grünem Tee mit einem niedrigeren Risiko für Herzkrankheiten und Schlaganfälle verbunden ist. Dies wird teilweise auf die Antioxidantien zurückgeführt, die zur Senkung des Blutdrucks und zur Verbesserung der Blutfettwerte beitragen können. Darüber hinaus wird grünem Tee eine positive Wirkung auf die Gewichtsabnahme und die Verbesserung des Stoffwechsels nachgesagt. Die darin enthaltenen Katechine und das Koffein können den Energieverbrauch des Körpers leicht erhöhen, was beim Abnehmen helfen kann.Neben diesen physischen Vorteilen wird grünem Tee auch eine beruhigende Wirkung auf den Geist zugeschrieben. L-Theanin, eine Aminosäure, die in grünem Tee in größeren Mengen vorkommt als in anderen Teesorten, kann helfen, Entspannung zu fördern und Stress abzubauen, ohne dabei schläfrig zu machen. Dies macht grünen Tee zu einem bevorzugten Getränk für Momente der Ruhe und Konzentration. Obwohl grüner Tee zahlreiche potenzielle Gesundheitsvorteile bietet, ist es wichtig, ihn in Maßen zu genießen und auf die Qualität des Tees zu achten, um die besten Ergebnisse zu erzielen.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Bio Pyramidenbeutel",
+        "subheading": "Wir legen viel Wert auf die Qualität unserer Teesorten. Dadurch führen wir ein großes Sortiment an Bio-Tees, welches stetig erweitert wird. Jährlich bestehen wir die strengen Kontrollen der EU-Bio-Zertifizierung und freuen uns sehr darüber, dass wir unsere Bio-Tees biozertifiziert verkaufen können. Die beliebtesten Bio-Tees bieten wir auch als praktische Pyramidenbeutel an. Für die Pyramidenbeutel wird die gleiche Qualität abgefüllt wie bei unserem losen Tee. Sie müssen also keine Angst haben, dass es sich nur um Reste handelt. Die Pyramidenbeutel eignen sich Bestens für unterwegs, egal ob fürs Büro oder im Urlaub die einzeln verpackten Teebeutel lassen sich überall mit hinnehmen und müssen dann nur noch frisch aufgebrüht werden. In unserem Onlineshop und in unserem lokalen Teeladen im Breuningerland Ludwigsburg finden Sie nicht nur  hochwertige Pyramidenbeutel in Bio-Qualität, auch unsere beliebtesten Früchtetees, Schwarztees, Grüntees, Kräutertees und Rooibos-Tees führen wir in unserem großen Sortiment.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--two-rows",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

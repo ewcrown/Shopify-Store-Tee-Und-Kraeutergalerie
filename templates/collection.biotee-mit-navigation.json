@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_heGzMX": {
+          "type": "collection",
+          "settings": {
+            "collection": "biotee"
+          }
+        },
+        "collection_xmMbQR": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-fruchtetee"
+          }
+        },
+        "collection_tYM9b8": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-schwarztee"
+          }
+        },
+        "collection_DmWRYU": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-gruntee"
+          }
+        },
+        "collection_dPJzRQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-krautertee"
+          }
+        },
+        "collection_RJ6mdW": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-oolong"
+          }
+        },
+        "collection_VLW6qE": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "bio-rooibos"
+          }
+        },
+        "collection_cKVFeh": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-weisser-tee"
+          }
+        },
+        "collection_HKgjGN": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-pyramidenbeutel"
+          }
+        }
+      },
+      "block_order": [
+        "collection_heGzMX",
+        "collection_xmMbQR",
+        "collection_tYM9b8",
+        "collection_DmWRYU",
+        "collection_dPJzRQ",
+        "collection_RJ6mdW",
+        "collection_VLW6qE",
+        "collection_cKVFeh",
+        "collection_HKgjGN"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Biotee",
+        "subheading": "In der Tee & Kräutergalerie, legen wir viel Wert auf qualitativ hochwertige Tees. Selbstverständlich zählt fürs uns daher eine große Auswahl an biologischen Tees zu unserem Sortiment. <strong>Unsere Biotees sind nach DE-ÖKO-006 Bio-zertifiziert.</strong> Neben Bio Früchtetees führen wir auch Kräutertees, Grüntee, Schwarztees, Weiße Teesorten, Oolong und Rooibos Tee in Bio Qualität. Biotee erfreut sich zunehmender Beliebtheit unter Teeliebhabern, die Wert auf Nachhaltigkeit, Umweltschutz und gesunde Lebensweise legen. Diese Art von Tee wird aus Pflanzen hergestellt, die ohne den Einsatz von synthetischen Düngemitteln, Pestiziden oder Gentechnik angebaut werden. Der biologische Anbau fördert nicht nur die Gesundheit der Verbraucher, sondern schützt auch die Umwelt und die Arbeiter auf den Teeplantagen, indem er die Exposition gegenüber schädlichen Chemikalien verringert. Die Vielfalt an Biotees ist beeindruckend und reicht von klassischen Sorten wie Grün- und Schwarztee über Kräutertees bis hin zu exotischen Mischungen. Jede Sorte bietet ein einzigartiges Geschmackserlebnis, das durch die natürlichen Anbaubedingungen und sorgfältigen Erntemethoden noch verstärkt wird. Der biologische Anbau kann zudem dazu beitragen, die Qualität und den Geschmack des Tees zu verbessern, da die Pflanzen in einem gesünderen Boden wachsen und somit ein reichhaltigeres Aromaprofil entwickeln können. Neben den geschmacklichen Vorteilen trägt der Kauf von Biotee auch zu einer gerechteren Handelspraxis bei. Viele Biotee-Produzenten arbeiten eng mit lokalen Bauern zusammen und unterstützen faire Löhne sowie bessere Arbeitsbedingungen. Dies fördert nicht nur die wirtschaftliche Entwicklung in den Anbauregionen, sondern stärkt auch die Gemeinschaften und hilft, langfristige Partnerschaften aufzubauen. Durch den bewussten Konsum von Biotee können Teetrinker also nicht nur ihre eigene Gesundheit fördern, sondern auch einen positiven Beitrag zum Umwelt- und Sozialschutz leisten.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

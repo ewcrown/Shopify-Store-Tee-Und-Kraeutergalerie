@@ -1,0 +1,422 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "330dbe5e-bd36-4021-bd03-eebf9c9098a7": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Geschmack nach {{ product.metafields.custom.geschmacksnoten.value }}</p>",
+            "text_size": "text-size--regular",
+            "text_style": "text-color--primary",
+            "text_color": "rgba(0,0,0,0)",
+            "text_transform": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "heading": "{{ product.metafields.custom.frisch_abgepackt.value }}",
+            "variants_style": "radio",
+            "color_swatches": true,
+            "style": "primary",
+            "unavailable_variants": "show"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_price": true,
+            "style": "outline"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "product_description_truncated": "full"
+          }
+        },
+        "0c7cc684-3594-4179-9b80-7fb5a875a1af": {
+          "type": "icons",
+          "settings": {
+            "title": "",
+            "icon_1_image": "shopify://shop_images/logo_1.png",
+            "icon_1_label": "{{ product.metafields.custom.geschmacksnoten.value }}",
+            "icon_2_label": "",
+            "icon_3_label": "",
+            "icon_4_label": "",
+            "icon_5_label": "",
+            "icon_6_label": "",
+            "hide_block_if": false
+          }
+        },
+        "d167c605-eae1-4c8b-9953-5dc48d3591c9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p></p><p><strong>Geschmacksnoten</strong></p><p>{{ product.metafields.custom.geschmacksnoten.value }}</p>",
+            "text_size": "text-size--regular",
+            "text_style": "text-color--primary",
+            "text_color": "rgba(0,0,0,0)",
+            "text_transform": true
+          }
+        },
+        "f1ee8cb8-626a-41b4-9ee9-185d17012424": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Geschmacksnoten",
+            "content": "<p>{{ product.metafields.custom.geschmacksnoten.value }}</p>",
+            "page": "",
+            "hide_block_if": false
+          }
+        },
+        "2298a873-b398-4883-912b-b3c407c3aab9": {
+          "type": "product_promotion",
+          "settings": {
+            "heading": "Gratis Teeprobe erhalten!",
+            "product": "teeproeb-rose-aschwaganda-krautertee",
+            "show_price_free": false,
+            "text": "Bei der Bestellung eines Früchtetees erhalten Sie diese Teeprobe gratis dazu. Fügen Sie diese Ihrer Bestellung bei.",
+            "style": "outline",
+            "hide_block_if": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "381a3722-e57f-494f-995b-c01f8c346578": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "330dbe5e-bd36-4021-bd03-eebf9c9098a7",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "0c7cc684-3594-4179-9b80-7fb5a875a1af",
+        "d167c605-eae1-4c8b-9953-5dc48d3591c9",
+        "f1ee8cb8-626a-41b4-9ee9-185d17012424",
+        "2298a873-b398-4883-912b-b3c407c3aab9",
+        "share",
+        "381a3722-e57f-494f-995b-c01f8c346578"
+      ],
+      "settings": {
+        "gallery_layout": "one-col scroll",
+        "gallery_desktop_width": "one-half",
+        "gallery_mobile_width": 100,
+        "gallery_aspect_ratio": "1",
+        "gallery_fit": false,
+        "gallery_padding": 0,
+        "gallery_background": "rgba(0,0,0,0)",
+        "gallery_border": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "show_thumbnails": false,
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "default_to_first_variant": true,
+        "style": "primary"
+      }
+    },
+    "93f46728-f37d-465a-800b-d16e7001f825": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-0": {
+          "type": "image",
+          "settings": {
+            "icon": "delivery",
+            "image": "shopify://shop_images/12.png",
+            "crop": true,
+            "title": "Teemenge",
+            "caption": "{{ product.metafields.custom.teemenge.value }}",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-1": {
+          "type": "image",
+          "settings": {
+            "icon": "time-limit",
+            "image": "shopify://shop_images/10_9b1b99a6-285b-417c-8486-9bf1dd818de6.png",
+            "crop": true,
+            "title": "Temperatur",
+            "caption": "{{ product.metafields.custom.temperatur.value }}",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-2": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "image": "shopify://shop_images/11.png",
+            "crop": true,
+            "title": "Ziehzeit",
+            "caption": "{{ product.metafields.custom.ziehzeit.value }}",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "icon": "earth-globe",
+            "crop": true,
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-0",
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-1",
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-2",
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-3"
+      ],
+      "settings": {
+        "heading": "Zubereitung",
+        "subheading": "So schmeckt Ihr Tee besonders gut!",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "style": "slider",
+        "layout": "grid-3 grid-lap-2 grid-palm-1",
+        "border_radius": 0,
+        "hide_borders": true,
+        "opacity_on_hover": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-0": {
+          "type": "title",
+          "settings": {
+            "title": "Zutaten",
+            "title_size": "heading-size--regular",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.zutatenliste | metafield_tag }}",
+            "text_size": "regular"
+          }
+        },
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Show more",
+            "link": "",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-0",
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-1",
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-2"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.zutatenbild.value }}",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-center",
+        "spacing": 17,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#000000",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": true,
+        "gutter_decrease": true,
+        "remove_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "8da9c801-f41e-44cd-8f3a-c199909b67c2": {
+      "type": "info-tabs",
+      "blocks": {
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-0": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Natürliche Aromen",
+            "caption": "<p>In unseren Tees sind ausschließlich natürliche Aromastoffe. Diese werden aus natürlichen, pflanzlichen oder tierischen Rohstoffen gewonnen. Zu deren Gewinnung dürfen nur physikalische, enzymatische oder mikrobiologische Verfahren angewendet werden, z.B. Erwärmen, Auspressen, Zerkleinern, Mahlen, Mischen, Filtrieren, Destillieren oder Vergären.</p>",
+            "image": "shopify://shop_images/How_to_Make_Chamomile_Tea.png",
+            "icon": "star"
+          }
+        },
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-1": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Bio Zertifiziert",
+            "caption": "<p>Unsere Bio Tees sind zertifziert. Mehr dazu finden Sie hier. </p>",
+            "image": "shopify://shop_images/bio-logo-dquadrat.png",
+            "icon": "star"
+          }
+        },
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-2": {
+          "type": "tab",
+          "settings": {
+            "title": "Schon gewusst?",
+            "caption": "<p>Kräutertee hat nichts mit echtem Tee zu tun. Echter Tee besteht aus Blättern der Camellia sinensis Teepflanze. Kräutertee hingegen wird aus getrockneten Kräutern, Blüten und Blättern hergestellt und gehört somit nicht zum echten Tee. <br/>Kräutertees sollten kühl und vor allem trocken gelagert werden. Wir empfehlen den Tee nach dem Öffnen direkt in eine Teedose umzufüllen. <br/></p>",
+            "image": "shopify://shop_images/blue-mug-and-laptop-sit-on-a-kitchen-counter.jpg",
+            "icon": "star"
+          }
+        },
+        "tab_DAemhz": {
+          "type": "tab",
+          "settings": {
+            "title": "Achtung",
+            "caption": "<p>Wenn Sie an einer Krankheit leiden, sollten Sie sich immer zuerst an einen Arzt wenden, bevor Sie sich selbst behandeln!</p>",
+            "icon": "star"
+          }
+        },
+        "7cc4e27e-af11-4f6b-87cf-cb6e01879d8a": {
+          "type": "tab",
+          "settings": {
+            "title": "Zubereitung",
+            "caption": "<p>In der Regel genügt ein Teelöffel pro Tasse, für einen intensiveren Geschmack kann man auch mehr nehmen. Der Tee sollte mit möglichst kalkarmen Wasser aufgegossen werden, um einen intensiven Geschmack zu erhalten.<br/><br/>Die Ziehzeit beträgt 8 bis 10 Minuten, dabei empfehlen wir den Kräutertee abgedeckt ziehen zu lassen. So wird verhindert, dass sich die ätherischen Öle aus den Kräutern verflüchtigen.</p>",
+            "image": "shopify://shop_images/hand-holds-a-spoon-and-adds-loose-leaf-tea-to-a-mug.jpg",
+            "icon": "star"
+          }
+        },
+        "087f0c4d-728f-42d0-ad70-891662265060": {
+          "type": "tab",
+          "settings": {
+            "title": "Genuss",
+            "caption": "<p>Am besten trinkt man den Kräutertee lauwarm, so muss der Körper sich nicht darauf konzentrieren die Temperatur zu regulieren und kann die Inhaltsstoffe der Kräuter besser aufnehmen. Im Sommer können die Tees aber auch eisgekühlt für eine gesunde Erfrischung sorgen.</p>",
+            "image": "shopify://shop_images/refreshing-drink-sitting-on-a-wooden-table.jpg",
+            "icon": "star"
+          }
+        }
+      },
+      "block_order": [
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-0",
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-1",
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-2",
+        "tab_DAemhz",
+        "7cc4e27e-af11-4f6b-87cf-cb6e01879d8a",
+        "087f0c4d-728f-42d0-ad70-891662265060"
+      ],
+      "settings": {
+        "heading": "Gut zu wissen",
+        "subheading": "Erfahren Sie mehr über unsere Tees",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "desktop_layout": "third",
+        "image_position": "left",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "style": "blank",
+        "autoplay_active": false,
+        "autoplay": 5,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "product_link": {
+          "type": "product_link",
+          "settings": {
+            "button_label": "Hier entdecken"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "title",
+        "product_link"
+      ],
+      "settings": {
+        "heading": "Produktempfehlungen",
+        "subheading": "Diese Teesorten könnten Ihnen auch schmecken.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "93f46728-f37d-465a-800b-d16e7001f825",
+    "ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f",
+    "8da9c801-f41e-44cd-8f3a-c199909b67c2",
+    "product-recommendations"
+  ]
+}

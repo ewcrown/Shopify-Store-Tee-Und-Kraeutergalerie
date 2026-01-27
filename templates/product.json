@@ -1,0 +1,163 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "heading": "{{ product.metafields.custom.frisch_abgepackt.value }}",
+            "variants_style": "radio",
+            "color_swatches": true,
+            "style": "primary",
+            "unavailable_variants": "show"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_price": true,
+            "style": "outline"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "product_description_truncated": "full"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "gallery_layout": "one-col scroll",
+        "gallery_desktop_width": "one-half",
+        "gallery_mobile_width": 100,
+        "gallery_aspect_ratio": "1",
+        "gallery_fit": false,
+        "gallery_padding": 0,
+        "gallery_background": "rgba(0,0,0,0)",
+        "gallery_border": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "show_thumbnails": false,
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "default_to_first_variant": true,
+        "style": "primary"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price"
+      ],
+      "settings": {
+        "heading": "Produktempfehlung",
+        "subheading": "Diese Produkte könnten Ihnen auch gefallen",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false
+      }
+    },
+    "featured_collection_BVppNt": {
+      "type": "featured-collection",
+      "blocks": {
+        "title_EMDgYE": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_wJB3cB": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_EMDgYE",
+        "price_wJB3cB"
+      ],
+      "settings": {
+        "heading": "Bestseller",
+        "subheading": "Entdecken Sie die Lieblingstees unserer Kunden",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "bestseller",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "1709202590c4df49f3": {
+      "type": "apps",
+      "blocks": {
+        "bogox_free_gift_product_cross_sell_bUUXHR": {
+          "type": "shopify://apps/bogox-free-gift/blocks/product-cross-sell/4254c128-561c-4a78-b553-cfcb302243bb",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "bogox_free_gift_product_cross_sell_bUUXHR"
+      ],
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "1709202590c4df49f3",
+    "featured_collection_BVppNt"
+  ]
+}

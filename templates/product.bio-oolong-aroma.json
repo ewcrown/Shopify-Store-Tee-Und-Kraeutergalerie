@@ -1,0 +1,391 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "330dbe5e-bd36-4021-bd03-eebf9c9098a7": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Geschmack nach {{ product.metafields.custom.geschmacksnoten.value }}</p>",
+            "text_size": "text-size--regular",
+            "text_style": "text-color--primary",
+            "text_color": "rgba(0,0,0,0)",
+            "text_transform": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "heading": "{{ product.metafields.custom.frisch_abgepackt.value }}",
+            "variants_style": "radio",
+            "color_swatches": true,
+            "style": "primary",
+            "unavailable_variants": "show"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_price": true,
+            "style": "outline"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "product_description_truncated": "full"
+          }
+        },
+        "0c7cc684-3594-4179-9b80-7fb5a875a1af": {
+          "type": "icons",
+          "settings": {
+            "title": "",
+            "icon_1_image": "shopify://shop_images/bio-logo-dquadrat.png",
+            "icon_1_label": "Unsere Bio Tees sind zertifiziert. Kontrollstelle DE-ÖKO-006",
+            "icon_2_label": "",
+            "icon_3_label": "",
+            "icon_4_label": "",
+            "icon_5_label": "",
+            "icon_6_label": "",
+            "hide_block_if": false
+          }
+        },
+        "2298a873-b398-4883-912b-b3c407c3aab9": {
+          "type": "product_promotion",
+          "settings": {
+            "heading": "Spare 5% im Set",
+            "product": "teesieb-wiederverwendbar",
+            "show_price_free": false,
+            "text": "Füge dieses Teesieb deiner Bestellung bei und spare darauf 5%",
+            "style": "outline",
+            "hide_block_if": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "330dbe5e-bd36-4021-bd03-eebf9c9098a7",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "0c7cc684-3594-4179-9b80-7fb5a875a1af",
+        "2298a873-b398-4883-912b-b3c407c3aab9",
+        "share"
+      ],
+      "settings": {
+        "gallery_layout": "one-col scroll",
+        "gallery_desktop_width": "one-half",
+        "gallery_mobile_width": 100,
+        "gallery_aspect_ratio": "1",
+        "gallery_fit": false,
+        "gallery_padding": 0,
+        "gallery_background": "rgba(0,0,0,0)",
+        "gallery_border": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "show_thumbnails": false,
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "default_to_first_variant": true,
+        "style": "primary"
+      }
+    },
+    "93f46728-f37d-465a-800b-d16e7001f825": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-0": {
+          "type": "image",
+          "settings": {
+            "icon": "delivery",
+            "image": "shopify://shop_images/12.png",
+            "crop": true,
+            "title": "Teemenge",
+            "caption": "{{ product.metafields.custom.teemenge.value }}",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-1": {
+          "type": "image",
+          "settings": {
+            "icon": "time-limit",
+            "image": "shopify://shop_images/10_1eb1b1f0-c296-44fd-98ba-eecd3e4c2e20.png",
+            "crop": true,
+            "title": "Temperatur",
+            "caption": "{{ product.metafields.custom.temperatur.value }}",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-2": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "image": "shopify://shop_images/11.png",
+            "crop": true,
+            "title": "Ziehzeit",
+            "caption": "{{ product.metafields.custom.ziehzeit.value }}",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-0",
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-1",
+        "template--17683368509705__93f46728-f37d-465a-800b-d16e7001f825-1677833781582a4fc2-2"
+      ],
+      "settings": {
+        "heading": "Zubereitung",
+        "subheading": "So schmeckt Ihr Tee besonders gut!",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "style": "slider",
+        "layout": "grid-3 grid-lap-2 grid-palm-1",
+        "border_radius": 0,
+        "hide_borders": true,
+        "opacity_on_hover": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-0": {
+          "type": "title",
+          "settings": {
+            "title": "Zutaten",
+            "title_size": "heading-size--regular",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.zutatenliste | metafield_tag }}",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-0",
+        "template--17683368509705__ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f-1677834635de85776d-1"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.zutatenbild.value }}",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-center",
+        "spacing": 17,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#000000",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": true,
+        "gutter_decrease": true,
+        "remove_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "8da9c801-f41e-44cd-8f3a-c199909b67c2": {
+      "type": "info-tabs",
+      "blocks": {
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-2": {
+          "type": "tab",
+          "settings": {
+            "title": "Bio Zertifiziert",
+            "caption": "<p>Unsere Bio Tees sind zertifiziert. Kontrollstelle DE-ÖKO-006. Mehr dazu finden Sie <a href=\"/pages/bio-zertifizierung\" target=\"_blank\" title=\"Bio Zertifizierung\">hier</a>. </p>",
+            "image": "shopify://shop_images/bio-logo-dquadrat.png",
+            "icon": "star"
+          }
+        },
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-0": {
+          "type": "tab",
+          "settings": {
+            "title": "Aroma",
+            "caption": "<p>Das Wort Aroma kommt aus dem Griechischen und bedeutet ursprünglich Gewürz. Ein Aroma setzt sich aus vielen einzelnen Aromastoffen zusammen. In unseren Tees befindet sich kein künstliches Aroma. Unsere Händler verwenden<br/>ausschließlich natürliche und naturidentische Aromen. </p>",
+            "image": "shopify://shop_images/How_to_Make_Chamomile_Tea.png",
+            "icon": "star"
+          }
+        },
+        "tab_CEzeXg": {
+          "type": "tab",
+          "settings": {
+            "title": "Schon gewusst?",
+            "caption": "<p>Oolong Tee ist ein halboxidierter Tee. Eine wunderbare Kombination aus dem<br/>Duft und Geschmack von Grüntee und den Vorteilen von Schwarztee wie Stärke und Intensität.</p>",
+            "icon": "star"
+          }
+        },
+        "tab_QdBpKM": {
+          "type": "tab",
+          "settings": {
+            "title": "Zubereitung",
+            "caption": "<p>Für die perfekte Zubereitung Ihres Oolongs, wird zunächst möglichst kalkarmes Wasser sprudelnd aufgekocht. Im Anschluss wird die entsprechende Teemenge mit dem nicht mehr kochenden Wssser übergossen. Damit sich die Geschmacksstoffe besser freisetzen können, ist es wirchtig einen ausrecihend großen Teefilter zu verwenden. Der Tee ist nach einer Ziehzeit von 3-4 Minuten fertig, die Teemenge und Ziehzeit kann dabei je nach Sorte abweichen. Wichtig;: die Teeblätter sollten nicht im Tee verbleiben.</p>",
+            "icon": "star"
+          }
+        }
+      },
+      "block_order": [
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-2",
+        "template--17683368509705__8da9c801-f41e-44cd-8f3a-c199909b67c2-16764711363131dfc6-0",
+        "tab_CEzeXg",
+        "tab_QdBpKM"
+      ],
+      "settings": {
+        "heading": "Gut zu Wissen",
+        "subheading": "erfahren Sie mehr über unsere Tees",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "desktop_layout": "third",
+        "image_position": "left",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "style": "blank",
+        "autoplay_active": false,
+        "autoplay": 5,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "af54466a-1a71-416b-a86e-b2f7374b4a08": {
+      "type": "products-bundle",
+      "blocks": {
+        "template--18051487432969__af54466a-1a71-416b-a86e-b2f7374b4a08-title-1": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--18051487432969__af54466a-1a71-416b-a86e-b2f7374b4a08-title-1"
+      ],
+      "settings": {
+        "heading": "Jetzt sparen",
+        "subheading": "Kaufen Sie drei Oolong-Tees und sparen Sie 5 % auf den günstigsten Oolong",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "select_collection": "oolongtee",
+        "collection_limit": 3,
+        "select_products": [],
+        "limit_bundles": true,
+        "discount_title": "Kaufen Sie drei Oolong-Tees und sparen Sie 5 % auf den günstigsten Oolong",
+        "discount_items": 3,
+        "limit_maximum": false,
+        "panel_bg_color": "{{ shop.brand.colors.primary[0].background }}",
+        "panel_text_color": "#f5f5f5",
+        "discount_opened": true,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "a85ad53e-50f1-4508-8072-d67ff673cc34": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--18051487432969__a85ad53e-50f1-4508-8072-d67ff673cc34-title-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--18051487432969__a85ad53e-50f1-4508-8072-d67ff673cc34-price-1": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--18051487432969__a85ad53e-50f1-4508-8072-d67ff673cc34-title-1",
+        "template--18051487432969__a85ad53e-50f1-4508-8072-d67ff673cc34-price-1"
+      ],
+      "settings": {
+        "heading": "Bio Oolong",
+        "subheading": "Entdecken Sie unsere anderen Bio Oolong-Tees",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "bio-oolong",
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price"
+      ],
+      "settings": {
+        "heading": "Produktempfehlungen",
+        "subheading": "Diese Teesorten könnten Ihnen auch schmecken.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "93f46728-f37d-465a-800b-d16e7001f825",
+    "ae2fb181-5514-4c0b-a3a8-3ca6dfc3076f",
+    "8da9c801-f41e-44cd-8f3a-c199909b67c2",
+    "af54466a-1a71-416b-a86e-b2f7374b4a08",
+    "a85ad53e-50f1-4508-8072-d67ff673cc34",
+    "product-recommendations"
+  ]
+}

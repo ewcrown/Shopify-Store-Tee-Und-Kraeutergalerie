@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.zubehoer-mit-navi.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "collection_list_yytVwE": {
+      "settings": {},
+      "blocks": {
+        "collection_xmMbQR": {
+          "settings": {
+            "collection": "teetassen-becher"
+          }
+        },
+        "collection_tYM9b8": {
+          "settings": {
+            "collection": "teekannen"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xmMbQR",
+        "collection_tYM9b8"
+      ]
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid"
+  ]
+}

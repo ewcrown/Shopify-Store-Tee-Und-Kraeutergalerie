@@ -1,0 +1,145 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_UFbd7x": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/Header_Teegschirr_Tee_und_kraeutergalerie.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_xmMbQR": {
+          "type": "collection",
+          "settings": {
+            "collection": "teetassen-becher",
+            "image": "shopify://shop_images/7912712--OGO----Juliet-300ml-_1.jpg"
+          }
+        },
+        "collection_tYM9b8": {
+          "type": "collection",
+          "settings": {
+            "collection": "teekannen",
+            "image": "shopify://shop_images/OGO-Teekanne-Enzo-680-ml-_1.jpg"
+          }
+        },
+        "collection_X6JhDP": {
+          "type": "collection",
+          "settings": {
+            "collection": "thermosflaschen-isolierflaschen",
+            "image": "shopify://shop_images/SlideCupNEOChicMic-tee-undkraeutergalerie_2.png"
+          }
+        },
+        "collection_mtji8D": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "dosen-aufbewahrung"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xmMbQR",
+        "collection_tYM9b8",
+        "collection_X6JhDP",
+        "collection_mtji8D"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 64,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Teegeschirr",
+        "subheading": "Wir haben schöne Teekannen und Tassen zum Servieren Ihrer Lieblingsteesorten. Teetassen, Teekannen und Isolierflaschen sind unverzichtbare Begleiter für alle Teeliebhaber. Sie dienen nicht nur dem praktischen Zweck, Tee zu servieren und zu transportieren, sondern auch der Aufrechterhaltung der Tradition und Kultur, die mit dem Teetrinken verbunden sind. Teetassen, oft aus Porzellan oder Keramik gefertigt, sind das Endziel jeder Teereise. Ihre Formen, Größen und Designs können variieren, aber alle dienen dem gleichen Zweck: dem Genuss von Tee. Ob bei einer ruhigen Morgenzeremonie oder einem geselligen Nachmittagstee, die Teetasse ist mehr als nur ein Behälter; sie ist ein Teil des Genusses. Teekannen, die in der Regel das Herzstück eines jeden Teeservices bilden, sind nicht nur funktional, sondern auch ästhetisch ansprechend. Sie variieren in Material, Größe und Design, von klassischem Porzellan über robustes Gusseisen bis hin zu modernem Glas. Eine gut gewählte Teekanne nicht nur bewahrt die Temperatur und das Aroma des Tees, sondern bereichert auch das visuelle Erlebnis des Teetrinkens. Die Kunst des Ausschenkens, die sanfte Handhabung der Kanne und das Zeremonielle des Einschenkens in die Tasse fügen der Teerunde eine meditative Qualität hinzu. Für Teeliebhaber, die unterwegs nicht auf ihren Lieblingstee verzichten möchten, sind Isolierflaschen ein Segen. Moderne Isolierflaschen sind so konzipiert, dass sie den Tee stundenlang heiß oder kalt halten können, ohne dass dabei das Aroma oder die Qualität des Tees beeinträchtigt wird. Sie sind in verschiedenen Größen und Designs erhältlich, um den Bedürfnissen jedes Teetrinkers gerecht zu werden. Egal, ob es sich um eine lange Wanderung, einen Arbeitstag oder eine Reise handelt, eine Isolierflasche ermöglicht es, den Komfort und die Freude einer guten Tasse Tee überallhin mitzunehmen. Zusammen bilden Teetassen, Teekannen und Isolierflaschen das perfekte Trio für jeden Teeliebhaber, der Wert auf Tradition, Qualität und Komfort legt.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_UFbd7x",
+    "banner",
+    "collection_list_yytVwE",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

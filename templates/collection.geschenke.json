@@ -1,0 +1,92 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_KaRJCE": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/Header_Geschenk_Tee_und_Kraeutergalerie.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_8yFmi8": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Geschenke",
+        "subheading": "Entdecken Sie die perfekten Geschenke für Teeliebhaber. Tee ist nicht nur ein Getränk, es ist eine Leidenschaft, eine Tradition und für viele Menschen eine tägliche Zeremonie. Für diejenigen, die ihre Tage gerne mit einer dampfenden Tasse Tee beginnen oder beenden, sind Geschenke rund um das Thema Tee eine wundervolle Möglichkeit, ihre Vorliebe zu zelebrieren und zu unterstützen. Ob für Geburtstage, Feiertage oder einfach als Zeichen der Wertschätzung – die Auswahl an Geschenkideen für Teeliebhaber ist groß und vielfältig. Zu den klassischen Geschenken zählen hochwertiges Teegeschirr und besondere Tee-Sorten. Ein exquisites Teeset, bestehend aus einer Teekanne und passenden Tassen, kann jeden Tee-Moment in ein elegantes Ritual verwandeln. Für diejenigen, die es modern mögen, sind Teekannen mit integriertem Teesieb eine praktische und stilvolle Wahl. Die Vielfalt an Teesorten aus aller Welt bietet zudem die Möglichkeit, den Beschenkten auf eine geschmackliche Entdeckungsreise zu schicken. Von klassischem Schwarztee über aromatischen Grüntee bis hin zu exotischem Oolong – für jeden Geschmack gibt es die passende Sorte. Neben Teegeschirr und Tee selber bieten sich auch Gutscheine für unseren Shop, hochwertiger Honig, der den Tee perfekt ergänzt, und vieles mehr als ideale Geschenke an. Stöbern Sie einfach in unserem großen Sortiment!",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_KaRJCE",
+    "banner",
+    "product-grid",
+    "collection_description_8yFmi8"
+  ]
+}

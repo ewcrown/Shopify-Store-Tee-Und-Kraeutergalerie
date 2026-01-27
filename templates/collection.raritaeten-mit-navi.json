@@ -1,0 +1,107 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_xqVVYj": {
+          "type": "collection",
+          "settings": {
+            "collection": "raritaten-manuell"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xqVVYj"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Tee Raritäten",
+        "subheading": "Finden Sie hier echte Tee-Raritäten und freuen Sie sich über schöne Auszeiten mit dem leckeren Heißgetränk. Seltene Tees bieten eine faszinierende Welt voller einzigartiger Aromen und Geschichten, die weit über das alltägliche Tässchen hinausgehen. Unter ihnen finden sich wahre Juwelen wie der Dooars First Flush, der Ostfriesen Sonntagstee oder der japanische Kabusecha Okumidori, um nur einige zu nennen. Der Dooars First Flush beispielsweise ist ein seltener Tee aus der Dooars-Region im Nordosten Indiens, bekannt für seine frischen und lebhaften Aromen, die das Ergebnis der ersten Ernte des Jahres sind. Dieser Tee zeichnet sich durch seine helle Farbe und seinen delikaten Geschmack aus, der oft mit blumigen Noten beschrieben wird. Der Dooars First Flush ist eine echte Rarität, denn seine Verfügbarkeit ist aufgrund der begrenzten Erntemenge und der spezifischen klimatischen Bedingungen, die für seine Produktion erforderlich sind, stark eingeschränkt. Der Ostfriesen Sonntagstee hingegen ist z. B. eine traditionelle Teemischung aus Ostfriesland in Deutschland und verkörpert die tiefe Teekultur dieser Region. Er besteht in der Regel aus einer sorgfältigen Auswahl an Schwarztees, darunter Assam, Darjeeling und Ceylon, die zusammen ein kräftiges und vollmundiges Aroma ergeben. Dieser Tee wird traditionell mit einem Stück Kluntje (Kandiszucker) und einem Schuss Sahne serviert, was ihm einen besonderen, cremigen Geschmack verleiht. Der Kabusecha Okumidori aus Japan bietet wiederum ein ganz anderes Geschmackserlebnis. Dieser grüne Tee wird aus der Okumidori-Teevarietät hergestellt, die für ihren süßen und zugleich umami-reichen Geschmack bekannt ist. Kabusecha bedeutet „beschatteter Tee“, was auf die Anbaumethode zurückzuführen ist: Die Teepflanzen werden einige Wochen vor der Ernte beschattet, um die Produktion von Chlorophyll und Aminosäuren zu fördern, was dem Tee eine tiefere Farbe und einen intensiveren Geschmack verleiht. Kabusecha Okumidori ist ein exquisiter Tee, der die feinen Nuancen der japanischen Teekultur widerspiegelt.Jeder dieser seltenen Tees bietet ein einzigartiges Erlebnis, das von der reichen Geschichte und den Traditionen seiner Herkunftsregion geprägt ist. Ihre Seltenheit und Besonderheit machen sie zu geschätzten Schätzen für Teeliebhaber auf der ganzen Welt.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

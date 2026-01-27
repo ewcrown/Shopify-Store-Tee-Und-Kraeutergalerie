@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_xqVVYj": {
+          "type": "collection",
+          "settings": {
+            "collection": "fruchtetee-1"
+          }
+        },
+        "collection_CBe3V7": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-fruchtetee"
+          }
+        },
+        "collection_HMy8Yq": {
+          "type": "collection",
+          "settings": {
+            "collection": "milder-fruchtetee-1"
+          }
+        },
+        "collection_Tihbwi": {
+          "type": "collection",
+          "settings": {
+            "collection": "kindertee"
+          }
+        },
+        "collection_WPXrpL": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-fruchtetee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xqVVYj",
+        "collection_CBe3V7",
+        "collection_HMy8Yq",
+        "collection_Tihbwi",
+        "collection_WPXrpL"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Früchtetee",
+        "subheading": "Früchtetee kann hervorragend eisgekühlt als Eistee erfrischen oder heißgenossen werden. Auch das vorbereitete Getränk kann nochmal kurz erwärmt werden, so eignet sich der Früchtetee perfekt für unterwegs. Früchtetee ist eine der beliebtesten Teesorten. Klassischer Früchtetee mit intensivem Geschmack von saftigem Apfel, Beeren und erfrischenden <a href=\"/products/hibiskusblueten-grosskelchig-kraeutertee\" target=\"_blank\" title=\"Hibiskusblüten, großkelchig | Kräutertee\">Hibiskus</a>-Blüten sind dabei ganz besonders gefragt. Aber auch exotische Früchte dürfen bei unseren geschmackvollen Teemischungen nicht fehlen. Das Team aus der Tee & Kräutergalerie sucht jeden Tee nach sorgfältiger Geschmacks- und Qualitätsprüfung für Sie aus. So sorgen wir dafür, dass wir ein immer wechselndes Früchtetee-Sortiment für unsere Kunden anbieten können und kein Tee dem anderen gleicht. Einige Früchtetees wie die Sorte Knusperhäuschen, Waldzwerg und Erdbeer-Popcorn führen wir schon über viele Jahre hinweg, da es sich inzwischen um wahre Klassiker unter unseren Kunden handelt, die besonders bei Familien sehr beliebt sind. Nicht jeder verträgt die Fruchtsäure aus Hibiskus und Hagebutte, doch magenmilde Früchtetees auf Basis von Apfel sorgen dafür, dass jeder einen passenden Früchtetee für sich findet. In der Tee & Kräutergalerie finden Sie neben Früchtetee auch viele <a href=\"/collections/gruner-tee\" title=\"Grüntee\">Grüntees</a>, <a href=\"/collections/schwarz-tee\" title=\"Schwarztee\">Schwarztees</a> und <a href=\"/collections/krautertee-1\" title=\"Kräutertee\">Kräuterteemischungen</a>. Aber auch Teesorten wie <a href=\"/collections/rooibushtee\" title=\"Rooibostee\">Rooibos</a>, <a href=\"/collections/honeybushtee\" title=\"Honeybushtee\">Honeybush </a>und <a href=\"/collections/weisser-tee\" title=\"Weißer Tee\">Weißer Tee</a> dürfen in unserem Fachgeschäft selbstverständlich nicht fehlen. Unser Sortiment ergänzen wir durch ausgewähltes Teegeschirr, Teedosen und verschiedenes Zubehör wie Filter, Kandis und Honig. Früchtetees sind perfekt für eine entspannende Auszeit und ein Genuss für die Sinne. Probieren Sie jetzt unsere Früchtetees und lassen Sie sich von unserem Teeladen verzaubern. Unsere besonderen Früchtetees sorgen für einen wunderbaren Geschmack und lässt Sie die Welt der Aromen entdecken. Früchtetees sind nicht nur im Winter sehr beliebt, eisgekühlt sorgen sie auch im Sommer für eine wunderbare Erfrischung. Es handelt sich um eine gesunde Alternative zu gesüßten Fertiggetränken und kann hervorragend in Flaschen abgefüllt mitgenommen werden. So hat man auch im Büro, in der Schule, bei der Arbeit oder in der Freizeit ein gesundes Getränk mit dabei.  ",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

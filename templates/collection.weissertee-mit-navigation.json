@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_67fWBB": {
+          "type": "collection",
+          "settings": {
+            "collection": "weisser-tee"
+          }
+        },
+        "collection_xmMbQR": {
+          "type": "collection",
+          "settings": {
+            "collection": "aroma-weisser-tee"
+          }
+        },
+        "collection_tYM9b8": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-weisser-tee"
+          }
+        },
+        "collection_DmWRYU": {
+          "type": "collection",
+          "settings": {
+            "collection": "china-weisser-tee-1"
+          }
+        },
+        "collection_N6fpiQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-weisser-tee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_67fWBB",
+        "collection_xmMbQR",
+        "collection_tYM9b8",
+        "collection_DmWRYU",
+        "collection_N6fpiQ"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Weißer Tee",
+        "subheading": "Weißer Tee / Zubereitung: Weißer Tee wird ca. 3 Minuten bei 75 Grad heißem Wasser aufgegossen. Dies kann allerdings je nach Sorte und Aufguss variieren, beachten Sie bitte immer die Hinweise auf der Verpackung. Das Wasser sollte einmal sprudelnd aufgekocht werden und dann auf die gewünschte Temperatur abkühlen. Da Weißer Tee nicht bitter wird, können die Blätter in der Tasse bleiben. Der Tee wird heiß und ohne Milchgetrunken. Er schmeckt sehr seidig, mild und leicht süßlich. Weißer Tee ist ein natürlicher Genuss für Körper und Geist. Weißer Tee, oft als einer der edelsten Teesorten gefeiert, ist ein Symbol für Raffinesse und subtile Geschmacksnuancen. Gewonnen aus den feinen Knospen und jungen Blättern der Teepflanze Camellia sinensis, durchläuft weißer Tee den minimalsten Verarbeitungsprozess unter allen Teesorten. Dieses sanfte Vorgehen bewahrt nicht nur seine zarte Farbe und sein mildes Aroma, sondern auch die wertvollen Antioxidantien und Nährstoffe, die ihn zu einem gesundheitlichen Kraftpaket machen. Die Herstellung von weißem Tee erfordert außergewöhnliche Sorgfalt und Aufmerksamkeit. Die jungen Blätter und Knospen werden sorgfältig von Hand gepflückt, oft bei kühler Morgendämmerung, um die zarte Pflanze nicht zu beschädigen. Anschließend werden sie natürlich getrocknet, entweder in der Sonne oder in gut belüfteten Räumen, wodurch der Tee seine charakteristische blasse Farbe und seinen delikaten Geschmack erhält. Diese Methode, kombiniert mit der Seltenheit der für die Ernte geeigneten Knospen, macht weißen Tee zu einer der kostbarsten Teesorten auf dem Markt. Weißer Tee wird für seine subtilen, jedoch vielschichtigen Geschmacksprofile geschätzt, die von süß und blumig bis hin zu leicht grasig und frisch reichen können. Neben seinem einzigartigen Geschmack wird er auch wegen seiner gesundheitsfördernden Eigenschaften geschätzt. Studien deuten darauf hin, dass weißer Tee reich an Antioxidantien ist, die das Immunsystem stärken und vor einer Vielzahl von Krankheiten schützen können. Ob als eleganter Begleiter am Nachmittag oder als Teil eines gesunden Lebensstils, weißer Tee bietet eine exquisite Erfahrung.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

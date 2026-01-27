@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Bio Früchtetee",
+        "subheading": "Früchtetee ist eine der beliebtesten Teesorten. Klassischer Früchtetee mit intensivem Geschmack von saftigem Apfel, Beeren und erfrischenden Hibiskus-Blüten sind dabei ganz besonders gefragt. Aber auch exotischen Früchte dürfen bei unseren geschmackvollen Teemischungen nicht fehlen. Das Team aus der Tee & Kräutergalerie sucht jeden Tee nach sorgfältiger Geschmacks und Qualitätsprüfung für Sie aus. So sorgen wir dafür, dass wir ein immer wechseltes Früchtetee-Sortiment für unsere Kunden anbieten können und kein Tee dem anderen gleicht. Einige Früchtetees wie die Sorte <a href=\"/products/knusperhaeuschen-fruechtetee-mild\" title=\"Knusperhäuschen® | Früchtetee | Mild\">Knusperhäuschen</a>, <a href=\"/products/waldzwerg-fruechtetee-mild\" title=\"Waldzwerg® | Früchtetee | Mild\">Waldzwerg </a>und <a href=\"/products/erdbeer-popcorn-fruechtetee-mild\" title=\"Erdbeer Popcorn | Früchtetee | Mild\">Erdbeer-Popcorn</a> führen wir schon über viele Jahre hinweg, da es sich inzwischen um wahre Klassiker unter unseren Kunden handelt, die besonders bei Familien sehr beliebt sind. Nicht jeder verträgt die Fruchtsäure aus Hibiskus und Hagebutte, doch Magenmilde Früchtetees auf Basis von Apfel sorgen dafür, dass jeder einen passenden Früchtetee für sich findet. In der Tee & Kräutergalerie finden Sie neben <a href=\"/collections/fruchtetee-1\" title=\"Früchtetee\">Früchtetee </a>auch viele <a href=\"/collections/gruner-tee\" title=\"Grüntee\">Grüntees</a>, <a href=\"/collections/schwarz-tee\" title=\"Schwarztee\">Schwarztees </a>und <a href=\"/collections/krautertee-1\" title=\"Kräutertee\">Kräuterteemischungen</a>. Aber auch Teesorten wie <a href=\"/collections/rooibushtee\" title=\"Rooibostee\">Rooibos</a>, <a href=\"/collections/honeybushtee\" title=\"Honeybushtee\">Honeybush </a>und <a href=\"/collections/weisser-tee\" title=\"Weißer Tee\">Weißer Tee</a> dürfen in unserem Fachgeschäft selbstverständlich nicht fehlen. Unser Sortiment ergänzen wir durch ausgewähltes Teegeschirr, Teedosen und verschiedenes Zubehör wie Filter, Kandis und Honig. Früchtetees sind perfekt für eine entspannende Auszeit und ein Genuss für die Sinne. Probieren Sie jetzt unsere Früchtetees und lassen Sie sich von unserem Teeladenverzaubern. Unsere besonderen Früchtetees sorgen für einen wunderbaren Geschmack und lässt Sie die Welt der Aromen entdecken. Früchtetees sind nicht nur im Winter sehr beliebt, eisgekühlt sorgen sie auch im Sommer für eine wunderbare Erfrischung. Es handelt sich um eine gesunde Alternative zu gesüßten Fertiggetränken und kann hervorragend in Flaschen abgefüllt mitgenommen werden. So hat man auch im Büro, in der Schule, bei der Arbeit oder in der Freizeit ein gesundes Getränk mit dabei.  ",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--two-rows",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

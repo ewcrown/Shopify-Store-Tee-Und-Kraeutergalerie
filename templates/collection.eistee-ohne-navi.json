@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Eistee",
+        "subheading": "Entdecken Sie die erfrischende Welt des Eistees! Eistee, ein Getränk, das sowohl Erfrischung als auch Geschmack verspricht, hat sich weltweit zu einem beliebten Durstlöscher entwickelt. Dieses Getränk, typischerweise aus schwarzem Tee zubereitet und dann gekühlt, vereint die robusten Aromen des Tees mit der kühlenden Wirkung von Eis. Im Laufe der Zeit haben verschiedene Kulturen ihre eigenen Versionen und Variationen hinzugefügt, indem sie Früchte, Kräuter oder sogar Gewürze beifügten, um einzigartige Geschmacksrichtungen zu kreieren. Die Zubereitung von Eistee kann auf zwei Hauptarten erfolgen: durch das Kühlen von heiß gebrautem Tee oder durch die Kaltwassermethode, bei der Teeblätter oder loser Tee für mehrere Stunden in kaltem Wasser eingeweicht werden. Beide Methoden entlocken den Teeblättern ihre reichen Aromen, allerdings betonen Kenner, dass die Kaltwassermethode einen sanfteren, weniger bitteren Geschmack hervorbringt. Unabhängig von der Methode ist die persönliche Anpassung des Geschmacks ein wichtiger Aspekt beim Genuss von Eistee. Ob gesüßt oder ungesüßt, mit Zitrone, Pfirsich oder Minze verfeinert – die Möglichkeiten, Eistee zu genießen, sind nahezu unbegrenzt. Eistee bietet nicht nur eine erfrischende Pause an einem heißen Tag, sondern bringt auch gesundheitliche Vorteile mit sich, besonders wenn er ohne Zuckerzusatz genossen wird. Tee enthält Antioxidantien, die den Körper vor freien Radikalen schützen können. Zudem kann der moderate Konsum von Tee zur Hydratation beitragen und hat weniger Koffein als Kaffee, was ihn zu einer milderen Alternative für einen Energiekick macht. Eistee erweist sich somit als vielseitiges Getränk, das Genuss und Wohlbefinden in einem Schluck vereint.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

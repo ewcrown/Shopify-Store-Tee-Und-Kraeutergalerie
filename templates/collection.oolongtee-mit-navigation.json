@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_PkRt3m": {
+          "type": "collection",
+          "settings": {
+            "collection": "oolongtee"
+          }
+        },
+        "collection_xmMbQR": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-oolong"
+          }
+        }
+      },
+      "block_order": [
+        "collection_PkRt3m",
+        "collection_xmMbQR"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Oolong",
+        "subheading": "Oolong Tee ist ein halboxidierter Tee. Eine wunderbare Kombination aus dem Duft und Geschmack von Grüntee und den Vorteilen von Schwarztee wie Stärke und Intensität. Oolong-Tee - Eine traditionelle und gesunde Wahl für Teeliebhaber. Oolong-Tee, ein faszinierendes Getränk mit einer reichen Geschichte und einer einzigartigen Position zwischen grünem und schwarzem Tee, besticht durch seine Vielfalt und Komplexität. Die Herstellung von Oolong-Tee ist eine Kunstform, die Präzision und Sorgfalt erfordert, um die perfekte Balance zwischen Oxidation und Fermentation zu erreichen. Dieser Prozess verleiht dem Oolong-Tee sein charakteristisches Aroma und seine geschmackliche Tiefe, die von leicht und blumig bis hin zu dunkel und vollmundig reichen kann. Die Ursprünge des Oolong-Tees lassen sich auf das alte China zurückführen, wo er als Symbol für raffinierten Geschmack und sozialen Status galt. Heute wird Oolong-Tee in verschiedenen Regionen Asiens angebaut, darunter China und Taiwan, wobei jede Region ihre eigenen einzigartigen Oolong-Varietäten hervorbringt. Die Unterschiede in Bodenbeschaffenheit, Klima und Verarbeitungstechniken führen zu einer beeindruckenden Vielfalt an Geschmacksprofilen, die Teeliebhaber auf der ganzen Welt zu schätzen wissen. Neben seinem reichen Geschmack wird Oolong-Tee auch für seine gesundheitlichen Vorteile geschätzt. Studien haben gezeigt, dass der regelmäßige Konsum von Oolong-Tee das Wohlbefinden fördern und zur Gewichtsreduktion beitragen kann, indem er den Stoffwechsel anregt und die Fettverbrennung unterstützt. Ob als morgendlicher Muntermacher oder als entspannendes Getränk am Abend, Oolong-Tee bietet eine köstliche und gesunde Ergänzung zu jeder Tageszeit.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

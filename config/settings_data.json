@@ -1,0 +1,302 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "presets": {
+    "Objects": {
+      "headings_font_primary": "sans-serif",
+      "body_font_primary": "sans-serif",
+      "body_primary_size": 16,
+      "body_font_secondary": "sans-serif",
+      "color_background_header": "#ffffff",
+      "color_text_header": "#000000",
+      "color_background_main_secondary": "#f2f2f2",
+      "color_background_footer": "#101010",
+      "color_text_footer": "#f2efec",
+      "container_vertical_space": 140,
+      "grid_gap": 32,
+      "border_width_forms": 1,
+      "border_radius_forms": 6,
+      "border_width_buttons": 1,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "0.83333",
+      "product_card_aspect_ratio_fit": false,
+      "product_card_thumbnail_gallery": false,
+      "product_card_thumbnail_link": true,
+      "variants_style": "radio",
+      "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+      "cart_mini_shadow": false,
+      "product_card_badge_sale_type": "percentage",
+      "product_card_badge_sale_color": "#000000",
+      "product_card_badge_custom_1_color": "#ffffff",
+      "product_card_badge_custom_1_text_color": "#000000",
+      "product_card_badge_custom_2_color": "#ffffff",
+      "product_card_badge_custom_2_text_color": "#000000",
+      "cart_image_ratio": "0.83333",
+      "cart_upsell_heading": "New Product",
+      "cart_recommendations": false,
+      "cart_free_shipping": true,
+      "cart_free_shipping_amount": "200",
+      "show_gotop": true,
+      "color_accent_header": "#f25a38",
+      "color_accent_main": "#f25a38",
+      "color_background_cards": "#FFFFFF",
+      "color_accent_cards": "#f25a38",
+      "color_accent_footer": "#f25a38"
+    },
+    "Beauty": {
+      "headings_font_primary": "dm_sans_n5",
+      "body_font_primary": "dm_sans_n4",
+      "body_font_secondary": "dm_sans_n5",
+      "color_background_header": "#ffffff",
+      "color_background_main_secondary": "#f2efec",
+      "color_background_footer": "#1b1a1a",
+      "color_text_footer": "#f1eeec",
+      "container_vertical_space": 140,
+      "grid_gap": 32,
+      "border_width_forms": 1,
+      "border_radius_forms": 6,
+      "border_radius_buttons": 6,
+      "product_card_aspect_ratio": "0.666667",
+      "product_card_thumbnail_link": true,
+      "variants_style": "select",
+      "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+      "cart_mini_shadow": false,
+      "cart_image_ratio": "0.83333",
+      "cart_free_shipping": true,
+      "social_facebook": "#",
+      "social_instagram": "#",
+      "social_pinterest": "#",
+      "color_accent_header": "#f25a38",
+      "color_accent_main": "#f25a38",
+      "color_background_cards": "#FFFFFF",
+      "color_accent_cards": "#f25a38",
+      "color_accent_footer": "#f25a38"
+    },
+    "Books": {
+      "headings_font_primary": "dm_sans_n5",
+      "headings_primary_size": 70,
+      "headings_line": 1.1,
+      "headings_spacing": -3,
+      "body_font_primary": "pt_mono_n4",
+      "body_primary_size": 15,
+      "color_background_header": "#FFFFFF",
+      "color_background_main_secondary": "#EEF1F2",
+      "color_background_footer": "#000000",
+      "color_text_footer": "#EEF1F2",
+      "theme_max_width": 1920,
+      "container_vertical_space": 150,
+      "widgets_border_radius": 20,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "0.83333",
+      "proudct_card_aspect_ratio_padding": 0,
+      "product_card_border_radius": 20,
+      "product_card_thumbnail_gallery": false,
+      "product_card_thumbnail_link": true
+    },
+    "Restaurant": {
+      "headings_font_primary": "bauer_bodoni_n4",
+      "headings_primary_size": 76,
+      "headings_spacing": 0,
+      "body_font_secondary": "bauer_bodoni_n4",
+      "body_secondary_size": 20,
+      "color_background_header": "#161514",
+      "color_text_header": "#d2c692",
+      "color_background_main": "#efede6",
+      "color_text_main": "#161514",
+      "color_background_footer": "#161514",
+      "color_text_footer": "#d2c692",
+      "container_vertical_space": 150,
+      "widgets_border_radius": 14,
+      "border_radius_buttons": 30,
+      "product_card_aspect_ratio": "1",
+      "product_card_aspect_ratio_fit": false,
+      "proudct_card_aspect_ratio_padding": 0,
+      "product_card_background": "rgba(0,0,0,0)",
+      "product_card_border": "#efede6",
+      "product_card_border_radius": 20,
+      "product_card_thumbnail_gallery": true,
+      "product_card_thumbnail_link": true,
+      "cart_mini_enabled": false,
+      "show_badges": true,
+      "show_breadcrumb": true
+    }
+  },
+  "current": {
+    "headings_font_primary": "playfair_display_n4",
+    "body_font_primary": "work_sans_n3",
+    "body_font_secondary": "work_sans_n4",
+    "color_background_header": "#637463",
+    "color_text_header": "#e3e4db",
+    "color_background_main_secondary": "#e3e4db",
+    "color_background_footer": "#637463",
+    "color_text_footer": "#e3e4db",
+    "theme_max_width": 1360,
+    "container_vertical_space": 60,
+    "grid_gap": 32,
+    "widgets_border_radius": 1,
+    "border_width_forms": 1,
+    "border_radius_forms": 6,
+    "border_radius_buttons": 1,
+    "product_card_aspect_ratio": "1",
+    "product_card_aspect_ratio_fit": false,
+    "proudct_card_aspect_ratio_padding": 8,
+    "product_card_border_radius": 0,
+    "product_card_thumbnail_link": true,
+    "variants_style": "select",
+    "color_swatches": false,
+    "color_swatches_labels": "color,colour,couleur,cor,colore,culoare,farbe,색,色,カラー,färg,farve,szín,barva",
+    "cart_mini_background": "#b9d4ba",
+    "cart_mini_shadow": false,
+    "favicon": "shopify://shop_images/fuer-online-fakiton.png",
+    "cart_image_ratio": "0.83333",
+    "cart_recommendations_heading": "DAS KÖNNTE IHNEN AUCH GEFALLEN.",
+    "cart_free_shipping": true,
+    "cart_free_shipping_amount": "30",
+    "show_breadcrumb": false,
+    "show_gotop": true,
+    "within_filter_enabled": true,
+    "social_facebook": "https://www.facebook.com/profile.php?id=100067067559148",
+    "social_instagram": "https://www.instagram.com/tee_und_kraeutergalerie/",
+    "social_pinterest": "",
+    "social_vimeo": "",
+    "social_twitter": "",
+    "checkout_header_image": "shopify://shop_images/Design_ohne_Titel_13.png",
+    "checkout_logo_image": "shopify://shop_images/bildmarke-weiss.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#e3e4db",
+    "checkout_accent_color": "#de7a22",
+    "checkout_button_color": "#637463",
+    "checkout_error_color": "#D14545",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_locale_selector": true,
+          "show_country_selector": true,
+          "show_social_icons": true,
+          "bar_bgcolor": "#111111",
+          "bar_txtcolor": "#ffffff",
+          "border_color": "rgba(0,0,0,0)"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "header-0": {
+            "type": "menu",
+            "settings": {
+              "linklist": "main-menu"
+            }
+          }
+        },
+        "block_order": [
+          "header-0"
+        ],
+        "settings": {
+          "logo_src": "shopify://shop_images/logo-tee-weiss-nebeneinander.png",
+          "logo_height": 65,
+          "logo_mobile_src": "shopify://shop_images/nur_text-weiss.png",
+          "alignment": "center",
+          "label_style": "tooltip",
+          "sticky_header": true,
+          "custom_icon_select": "no-icon",
+          "label_text": "",
+          "custom_icon_link": "",
+          "open_in_new_window": false,
+          "header_absolute_homepage": false,
+          "header_absolute_collection": false,
+          "header_absolute_custom": "",
+          "color_text_header": "#000000",
+          "show_locale_selector": true,
+          "show_country_selector": true,
+          "show_social_icons": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "menu",
+            "settings": {
+              "title": "QUICK LINKS",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "newsletter",
+            "settings": {
+              "title": "NEWSLETTER"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
+        "settings": {
+          "layout": "grid-4 grid-portable-2 grid-lap-1",
+          "show_locale_selector": false,
+          "show_country_selector": false
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "settings": {
+          "popup_border_radius": 10
+        }
+      },
+      "main-gift-card": {
+        "type": "main-gift-card",
+        "settings": {
+          "logo_src": "shopify://shop_images/logo_uebereinander.png",
+          "logo_width": 242
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#202a36",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": "👋 Hi, wenn du Fragen hast, lass es uns wissen. Wir sind gerne für dich da!"
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "6744518860797519131": {
+        "type": "shopify://apps/etranslate-translate/blocks/floating-selector/35c05b0e-4f05-4fc9-adc7-77b6ccb6b2ca",
+        "disabled": false,
+        "settings": {}
+      },
+      "13180643132867056963": {
+        "type": "shopify://apps/gdpr-legal-cookie/blocks/bc-block/e49729f0-d37d-4e24-ac65-e0e2f472ac27",
+        "disabled": false,
+        "settings": {
+          "hide_label": false
+        }
+      },
+      "1932496262343429097": {
+        "type": "shopify://apps/bogox-free-gift/blocks/app/4254c128-561c-4a78-b553-cfcb302243bb",
+        "disabled": true,
+        "settings": {}
+      }
+    }
+  }
+}

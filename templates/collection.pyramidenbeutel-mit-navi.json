@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_dVz3fw": {
+          "type": "collection",
+          "settings": {
+            "collection": "tee-im-pyramidenbeutel"
+          }
+        },
+        "collection_CBe3V7": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-fruchtetee"
+          }
+        },
+        "collection_HMy8Yq": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-gruntee"
+          }
+        },
+        "collection_r7tNkA": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-schwarztee"
+          }
+        },
+        "collection_Tihbwi": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-krautertee"
+          }
+        },
+        "collection_WPXrpL": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-rooibos"
+          }
+        },
+        "collection_bNqgqz": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-weisser-tee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_dVz3fw",
+        "collection_CBe3V7",
+        "collection_HMy8Yq",
+        "collection_r7tNkA",
+        "collection_Tihbwi",
+        "collection_WPXrpL",
+        "collection_bNqgqz"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Pyramidenbeutel",
+        "subheading": "Die Pyramidenbeutel eignen sich hervorragend für unterwegs, ohne, dass Sie viel Teezubehör mitnehmen müssen. So haben Sie Ihren Lieblingstee auch bei Reisen, im Büro oder in der Freizeit immer mit dabei und können ihn frisch aufgießen. Tee in Pyramidenbeuteln ist eine moderne und praktische Art, den traditionellen Teeaufguss zu genießen. Diese innovative Verpackungsform hat in den letzten Jahren an Popularität gewonnen, da sie nicht nur die Ästhetik des Teezubereitungsprozesses verbessert, sondern auch die Qualität und den Geschmack des Tees selbst. Im Gegensatz zu den klassischen flachen Teebeuteln bieten Pyramidenbeutel den Teeblättern mehr Platz, sich zu entfalten und ihr volles Aroma freizusetzen. Das Design ermöglicht eine bessere Zirkulation des Wassers um die Teeblätter, was zu einem intensiveren und vollmundigeren Geschmack führt.Die Herstellung von Tee in Pyramidenbeuteln nimmt besondere Rücksicht auf die Qualität der verwendeten Teeblätter. Oftmals werden für diese Art von Beuteln ganze Blätter oder große Blattstücke verwendet, die eine höhere Qualität im Vergleich zum herkömmlich in Teebeuteln verwendeten Teestaub und Fannings aufweisen. Dies trägt entscheidend dazu bei, dass der Tee sein reiches Aroma und seine feinen Nuancen besser entfalten kann. Die transparente Natur vieler Pyramidenbeutel lässt zudem die Qualität der Blätter erkennen und bietet Teeliebhabern ein visuell ansprechendes Erlebnis.Neben den geschmacklichen Vorteilen bieten Tee in Pyramidenbeuteln auch praktische Vorteile. Sie sind einfach zu verwenden, erfordern kein Teesieb oder andere Utensilien und sind ideal für den schnellen Genuss zwischendurch. Darüber hinaus sind sie eine umweltfreundlichere Option, da viele Marken mittlerweile biologisch abbaubare Materialien für ihre Pyramidenbeutel verwenden. Die Kombination aus verbessertem Geschmackserlebnis, hoher Qualität der Teeblätter und der praktischen sowie umweltbewussten Verpackung macht Tee in Pyramidenbeuteln zu einer ausgezeichneten Wahl für Teeliebhaber und diejenigen, die es noch werden möchten.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

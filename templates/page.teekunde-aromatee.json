@@ -1,0 +1,357 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_yU4ckn": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/HeaderTeekunde_Tee_und_Kraeutergalerie_56a8e93f-dadd-4774-8390-b6f9d628a92a.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": true,
+        "page_cover_metafield": "",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "e4a67d09-f3b9-44d0-9543-b00b9732b38d": {
+      "type": "content-toggles",
+      "blocks": {
+        "template--18036535853321__e4a67d09-f3b9-44d0-9543-b00b9732b38d-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Aroma Tee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/alle-aromatees",
+            "body": "<p>Aroma-Tee stammt ursprünglich aus China</p><p>Wie der Tee selbst, so hat auch der Prozess des Aromatisierens seinen Ursprung in China. Seit rund 800 Jahren trinken Chinesen Jasmin- oder Rosentee und noch weiter zurück fügten sie ihrem Tee Gewürze zu.</p><p>In Europa ist aromatisierter Tee um das Jahr 1830, erst durch den Earl Grey salonfähig geworden. </p><p>So ist es nicht verwunderlich, dass sich im Laufe der Zeit immer mehr Geschmacksrichtungen entwickelten. Heute kann der Verbraucher auf nahezu unendlich viele verschiedene Tees zurückgreifen.</p><p>Wir führen folgende Aroma-Tees:</p><ul><li>Früchtetee</li><li>Grüntee</li><li>Kräutertee</li><li>Schwarztee</li><li>Weißer Tee</li><li>Rooibos</li></ul><p>Das Wort <strong>Aroma</strong> kommt aus dem griechischen und bedeutet ursprünglich <strong>Gewürz</strong>. Entweder sind die Stoffe natürlicherweise vorhanden oder sie werden zugefügt. Zu unterscheiden sind:</p><ul><li><strong>natürliche</strong> Aromastoffe</li><li><strong>naturidentische</strong> Aromastoffe</li><li><strong>künstliche</strong> Aromastoffe <strong>(werden nicht für das Aromatisieren von Tee verwendet)</strong></li></ul><p>Natürliche Aromastoffe werden aus natürlichen, pflanzlichen oder tierischen Rohstoffen gewonnen. Zu deren Gewinnung dürfen nur physikalische, enzymatische oder mikrobiologische Verfahren angewendet werden, z.B. Erwärmen, Auspressen, Zerkleinern, Mahlen, Mischen, Filtrieren, Destillieren oder Vergären.</p><p>Naturidentische Aromastoffe werden mittels chemischer Synthese hergestellt. Nach Abschluss des Herstellungsverfahrens müssen diese Stoffe mit einem Stoff chemisch identisch sein, der in seinem Ausgangsstoff pflanzlicher oder tierischer Herkunft natürlicherweise vorkommt. Die Rohstoffe hierfür müssen nicht natürlichen Ursprungs sein. So können naturidentische Aromen sowohl naturidentische als auch natürliche Aromastoffe enthalten.</p><p>Aufgrund dieser Tatsache stellt der Gesetzgeber diese beiden Gruppen auf gleiche Stufe und fasst sie unter dem Begriff <strong>Aroma</strong> zusammen. Trotz der Gleichheit besitzen naturidentische Aromastoffe viele Vorteile:</p><ul><li>Sie sind stabiler</li><li>Sie behalten Geschmack und Geruch über längere Zeit und auch unter Einwirkung von Hitze</li><li>Sie sind kostengünstiger und kalkulierbarer</li></ul><p> </p><p>   </p><p> </p><p></p>",
+            "image": "shopify://shop_images/Design_ohne_Titel_16.png"
+          }
+        },
+        "template--18036535853321__e4a67d09-f3b9-44d0-9543-b00b9732b38d-text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Assam",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/assam-schwarztee",
+            "body": "<h3>Assam stammt aus Indien</h3><p>Im Nordosten Indiens liegt der Bundesstaat Assam. Wenn es in Assam regnet, schüttet es wie ein Wasserfall vom Himmel.</p><p>Ein absoluter Klassiker ist der <a href=\"/collections/assam-schwarztee\" target=\"_blank\" title=\"Assam - Schwarztee\">Assam</a>. Er wird auf 800 m Höhe im Nordosten Indiens angebaut. Er schmeckt sehr kräftig, malzig und würzig. Der klassische Assam kann hervorragend mit Milch und <a href=\"/collections/kandis-co\" target=\"_blank\" title=\"Kandis & Co.\">Zucker</a> getrunken werden. </p><p>In den Monaten April bis September fallen 90 % des Regens bei Temperaturen von 25 °C bis über 35 °C — es ist feucht-heiß wie in einem Treibhaus — ideale Bedingungen, um Tee reichlich sprießen zu lassen.</p><p>In den Monaten Oktober bis März schwanken die Temperaturen zwischen 20 °C und 25 °C bei geringen Niederschlägen und häufigem Sonnenschein.</p><p>Alle Versuche, chinesische Teepflanzen und Samen im nordindischen Assam zu kultivieren, schlugen allesamt fehl.</p><p>Im Jahr 1823 aber wurden in diesem Gebiet wildwachsende Teesträucher (Thea Assamica) entdeckt und fortan als Alternative zur Thea Sinensis kultiviert. Die Assampflanze hat wesentlich größere und kräftigere Blätter als die Teepflanzen in Darjeeling.</p><p>Während in Darjeeling ein Teestrauch ca. 5-6 Jahre benötigt, um regelmäßig gepflückt zu werden, benötigt der Teestrauch in Assam lediglich ca. 3 Jahre.</p><p>In den Jahren 1836 bis 1838 wurde dann der erste Tee — grüner Tee — aus Assam in Calcutta gehandelt. Kurz darauf folgte der Schwarztee, der noch heute die Grundlage der bekannten <a href=\"/collections/ostfriesen-mischungen\" title=\"Ostfriesen Mischungen\">ostfriesischen Mischungen</a> ist.</p><p> </p><p> </p><p> </p>",
+            "image": "shopify://shop_images/Design_ohne_Titel_15.png"
+          }
+        },
+        "template--18036535853321__e4a67d09-f3b9-44d0-9543-b00b9732b38d-text-3": {
+          "type": "text",
+          "settings": {
+            "title": "Ayurveda-Tee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/ayurveda-1",
+            "body": "<h3>Der Zauber und die Weisheit Indiens</h3><p>Einen nicht alltäglichen Kräuterteegenuss mit garantiertem Wohlfühlfaktor versprechen <a href=\"/collections/ayurveda-1\" target=\"_blank\" title=\"Ayurveda\">ayurvedische</a>  Teesorten. Zutaten wie Koriander, Javanische Gelbwurzel, Zitronellengras, Jasminblüten, Eukalyptusblätter oder Thymian ergeben exotische <a href=\"/collections/krautertee-1\" target=\"_blank\" title=\"Alle Kräutertees\">Kräuterteespezialitäten</a>, die nicht nur außergewöhnlich schmecken, sondern auch das Wohlbefinden von Körper und Geist steigern.</p><p>Ayurveda ist die ca. 3.500 Jahre alte Heilkunde Indiens. »Ayus« bedeutet Zusammenhalt, »Veda« Wissen oder Wissenschaft. Wörtlich übersetzt heißt Ayurveda <strong>„Die Wissenschaft vom Leben“</strong>. Grundgedanke bei dieser Heilkunst ist es, Körper, Geist und Seele mit sich und mit der Umwelt in einem stabilen Gleichgewicht zu halten, denn Krankheit oder Unwohlsein wird erst ausgelöst, wenn diese Harmonie gestört ist.</p><p>Grundlage für ayurvedische Teesorten bildet das Kräuterwissen aus mehreren Jahrtausenden. Zahlreiche Mischungen basieren auf alten indischen Rezepten. Viele Zutaten stammen nicht aus kultiviertem Anbau, sondern aus Wildsammlungen.</p><p>Je nach Auswahl und Rezeptur der verwendeten Kräuter und Gewürze sind die unterschiedlichsten Mischungen erhältlich, die das Wohlbefinden in vielerlei Hinsicht steigern können. Ihre Wirkungen reichen von beruhigend und stresshemmend bis zu belebend oder sinnlich, um nur einige zu nennen. Zum Beispiel:</p><p>Eine Mischung aus Eukalyptusblättern, Ingwerwurzelstock, Fenchel, schwarzem Pfeffer, Gewürznelkenstielen mit seinem feurigpfeffrigen und würzigem Geschmack soll beispielsweise die Leidenschaft neu entfachen.</p><p>Eine Kombination aus Fenchel, Kamillen, Pfefferminze, Melissenblättern, Zitronellengras, Jasminblüten, Rosenblüten- und Salbeiblättern kann hingegen eher sanfte und warme Gefühle entstehen lassen.</p><p>Zutaten wie Löwenzahnkraut, Kardamom, Fenchel, Gewürznelkenstiele und Hagebuttenschalen ergeben ein angenehm süßliches Aroma, das den Stress des Alltags vergessen lässt.</p><h2></h2><p>Man muss also nicht gleich eine ganze Ayurveda-Kur machen, um etwas für sein eigenes Wohlbefinden zu tun. Fangen Sie den Zauber und die Weisheit Indiens doch ganz einfach in einer exotischen Tasse ayurvedischen Kräutertees ein!</p><p> </p><p>   </p><p></p>",
+            "image": "shopify://shop_images/Design_ohne_Titel_17.png"
+          }
+        },
+        "e3d22acc-ff79-4a78-8e1c-cbfb34367e9b": {
+          "type": "text",
+          "settings": {
+            "title": "BIO",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://pages/bio-zertifizierung",
+            "body": "<h3>Bio-Tee in der Tee und Kräutergalerie</h3><p>Uns liegt nicht nur die Qualität unserer Produkte am Herzen, sondern auch ein ökologischer Anspruch, der sicherstellt, dass unsere Tees auf nachhaltige und umweltfreundliche Weise angebaut und verarbeitet werden. Aus diesem Grund finden Sie bei uns viele Teesorten, die <a href=\"/pages/bio-zertifizierung\" target=\"_blank\" title=\"Bio Zertifizierung\">Bio-zertifiziert</a>    sind.</p><p>Tauchen Sie ein in die Welt des Genusses und der Entspannung mit unseren sorgfältig ausgewählten <a href=\"/collections/biotee\" target=\"_blank\" title=\"Alle Biotees\">Biotees</a> und <a href=\"/collections/bio-krautertee\" target=\"_blank\" title=\"BIO Kräutertee\">Kräutern</a>. Entdecken Sie die Vielfalt an Aromen und Wirkungen und lassen Sie sich von unserer Tee-Expertise begeistern. Besuchen Sie unsere Tee und Kräutergalerie und lassen Sie sich von der Welt des Tees verzaubern.</p>"
+          }
+        },
+        "8078a98a-46ca-490e-8b0d-c91396e694ed": {
+          "type": "text",
+          "settings": {
+            "title": "Chai",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/chai-krautertee",
+            "body": "<h3>Chai - das indische Nationalgetränk</h3><p>Der <a href=\"/collections/chai-krautertee\" target=\"_blank\" title=\"Chai - Kräutertee\">Chai-Tee</a> kommt traditionell aus Indien und wird aus schwarzem Tee und Gewürzen wie Kardamom, Ingwer, Zimt, Nelken und Anis gewürzt. Perfekt abgerundet wird der Chai durch einen Schuss Milch und Honig oder Zucker. </p><p>Das beliebte Getränk ist längst in aller Welt bekannt und wird in vielen verschiedenen Varianten zubereitet. Ursprünglich stammt das Rezept aus der  ayurvedischen Gesundheitslehre, in der diese Gewürze ihren festen Platz haben. Denn dank der Gewürze wird die Wirkung des belebenden Schwarztees unterstützt, so wirkt sich ein frisch aufgebrühter Chai Tee positiv auf Körper und Seele aus. </p><p>Durch die wohltuende Wirkung von Tee und Gewürzen ist jede Tasse Chai-Tee ein kleiner persönlicher Wellnesstrip im Alltag.</p><p>Bei uns finden Sie neben leckeren, losen Chai-Tees von <a href=\"/collections/david-rio\" target=\"_blank\" title=\"David Rio\">David Rio</a> auf fertige Mischungen, die nur noch mit heißem Wasser aufgegossen werden müssen. </p>",
+            "image": "shopify://shop_images/Design_ohne_Titel_19.png"
+          }
+        },
+        "586f1b2b-fef6-4adf-b695-f5d5be107d04": {
+          "type": "text",
+          "settings": {
+            "title": "China",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/china-gruntee",
+            "body": "<h3>China Tee - ein Stück Kultur</h3><p>China - Ein Land mit jahrtausendealter Teekultur, welches uns eine schier unendliche Auswahl an Tees bietet. </p><p>Generation für Generation wurden die Erfahrungen und das Wissen über den Teeanbau und die Teezubereitung überliefert, und noch heute können wir davon profitieren.</p><p>In China blickt man auf eine ca. 5000 Jahre alte Teekultur zurück. Anfangs als Gewürz, später als Medizin und schließlich als Genussmittel mit vielen Vorzügen genossen, gewann der Tee mehr und mehr an Bedeutung.</p><p>Bis zu 75 % der weltweiten Grünteeproduktion kommt aus China. Die Tees werden meist von kleinen Teebauern angebaut, die je nach Region unterschiedliche Sorten und Anbautraditionen haben.  </p><p>Wer eher einen milden <a href=\"/collections/china-schwarztee\" target=\"_blank\" title=\"China - Schwarztee\">Schwarztee</a> sucht, der sollte einen Schwarztee aus China wählen. Diese Tees sind eher mild und ausgewogen. <br/>Einige haben eine feine Kakao-Note oder sind leicht rauchig. </p><p>Aus China führen wir hochwertigen <a href=\"/collections/china-gruntee\" target=\"_blank\" title=\"China - Grüntee\">Grün</a>- und Schwarztee sowie <a href=\"/collections/china-weisser-tee-1\" target=\"_blank\" title=\"China - Weißer Tee\">weißen Tee</a>.</p>",
+            "image": "shopify://shop_images/tea-set-break.jpg"
+          }
+        },
+        "6ac9fe6f-b6b9-4d20-a39c-16bd7de9a290": {
+          "type": "text",
+          "settings": {
+            "title": "Darjeeling",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/darjeeling-schwarztee",
+            "body": "<h3>Darjeeling - immer ein Genuss</h3><p>Der Darjeeling ist fein gerollter Schwarztee und kommt aus dem Norden Indiens. Die Hochlandplantagen  befinden sich auf 800 - 2000 m Höhe. Der Geschmack des Darjeeling ist besonders frisch, blumig und sehr aromatisch. </p>"
+          }
+        },
+        "90fb1653-815d-4180-b50e-6a41b774efe5": {
+          "type": "text",
+          "settings": {
+            "title": "First Flush & Second Flush",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/first-flush-second-flush",
+            "body": "<h3>Wissenswertes zum First und Second Flush</h3><p>Jede Jahreszeit bringt ihre eigenen Tees hervor:</p><p>Der <strong>First Flush</strong> wird von März bis April gepflückt und ist frisch und spritzig. Die allerersten Tees werden sehnsüchtig erwartet und per Flugzeug nach Deutschland geholt. Deshalb werden sie oft auch Flugtee genannt.</p><p>In der Zeit von April bis Mitte Mai wird der <strong>\"In Between\"</strong> produziert. Ein Tee, der noch ein wenig die Frische der ersten Pflückung besitzt und gleichzeitig Appetit auf den Second Flush macht.</p><p>Von ca. Mai bis Juni kann man dann die Blätter für den <strong>Second Flush</strong> pflücken — ein weicher, aromatischer Tee mit erlesenem Muskatelflavour. Die besten Qualitäten erzielen Höchstpreise auf dem internationalen Markt.</p><p>Spät in der Saison, kurz vor der Erntepause, werden noch einmal die <strong>Autumnals</strong> angeboten. Sie gehören nicht mehr unbedingt zu den hochklassigen Tees, haben jedoch noch einen ausgeprägten und würzigen Charakter.</p>"
+          }
+        },
+        "529ff00c-f292-4d36-b36e-8bf23f9b4b13": {
+          "type": "text",
+          "settings": {
+            "title": "Flugtee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/flugtee",
+            "body": "<h3>Flugtee hat etwas Besonderes</h3><p>Der Flugtee hat ein besonders volles Aroma. Er landet maximal drei Wochen nach der Ernte in Deutschland und enthält ausschließlich die Blätter der ersten Pflückung.</p><p>Flugtee, ein Begriff, der Teeliebhabern weltweit ein Lächeln auf die Lippen zaubert, bezeichnet eine spezielle Sorte von frisch geerntetem Tee, der nach der Ernte so schnell wie möglich zu den Verbrauchern transportiert wird. Dieser schnelle Transport, oft per Flugzeug – daher der Name „Flugtee“ –, soll sicherstellen, dass die Blätter ihre außergewöhnliche Frische und ihr einzigartiges Aroma behalten. Traditionell bezieht sich der Begriff auf den ersten Pflückungen des Jahres, insbesondere bei Darjeeling- und Assam-Tees aus Indien, die für ihre hochwertige Qualität und ihren exquisiten Geschmack bekannt sind.</p><p>Die Ernte von Flugtee beginnt in der Regel im frühen Frühjahr, wenn die ersten Teeblätter und Knospen an den Teesträuchern zu sprießen beginnen. Diese erste Ernte wird oft als \"First Flush\" bezeichnet und ist für ihre leichte, aromatische und blumige Note bekannt, die von Kennern besonders geschätzt wird. Um die Frische und das Aroma dieser ersten Pflückung zu bewahren, wird der Tee nach der Ernte schnell getrocknet, verpackt und dann per Luftfracht in verschiedene Teile der Welt verschickt. Diese schnelle Bearbeitung und Lieferung unterscheidet Flugtee von anderen Teesorten, die möglicherweise wochen- oder monatelang auf dem Seeweg transportiert werden, bevor sie die Verbraucher erreichen.</p><p>Der Genuss von Flugtee ist für viele ein jährliches Ritual, das den Beginn der neuen Teesaison markiert. Sein einzigartiges Aroma und Geschmacksprofil, das durch die schnelle Lieferung von der Plantage zum Teetisch erhalten bleibt, bietet eine exklusive Erfahrung, die über den bloßen Teekonsum hinausgeht. Es ist eine Feier der Sorgfalt und Hingabe, die Teeproduzenten in die Pflege ihrer Plantagen und die Ernte der feinsten Teeblätter investieren. Flugtee ist nicht nur ein Getränk, sondern ein Ausdruck von Tradition, Handwerk und der Freude am Teegenuss.</p>"
+          }
+        },
+        "e74a7243-4d27-49f8-8feb-3ab3aa43e32e": {
+          "type": "text",
+          "settings": {
+            "title": "Früchtetee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/fruchtetee-1",
+            "body": "<h3>Wer mag ihn nicht, den Früchtetee!?</h3><p><a href=\"/collections/fruchtetee-1\" target=\"_blank\" title=\"Alle Früchtetees\">Früchtetee</a> wird schon seit Jahrtausenden getrunken. Im Sommer und Herbst werden die frischen Früchte getrocknet, welche das ganze Jahr mit heißem Wasser aufgegossen werden können. Heutzutage gibt es wunderbare Mischungen mit Früchten aus aller Welt. </p><p><a href=\"/collections/milder-fruchtetee-1\" target=\"_blank\" title=\"Milder Früchtetee\"><strong>Milder Früchtetee</strong></a><br/>Oft werden Früchtetees mit Säure in Verbindung gebracht, doch viele vertragen die im Tee enthaltene Fruchtsäure nicht. Hier gibt es großartige, milde und besonderes magenfreundliche Alternativen auf Basis von Apfel, Rote Beete oder Karotte. <br/>So muss nicht auf Früchtetee verzichtet werden. </p><p><strong>Schon gewusst?</strong><br/>Früchtetee gehört, anders als der Grün- und Schwarztee nicht zu den klassischen „echten“ Teesorten, da die Basis aus Fruchtstücken besteht und nicht aus der „echten“ Teepflanze, der Camellia sinensis. <br/><br/>Doch die leckeren Fruchtkreationen sind aus unserem täglichen Leben nicht mehr wegzudenken. Egal ob kalt oder warm, sie sind eine tolle Alternative zu Fertiggetränken.</p>"
+          }
+        },
+        "2d864030-9606-4c84-bab3-0d575e1e0fba": {
+          "type": "text",
+          "settings": {
+            "title": "Gelber Tee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<h3>Gelber Tee hat eine Geschichte</h3><p>Gelber Tee hat eine ähnlich lange Geschichte wie Oolong Tee. </p><p>Der gelbe Tee ist eng mit dem Grüntee verwandt. Er wird nur schwach fermentiert. Die Fermentation wird durch das Rösten gestoppt und der Tee danach nochmals feucht erhitzt. So verfärben sich die Knospen gelb und der Tee erhält seinen süßlich-milden Geschmack. </p><p>Gelber Tee war aufgrund seiner belebenden Wirkung und vielen wohltuenden Eigenschaften lange Zeit ausschließlich den buddhistischen Mönchen vorbehalten.</p><p>Seine Sortenvielfalt ist sehr begrenzt, die verfügbaren Mengen gering. Berühmt ist sein Aroma, welches Spuren von Schokolade und Kaffee enthält.</p><p>Fotos aus der laufenden Produktion zu machen, ist bis heute nicht möglich. Die Geheimnisse der Herstellung sollen bewahrt werden.</p>",
+            "image": "shopify://shop_images/tea-set-on-grey.jpg"
+          }
+        },
+        "23b779cf-8832-4b03-af4f-14855e513004": {
+          "type": "text",
+          "settings": {
+            "title": "Grüntee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/gruner-tee",
+            "body": "<h3>Grüntee schmeckt oft blumig</h3><p><a href=\"/collections/gruner-tee\" target=\"_blank\" title=\"Alle Grüntees\">Grüntee</a> stammt ebenso wie <a href=\"/collections/schwarz-tee\" target=\"_blank\" title=\"Alle Schwarztee\">Schwarztee</a> von dem Teestrauch Camellia sinensis ab. Er wird hauptsächlich in <a href=\"/collections/china-gruntee\" target=\"_blank\" title=\"China - Grüntee\">China</a> und Japan angebaut und ist bekannt für seinen besonders leichten und blumigen Geschmack. Der Unterschied zum Schwarztee ist, dass Grüntee nicht fermentiert wird. Denn der Fermentationsprozess wird durch Erhitzen unterbunden. So behält der Tee seinen feinen Geschmack und die grüne Farbe. <br/>Der Fermentationsprozess kann durch das Dämpfen oder Rösten der frischen Teeblätter gestoppt werden. Im nächsten Schritt werden die Teeblätter durch z. B. rollen weiterverarbeitet.  <br/>Neben klassischen Tees führen wir auch viele aromatisierte  Grüntees und Grünteemischungen.</p><p><strong>Schon gewusst?</strong><br/>Zum Grüntee und seinem Anbau gibt es viele Märchen, Mhyten und Sagen. Das romantische Märchen, rund um den Mao-Feng-Tee, erzählt beispielsweise eine dramatische Liebesgeschichte, in der ein Mädchen aus einer Teeplantage um ihren Geliebten trauert. Noch heute gilt diese Geschichte als der Grund, weshalb es in der Anbauregion des Mao-Feng-Tees das ganze Jahr feucht und wolkig ist. Denn die Tränen des Mädchens sind laut des Märchens nie versiegt.<br/></p>"
+          }
+        },
+        "c94741d1-3c6c-4c53-84cb-4c595ba4553a": {
+          "type": "text",
+          "settings": {
+            "title": "Honeybush",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/honeybushtee-1",
+            "body": "<h3>Rooibostee und Honeybushtee - immer wieder ein Genuss!</h3><p>Rooibostee und Honeybush-Tee zählen zu den Schätzen der südafrikanischen Teevielfalt und haben in den letzten Jahren weltweit an Beliebtheit gewonnen. Beide Teesorten werden in den Bergregionen Südafrikas angebaut und zeichnen sich durch ihre einzigartigen Aromen sowie zahlreiche gesundheitliche Vorteile aus.</p><p>Rooibostee, auch Rotbuschtee genannt, wird aus den Blättern des Rooibos-Strauchs (Aspalathus linearis) gewonnen. Dieser Tee ist für seine tiefe, natürliche rote Farbe bekannt und wird oft als Kaffeealternative geschätzt, da er kein Koffein enthält. Rooibostee bietet ein sanftes, leicht süßliches Geschmacksprofil, das oft mit Noten von Honig und Vanille verglichen wird. Abgesehen von seinem angenehmen Geschmack wird Rooibostee auch für seine antioxidativen Eigenschaften geschätzt, die das Immunsystem stärken und zur Gesunderhaltung der Haut beitragen können.</p><p>Honeybush-Tee, gewonnen aus den Blüten des Honeybush-Strauchs (Cyclopia), ist weniger bekannt als Rooibostee, aber nicht weniger bemerkenswert. Dieser Tee ist leicht süßer im Geschmack und erinnert, wie der Name schon sagt, an Honig. Honeybush-Tee enthält ebenfalls keine stimulierenden Substanzen wie Koffein und ist reich an Antioxidantien, die eine gesunde Zellfunktion unterstützen und entzündungshemmende Eigenschaften haben können. Zudem wird ihm eine beruhigende Wirkung auf das Verdauungssystem nachgesagt.</p><p>Sowohl Rooibostee als auch Honeybush-Tee sind köstliche, gesunde Getränkeoptionen, die sich hervorragend für eine entspannte Teestunde eignen. Ob pur genossen oder als Basis für kreative Teemischungen – diese südafrikanischen Tees bieten ein einzigartiges Geschmackserlebnis und laden dazu ein, die reiche Teekultur Südafrikas zu entdecken.</p>"
+          }
+        },
+        "0e353bc6-0092-4935-832f-1977955cf6a7": {
+          "type": "text",
+          "settings": {
+            "title": "Japan",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/japan-gruntee",
+            "body": "<h3>Japanische Grüntees für Kenner</h3><p>Japanische <a href=\"/collections/japan-gruntee\" target=\"_blank\" title=\"Japan - Grüntee\">Grüntees</a> sind besonders für fortgeschrittene Teekenner zu empfehlen. Sie haben einen besonders intensiven „Umami Geschmack“ und sind eher grasig. Die Japaner legen viel Wert auf feinste Teequalität und perfekte Verarbeitung. Daher sind japanische Tees im höheren Preissegment angesiedelt. </p><p>Japanische Grüntees repräsentieren eine facettenreiche Welt des Genusses und der Tradition, die seit Jahrhunderten tief in der japanischen Kultur verwurzelt ist. Sie unterscheiden sich von anderen Grüntees durch ihre speziellen Anbauverfahren, Verarbeitungsmethoden und einzigartigen Geschmacksprofile, die sie weltweit beliebt machen.</p><p>Zu den bekanntesten Sorten japanischer Grüntees gehört der Sencha, der für seinen frischen, leicht grasigen Geschmack geschätzt wird. Sencha macht den größten Teil der in Japan produzierten Tees aus und wird nach dem Dämpfen der Teeblätter gerollt und getrocknet, was ihm ein charakteristisches Erscheinungsbild verleiht. Ein weiterer bemerkenswerter Tee ist Matcha, ein fein gemahlener Pulvertee, der in der traditionellen japanischen Teezeremonie eine zentrale Rolle spielt. Matcha zeichnet sich durch seine intensive grüne Farbe und seinen reichen, etwas süßlichen Geschmack aus, der durch die Beschattung der Teebüsche vor der Ernte intensiviert wird.</p><p>Neben Sencha und Matcha gibt es noch eine Reihe anderer Sorten wie Gyokuro, der als einer der hochwertigsten Tees gilt und für seinen süßen, umami-reichen Geschmack bekannt ist. Dieser Geschmack wird durch eine spezielle Anbautechnik erreicht, bei der die Teebüsche vor der Ernte beschattet werden, um die Produktion von Chlorophyll und anderen Aminosäuren zu fördern. Der Genmaicha, eine Mischung aus Grüntee und geröstetem Reis, bietet ein ganz anderes Geschmackserlebnis mit seinem nussigen Unterton. Diese Vielfalt macht japanische Grüntees zu einer faszinierenden Entdeckungsreise für Teeliebhaber und solche, die es werden möchten, indem sie eine breite Palette an Geschmacksrichtungen und Aromen bietet, die von erfrischend und belebend bis hin zu beruhigend und meditativ reichen.</p>"
+          }
+        },
+        "566a66f9-006a-47c2-9f5a-09b336f3ba99": {
+          "type": "text",
+          "settings": {
+            "title": "Kenia",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<h3>Grüntee aus Kenia - frisch und grasig</h3><p>Der Grüntee aus Kenia hat keinen Hochlandcharakter. Er ist eine gute Alternative zum China Grüntee und überzeugt durch seinen fruchtigen, beerigen und leicht würzigen Geschmack.</p><p>In den letzten Jahren hat sich Kenia als ein bedeutender Akteur in der globalen Teeproduktion etabliert, wobei der Fokus traditionell auf Schwarztee liegt. Doch in jüngerer Zeit erlangt Grüntee aus Kenia zunehmend Anerkennung für seine ausgezeichnete Qualität und sein einzigartiges Aroma. Diese Entwicklung ist nicht nur für Tee-Liebhaber von Interesse, sondern auch für Kenner, die auf der Suche nach neuen Geschmackserlebnissen sind.</p><p>Grüntee aus Kenia zeichnet sich durch seine frischen, teilweise grasigen Aromen aus, die mit einer angenehmen Süße und manchmal sogar mit fruchtigen Noten kombiniert sind. Diese Besonderheiten verdankt der kenianische Grüntee den einzigartigen klimatischen Bedingungen und dem fruchtbaren Boden des Landes. Die Teeplantagen in Kenia befinden sich größtenteils in hochgelegenen Gebieten, wo die Teesträucher langsamer wachsen und so mehr Geschmacksstoffe entwickeln können. Dies führt zu einem reicheren und intensiveren Geschmack des Tees.</p><p>Darüber hinaus setzen kenianische Teeproduzenten zunehmend auf nachhaltige Anbaumethoden und Fair-Trade-Praktiken. Dies nicht nur, um die Qualität ihres Tees zu verbessern, sondern auch, um einen positiven Beitrag zum Umweltschutz und zur sozialen Gerechtigkeit zu leisten. Konsumenten, die Wert auf Nachhaltigkeit legen, können somit kenianischen Grüntee genießen und gleichzeitig ein gutes Gewissen haben. Ob als erfrischendes Getränk am Morgen oder als beruhigender Abschluss des Tages – kenianischer Grüntee bietet eine exquisite Geschmacksvielfalt, die jeden Teeliebhaber begeistern dürfte.</p>"
+          }
+        },
+        "07d093a9-9b57-4c8e-951f-60be34b347dd": {
+          "type": "text",
+          "settings": {
+            "title": "Kräutertee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/krautertee-1",
+            "body": "<h3>Kräutertees sind sehr beliebt</h3><p>Kräutertees sind aromatische Aufgussgetränke, die aus frischen oder getrockneten Pflanzenteilen hergestellt und mit heißem Wasser aufgegossen werden. Jede Pflanze, die zu Kräutertee verarbeitet wird, hat verschiedene Inhaltsstoffe. Dazu gehören ätherische Öle, die den Geschmack und Geruch der jeweiligen Pflanze bestimmen, sowie Vitamine, Mineralstoffe, Spurenelemente und Polyphenole. <br/><br/>Neben klassischen Kräutern wie Kamille, Pfefferminze, Salbei und Brennnessel zählen auch Rooibos, Honeybush & Mate zu den Kräutertees. Viele davon werden schon jahrhundertelang  in der Heilmedizin verwendet.</p><p><strong>Schon gewusst?</strong><br/>Kräutertee hat nichts mit echtem Tee zu tun. Echter Tee besteht aus Blättern der Camellia sinensis Teepflanze. Kräutertee hingegen wird aus getrockneten Kräutern, Blüten und Blättern hergestellt und gehört somit nicht zum echten Tee. <br/>Kräutertees sollten kühl und vor allem trocken gelagert werden. Wir empfehlen den Tee nach dem Öffnen direkt in eine Teedose umzufüllen. </p>"
+          }
+        },
+        "42a2124f-a025-4ef6-ab0d-e3a1badecea2": {
+          "type": "text",
+          "settings": {
+            "title": "Matcha",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/matcha",
+            "body": "<h3>Matcha - vielseitig und lecker</h3><p>Matcha Tee, ein grünes Pulver, das aus fein gemahlenen, schattengewachsenen Teeblättern besteht, hat in den letzten Jahren weltweit an Popularität gewonnen. Seine Ursprünge lassen sich jedoch weit zurück in die japanische Kultur verfolgen, wo er seit Jahrhunderten nicht nur als Getränk, sondern auch als zentrales Element in der traditionellen Teezeremonie geschätzt wird. Der besondere Anbau- und Verarbeitungsprozess von Matcha unterscheidet ihn maßgeblich von anderen Teesorten. Die Teeblätter werden einige Wochen vor der Ernte beschattet, um die Chlorophyllproduktion zu steigern, was dem Matcha seine charakteristische leuchtend grüne Farbe verleiht. Anschließend werden die Blätter gedämpft, getrocknet und zu einem feinen Pulver vermahlen.</p><p>Matcha ist nicht nur für seine einzigartige Zubereitungsweise bekannt, sondern auch für seine gesundheitlichen Vorteile. Dieses grüne Pulver ist reich an Antioxidantien, insbesondere an Catechinen, die eine schützende Wirkung auf die Zellen haben und somit zur Vorbeugung von verschiedenen Krankheiten beitragen können. Darüber hinaus enthält Matcha L-Theanin, eine Aminosäure, die für ihre beruhigende Wirkung auf das Gehirn bekannt ist und in Verbindung mit dem enthaltenen Koffein zu einem \"wachen Entspannungszustand\" führen kann. Diese einzigartige Kombination macht Matcha zu einem beliebten Getränk für Menschen, die nach geistiger Klarheit und gesteigerter Konzentration suchen.</p><p>Die Zubereitung von Matcha unterscheidet sich ebenfalls von der anderer Teesorten. Traditionell wird das grüne Pulver in eine Schale (Chawan) gesiebt und dann mit heißem, nicht kochendem Wasser (um 80°C) aufgegossen. Mit einem Bambusbesen (Chasen) wird das Ganze zu einem schaumigen Getränk aufgeschlagen. Diese Methode betont die cremige Textur und den reichen Geschmack des Matcha. Heutzutage findet Matcha nicht nur in Teetassen seinen Platz, sondern wird auch in verschiedenen Rezepten wie Smoothies, Eiscreme und sogar in Backwaren verwendet, was seine Vielseitigkeit und anhaltende Beliebtheit unterstreicht.</p>"
+          }
+        },
+        "d91b6330-8db3-42f0-a68c-2d78af8827cb": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Mate",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Write a complete answer to the most frequent questions that your customers might have, such as important product information, shipping policies, payment issues or returns.</p>"
+          }
+        },
+        "6b3afb27-bc74-4267-a917-14415e022c4c": {
+          "type": "text",
+          "settings": {
+            "title": "Nepal",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/nepal-gruntee",
+            "body": "<h3>Schwarztee aus Nepal ist sehr aromatisch</h3><p>Schwarztee aus Nepal ist ein faszinierendes Produkt, das in den letzten Jahren auf der Weltbühne immer mehr Beachtung findet. Gelegen in den majestätischen Höhen des Himalayas, bietet Nepal einzigartige klimatische Bedingungen, die ideale Voraussetzungen für den Anbau von hochwertigem Tee schaffen. Die Teegärten erstrecken sich über sanfte Hügel und steile Berghänge, oft umgeben von atemberaubenden Landschaften, die nicht nur eine Augenweide sind, sondern auch einen unvergleichlichen Geschmack in jede Tasse bringen.</p><p>Nepalesischer Schwarztee ist bekannt für sein reichhaltiges Aroma und seine Vielfalt an Geschmacksprofilen. Von malzig-süß bis hin zu würzig und sogar leicht rauchig – die Palette an Aromen ist beeindruckend und spiegelt die Vielfalt der Regionen Nepals wider, in denen der Tee angebaut wird. Die sorgfältige Handarbeit bei der Ernte und Verarbeitung des Tees spielt eine entscheidende Rolle bei der Qualitätserhaltung und sorgt dafür, dass jeder Schluck eine Geschichte erzählt. Traditionelle Methoden der Fermentation und Trocknung werden oft angewendet, um den charakteristischen Geschmack zu erzielen, den Teeliebhaber so sehr schätzen.</p><p>Der Anbau von Schwarztee in Nepal trägt nicht nur zur globalen Teevielfalt bei, sondern unterstützt auch die lokale Wirtschaft und die Gemeinschaften innerhalb der Teeplantagen. Viele der Teegärten sind in Familienbesitz und betreiben einen nachhaltigen Landbau, der nicht nur die Qualität des Tees verbessert, sondern auch die natürliche Umgebung schützt. Darüber hinaus leisten Teegärten in Nepal einen wichtigen Beitrag zur Bewahrung der kulturellen Identität und fördern den ökologischen Tourismus. So wird der Genuss von Schwarztee aus Nepal nicht nur zu einer geschmacklichen, sondern auch zu einer ethisch wertvollen Entscheidung.</p><p><a href=\"/collections/nepal-schwarztee\" target=\"_blank\" title=\"Nepal - Schwarztee\">Schwarztee</a> aus Nepal zeichnet sich also durch sein eher wildes Blatt aus. </p><p>Er schmeckt blumig und ist sehr gehaltvoll. Geschmacklich ist der Nepal Schwarztee eine schöne Alternative zum <a href=\"/collections/darjeeling-schwarztee\" target=\"_blank\" title=\"Darjeeling - Schwarztee\">Darjeeling</a>, da er etwas intensiver schmeckt. </p>"
+          }
+        },
+        "309bc957-b113-412e-82e7-e364639ee793": {
+          "type": "text",
+          "settings": {
+            "title": "Oolong",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/oolongtee",
+            "body": "<h3>Oolong für Genießer</h3><p><a href=\"/collections/oolongtee\" target=\"_blank\" title=\"Alle Oolongtees\">Oolong</a> steht für halbfermentierte Tees, sie sind im Geschmack feiner und zarter als Schwarze Tees und haben nicht die herbe Note des grünen Tees, sondern eine leichte Süße. Die Herstellung von Oolong Tee ist sehr zeitaufwendig und bedarf langjähriger Erfahrung. <br/><br/>Genauigkeit ist gefragt, um den Fermentationsprozess im richtigen Augenblick zu unterbrechen und mit dem Dämpfen oder Rösten der Teeblätter zu beginnen. So entstehen mal mehr oder weniger fermentierte Oolongs. <br/><br/>Der Oolong Tee kommt hauptsächlich aus China, Taiwan und Thailand. </p>"
+          }
+        },
+        "1f6c7c97-e281-4f87-9005-ef9dde75aa2e": {
+          "type": "text",
+          "settings": {
+            "title": "Rooibos",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/rooibos-honeybush",
+            "body": "<h3>Rooibostee enthält kein Koffein</h3><p>Rooibos Tee, auch bekannt als Rotbuschtee, ist ein Getränk, das weit mehr als nur eine Alternative zu traditionellem Tee darstellt. Gewonnen wird er aus den Nadeln des Rooibos-Strauchs, der ausschließlich in den Zederbergen Südafrikas gedeiht. Diese Region, bekannt für ihre reiche Biodiversität, bietet die einzigartigen klimatischen Bedingungen, die für das Wachstum des Rooibos notwendig sind. Im Gegensatz zu schwarzem oder grünem Tee enthält Rooibos kein Koffein und zeichnet sich durch einen hohen Gehalt an Antioxidantien aus, was ihn zu einer beliebten Wahl für gesundheitsbewusste Teetrinker macht.</p><p>Der Geschmack von Rooibos Tee ist mild und leicht süßlich, mit einer erdigen Note, die ihn unverwechselbar macht. Viele schätzen ihn auch für seine Vielseitigkeit; er kann sowohl heiß als auch kalt genossen werden und eignet sich hervorragend für die Zubereitung von Eistee oder als Basis für verschiedene Tee-Mischungen. Darüber hinaus wird Rooibos in der kulinarischen Welt geschätzt, wo er zur Aromatisierung von Gerichten und Desserts verwendet wird.</p><p>Die gesundheitlichen Vorteile von Rooibos Tee sind umfangreich. Er wird nicht nur für seine beruhigende Wirkung und als Hilfsmittel für einen besseren Schlaf geschätzt, sondern auch für seine positiven Effekte auf das Herz-Kreislauf-System. Studien deuten darauf hin, dass der regelmäßige Konsum von Rooibos Tee den Blutdruck senken und das Risiko für Herzkrankheiten reduzieren kann. Des Weiteren wird ihm eine antientzündliche Wirkung zugeschrieben, die bei der Linderung von Hautproblemen helfen kann. Zusammengefasst ist Rooibos Tee ein wunderbares Getränk, das nicht nur durch seinen einzigartigen Geschmack, sondern auch durch seine vielfältigen gesundheitlichen Vorteile besticht.</p><p>Er ist ein Tee, der von Natur aus koffeinfrei ist, beruhigend wirkt und einen süßlich, nussigen Geschmack hat. Übersetzt heißt \"Rooibos\" roter Busch. Der <a href=\"/collections/rooibos\" target=\"_blank\" title=\"Rooibos\">Rooibos</a>-Tee wird in den Zedernbergen im Herzen Südafrikas angebaut und geerntet. Er bekommt durch die Fermentation seinen typisch roten Farbton. </p>"
+          }
+        },
+        "d14a6eee-2b63-4c2b-81e0-7061a4862fa4": {
+          "type": "text",
+          "settings": {
+            "title": "Schwarztee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/schwarz-tee",
+            "body": "<h3>Schwarztee mit oder ohne Milch gefällig?</h3><p>Bei Schwarztee handelt es sich um echten Tee aus der Pflanze Camellia sinensis. Er wird hauptsächlich in Indien, Sri Lanka, China und Afrika angebaut und ist bekannt für seinen besonders aromatischen und kräftigen Geschmack. Neben klassischen Tees führen wir auch viele natürlich-aromatisierte Schwarztees.</p><p><strong>Schon gewusst?</strong><br/>In Süddeutschland gehört der <a href=\"/collections/darjeeling-schwarztee\" target=\"_blank\" title=\"Darjeeling - Schwarztee\">Darjeeling</a> zu den beliebtesten Schwarzteesorten. Er gilt als der „Champagner“ unter den Tees. Im Süden ist das Wasser kalkhaltiger und dadurch „härter“, so kommt der leichte Darjeeling besonders gut zur Geltung. <br/><br/>In Norddeutschland sind hingegen kräftige Sorten wie der <a href=\"/collections/assam-schwarztee\" target=\"_blank\" title=\"Assam - Schwarztee\">Assam</a> beliebt. Hier ist die Wasserqualität „weicher“ und so schmecken die kräftigen Sorten besonders gut. </p><p><strong>Genuss</strong><br/>Schwarztee wird in der Regel pur getrunken. Eisgekühlt ist er eine großartige Grundlage für erfrischende Eistees. <br/>Schwarztees wie der Assam oder klassische Mischungen wie beispielsweise der Earl Grey können auch mit Milch, Sahne und <a href=\"/collections/kandis-co\" target=\"_blank\" title=\"Kandis & Co.\">Kandis</a> verfeinert werden.  </p><p></p>"
+          }
+        },
+        "fe570bac-e9e0-463f-80c8-23307dc462a8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Tulsi",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Write a complete answer to the most frequent questions that your customers might have, such as important product information, shipping policies, payment issues or returns.</p>"
+          }
+        },
+        "aedfa377-58cf-4e87-ad2e-8006b709bb9a": {
+          "type": "text",
+          "settings": {
+            "title": "Weißer Tee",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/weisser-tee",
+            "body": "<h3>Weißer Tee kommt meist aus China</h3><p>Das Geheimnis des Weißen Tees liegt in der jahrhundertealten Tradition der Auswahl der Blätter bis hin zu deren Verarbeitung. Der Weiße Tee wird aus den Blättern der Camellia sinensis gewonnen und hauptsächlich in Fuding, in China geerntet. Er gilt als der edelste Tee der Welt und wird sehr früh morgens von Hand geerntet, wenn die Knospen noch in die Blätter eingewickelt sind. So behalten die Knospen ihren silbrigen, seidenartigen Flaum, der sie umgibt und dem der Weiße Tee seinen Namen verdankt. </p><p>Um diese Besonderheit zu erhalten, wird er kaum verarbeitet, sondern natürlich bei schwachem Tageslicht luftgetrocknet. Für ein Kilo Tee sind rund 30.000 Knospen notwendig. Durch die besonders schonende Verarbeitung erhält der Tee seine exklusive Note. <br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18036535853321__e4a67d09-f3b9-44d0-9543-b00b9732b38d-text-1",
+        "template--18036535853321__e4a67d09-f3b9-44d0-9543-b00b9732b38d-text-2",
+        "template--18036535853321__e4a67d09-f3b9-44d0-9543-b00b9732b38d-text-3",
+        "e3d22acc-ff79-4a78-8e1c-cbfb34367e9b",
+        "8078a98a-46ca-490e-8b0d-c91396e694ed",
+        "586f1b2b-fef6-4adf-b695-f5d5be107d04",
+        "6ac9fe6f-b6b9-4d20-a39c-16bd7de9a290",
+        "90fb1653-815d-4180-b50e-6a41b774efe5",
+        "529ff00c-f292-4d36-b36e-8bf23f9b4b13",
+        "e74a7243-4d27-49f8-8feb-3ab3aa43e32e",
+        "2d864030-9606-4c84-bab3-0d575e1e0fba",
+        "23b779cf-8832-4b03-af4f-14855e513004",
+        "c94741d1-3c6c-4c53-84cb-4c595ba4553a",
+        "0e353bc6-0092-4935-832f-1977955cf6a7",
+        "566a66f9-006a-47c2-9f5a-09b336f3ba99",
+        "07d093a9-9b57-4c8e-951f-60be34b347dd",
+        "42a2124f-a025-4ef6-ab0d-e3a1badecea2",
+        "d91b6330-8db3-42f0-a68c-2d78af8827cb",
+        "6b3afb27-bc74-4267-a917-14415e022c4c",
+        "309bc957-b113-412e-82e7-e364639ee793",
+        "1f6c7c97-e281-4f87-9005-ef9dde75aa2e",
+        "d14a6eee-2b63-4c2b-81e0-7061a4862fa4",
+        "fe570bac-e9e0-463f-80c8-23307dc462a8",
+        "aedfa377-58cf-4e87-ad2e-8006b709bb9a"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--two-rows",
+        "cta_label": "",
+        "cta_url": "",
+        "form_enable": false,
+        "form_title": "Contact form",
+        "style": "outline",
+        "open_first": false,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_yU4ckn",
+    "main",
+    "e4a67d09-f3b9-44d0-9543-b00b9732b38d"
+  ]
+}

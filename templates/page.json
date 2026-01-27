@@ -1,0 +1,160 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_Vm6fMm": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/Header_Kontakt_Tee_unud_Kraeutergalerie.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "4ac194aa-b289-489e-a0f8-0541a3c72216": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18027765891337__4ac194aa-b289-489e-a0f8-0541a3c72216-168975326304334a8e-0": {
+          "type": "title",
+          "settings": {
+            "title": "Sie haben Fragen oder benötigen Hilfe bei Ihrer Online-Bestellung?",
+            "title_size": "heading-size--regular",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--18027765891337__4ac194aa-b289-489e-a0f8-0541a3c72216-168975326304334a8e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir helfen Ihnen gerne weiter: </p><p>E-Mail: shop@tee-undkraeutergalerie.de</p><p>Telefon: 07141 / 918270 <br/>(Mo. - Sa. von 10:00 Uhr bis 20:00 Uhr)</p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027765891337__4ac194aa-b289-489e-a0f8-0541a3c72216-168975326304334a8e-0",
+        "template--18027765891337__4ac194aa-b289-489e-a0f8-0541a3c72216-168975326304334a8e-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": false,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-left",
+        "spacing": 20,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": true,
+        "gutter_decrease": true,
+        "remove_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "rich_text_4pDXNd": {
+      "type": "rich-text",
+      "blocks": {
+        "title_DjQUJP": {
+          "type": "title",
+          "settings": {
+            "title": "Kontakt & Anfahrt",
+            "title_size": "heading-size--regular",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_zF7mUA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Sie finden unsere Tee & Kräutergalerie im Breuningerland Ludwigsburg.</strong></p><p>Erdgeschoss 1 / neben Blume 2000</p><p>Heinkelstraße 1<br/>71634 Ludwigsburg</p><p>Telefon: 07141 / 918270</p><p>E-Mail: shop@tee-undkraeutergalerie.de</p><p><strong>ÖFFNUNGSZEITEN</strong></p><p>Montag bis Samstag:<br/>10:00 Uhr bis 20:00 Uhr</p><h3></h3><p> </p><p><strong>Mit dem Auto:<br/></strong>Aus Richtung <strong>Stuttgart / Heilbronn </strong>kommend verlassen Sie die A81 an der Ausfahrt Ludwigsburg Nord.</p><p><br/>Folgen Sie den Hinweisen zum Einkaufszentrum.<br/>Aus Richtung <strong>Ludwigsburg </strong>folgen Sie der B27 in Richtung Autobahn.<br/>Folgen Sie nach der Autobahnbrücke den Hinweisen zum Einkaufszentrum.</p><p><strong>Mit dem Bus:<br/></strong>Diese Buslinien bringen Sie zum Breuningerland:</p><p>• Linie 424<br/>• Linie 536<br/>• Linie 551</p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_DjQUJP",
+        "text_zF7mUA"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "top no-image",
+        "height": "regular",
+        "image_crop": false,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-left",
+        "spacing": 20,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": true,
+        "gutter_decrease": true,
+        "remove_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "92579784-abf3-443d-906e-10531e9688b9": {
+      "type": "contact-form",
+      "blocks": {
+        "template--18027765891337__92579784-abf3-443d-906e-10531e9688b9-1689752886cc9356ae-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Mailing Address",
+            "content": "<p>Write some useful information about your business, contact information or links to various FAQ pages.</p>",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--18027765891337__92579784-abf3-443d-906e-10531e9688b9-1689752886cc9356ae-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Have a question?",
+            "content": "<p>Link to some useful pages that your customers might want to know about.</p><p><a href=\"#\">Returns & ExchangesGeneral QuestionsReturns & ExchangesShipping Policies</a>.</p>",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027765891337__92579784-abf3-443d-906e-10531e9688b9-1689752886cc9356ae-0",
+        "template--18027765891337__92579784-abf3-443d-906e-10531e9688b9-1689752886cc9356ae-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Schreiben Sie uns eine Nachricht",
+        "heading_size": "heading-size--small",
+        "show_phone": false,
+        "show_subject": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false,
+        "page_cover_metafield": "",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    }
+  },
+  "order": [
+    "image_Vm6fMm",
+    "4ac194aa-b289-489e-a0f8-0541a3c72216",
+    "rich_text_4pDXNd",
+    "92579784-abf3-443d-906e-10531e9688b9",
+    "main"
+  ]
+}

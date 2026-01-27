@@ -1,0 +1,1317 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "4d7cd95a-473c-457b-982a-b443bad987f7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_QGhHyQ": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_26.png",
+            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_26.png",
+            "caption": "Liebevoll zusammengestellt",
+            "title": "Unsere Weihnachtsgeschenke",
+            "link": "shopify://collections/geschenke-1",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_9qAhAE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_2.png",
+            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_2.png",
+            "caption": "Lassen Sie Ihren Tee erblühen!",
+            "title": "Erblühtee - Teeblumen",
+            "link": "https://www.tee-undkraeutergalerie.de/search?q=erbl%C3%BChtee",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_f77f6z": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_33.png",
+            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_33.png",
+            "caption": "",
+            "title": "Unsere neuen Flugtees",
+            "link": "shopify://collections/flugtee",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "#757575",
+            "color_text_main": "#f1eeec",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_qLJnJn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Header_Slider_Homepage_2048_x_500_px_2048_x_350_px_1_bf63fa61-1042-493f-8df1-928341a9cfc1.jpg",
+            "caption": "Direkt von der Messe",
+            "title": "Teeneuheiten",
+            "link": "shopify://collections/messe-neuheiten-februar-2025",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "#000000",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bio-Tees.jpg",
+            "mobile_image": "shopify://shop_images/Unbenannt-1_e236862e-28dc-40c6-bbb6-835517c0a22b.jpg",
+            "caption": "",
+            "title": "Große Auswahl an Bio-Tees",
+            "link": "shopify://collections/biotee",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "#f1eeec",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_4213275e-e9b6-4daa-b321-fa3ffa7355a9.png",
+            "mobile_image": "shopify://shop_images/Unbenannt-1_9059776c-b865-4c61-81c9-71ac52ae2196.jpg",
+            "caption": "",
+            "title": "Das passende Teezubehör",
+            "link": "shopify://collections/teegeschirr",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "#f2efec",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "image_QGhHyQ",
+        "image_9qAhAE",
+        "image_f77f6z",
+        "image_qLJnJn",
+        "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-1",
+        "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-2"
+      ],
+      "settings": {
+        "desktop_height": "40vh",
+        "mobile_height": "40vh",
+        "is_fullwidth": true,
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "caption_size": "text-size--large",
+        "title_size": "heading-size--regular",
+        "spacing": 18,
+        "width": "100%",
+        "button_style": "solid",
+        "remove_margin": false
+      }
+    },
+    "slideshow_UjAynh": {
+      "type": "slideshow",
+      "blocks": {
+        "image_p9VAmd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_33.png",
+            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_33.png",
+            "caption": "Nur für kurze Zeit",
+            "title": "",
+            "link": "shopify://products/floragold-adventskalender-booklet-2025-kraeutertee-pyramidenbeutel",
+            "button_label": "Hier entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_Cj6QEA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Rot_Beige_Ordentlich_Standard_Zu_Verkaufen_Immobilien_Banner_13d15dc7-b977-43f0-9ab2-0773a755a4f4.png",
+            "mobile_image": "shopify://shop_images/Rot_Beige_Ordentlich_Standard_Zu_Verkaufen_Immobilien_Banner_1.png",
+            "caption": "",
+            "title": "",
+            "link": "shopify://collections/geschenke-mit-herz",
+            "button_label": "Geschenke mit Herz",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_HjHpwM": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "image_p9VAmd",
+        "image_Cj6QEA",
+        "image_HjHpwM"
+      ],
+      "name": "t:sections.bundle-extra-words.sections.slideshow.name",
+      "settings": {
+        "desktop_height": "80vh",
+        "mobile_height": "60vh",
+        "is_fullwidth": true,
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "caption_size": "text-size--large",
+        "title_size": "heading-size--regular",
+        "spacing": 18,
+        "width": "100%",
+        "button_style": "solid",
+        "remove_margin": false
+      }
+    },
+    "1662457498c47086cb": {
+      "type": "rich-text",
+      "blocks": {
+        "6bbf7a01-d3d2-4ead-90f4-4698d468453a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MUTTERTAG!</p><p>Die</p>",
+            "text_size": "large"
+          }
+        },
+        "166245749775e9bb81-0": {
+          "type": "title",
+          "settings": {
+            "title": "Tee & Kräutergalerie",
+            "title_size": "heading-size--small",
+            "seo_h_tag": "h2"
+          }
+        },
+        "166245749775e9bb81-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>hat tolle Angebote zum Muttertag! Einfach mal stöbern!</p>",
+            "text_size": "large"
+          }
+        },
+        "166245749775e9bb81-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "link": "shopify://collections/geschenke-1",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "6bbf7a01-d3d2-4ead-90f4-4698d468453a",
+        "166245749775e9bb81-0",
+        "166245749775e9bb81-1",
+        "166245749775e9bb81-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_35.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": true,
+        "is_fullwidth": true,
+        "text_alignment": "horizontal-left",
+        "spacing": 24,
+        "color_background_main": "#f2efec",
+        "color_text_main": "#637463",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": true,
+        "gutter_decrease": false,
+        "remove_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "d57ade2e-d526-4303-b3d6-7463564b3a10": {
+      "type": "featured-product",
+      "blocks": {
+        "template--17665760362761__d57ade2e-d526-4303-b3d6-7463564b3a10-1677157019a61a70f3-1": {
+          "type": "title",
+          "settings": {
+            "seo_h_tag": "h3"
+          }
+        },
+        "price_zGADH9": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--17665760362761__d57ade2e-d526-4303-b3d6-7463564b3a10-1677157019a61a70f3-3": {
+          "type": "variant_picker",
+          "settings": {
+            "heading": "",
+            "variants_style": "radio",
+            "color_swatches": true,
+            "style": "primary",
+            "show_quantities": "no",
+            "unavailable_variants": "hide"
+          }
+        },
+        "template--17665760362761__d57ade2e-d526-4303-b3d6-7463564b3a10-1677157019a61a70f3-4": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "show_price": true,
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "template--17665760362761__d57ade2e-d526-4303-b3d6-7463564b3a10-1677157019a61a70f3-1",
+        "price_zGADH9",
+        "template--17665760362761__d57ade2e-d526-4303-b3d6-7463564b3a10-1677157019a61a70f3-3",
+        "template--17665760362761__d57ade2e-d526-4303-b3d6-7463564b3a10-1677157019a61a70f3-4"
+      ],
+      "settings": {
+        "heading": "Teeangebot des Monats",
+        "subheading": "100g für 5,55€ anstatt 6,20€",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--two-rows",
+        "product": "blutorange-maracuja-fruechtetee-mild",
+        "gallery_layout": "one-col slider",
+        "gallery_desktop_width": "one-half",
+        "gallery_mobile_width": 90,
+        "gallery_aspect_ratio": "1",
+        "gallery_fit": false,
+        "gallery_padding": 0,
+        "gallery_background": "rgba(0,0,0,0)",
+        "gallery_border": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "show_thumbnails": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "default_to_first_variant": true,
+        "gutter_decrease": true,
+        "seo_h_tag": "h1"
+      }
+    },
+    "promotion_cards_ybpEpm": {
+      "type": "promotion-cards",
+      "blocks": {
+        "card_qeEywU": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/BlutorangeMaracujamitVitaminC_1.jpg",
+            "caption": "100g für nur 5,55 €",
+            "title": "Angebot des Monats",
+            "subtitle": "Blutorange Maracuja | Früchtetee | Mild",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://products/blutorange-maracuja-fruechtetee-mild",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_LVBRby": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/HangoverDeluxeUrbanTeaFactoryTeeimGlas.jpg",
+            "caption": "11,19 € anstatt 15,99 €",
+            "title": "Angebot",
+            "subtitle": "Tee im Glas von Urban Tea Factory - verschiedene Sorten",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://collections/tee-im-glas-von-urban-tea-factory",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_LjtHmm": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Freisteller_Early_Morning_1.jpg",
+            "caption": "100g für nur 4,00 € anstatt 5,95 €",
+            "title": "Angebot",
+            "subtitle": "Early Morning Tea | Schwarztee",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://products/early-morning-tea-schwarztee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_NgNfhW": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/FreistellerOrangeGrapefruit_1.jpg",
+            "caption": "100g für nur 4,80 €",
+            "title": "Angebot",
+            "subtitle": "Orange Grapefruit | Grüntee | Aroma",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://products/orange-grapefruit-gruentee-aroma",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_fai7yQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Freisteller_Marzipan_Luebecker_Art_1.jpg",
+            "caption": "100g für nur 4,50 €",
+            "title": "Angebot",
+            "subtitle": "Marzipan Lübecker Art",
+            "button_label": "Hier entdecken",
+            "button_link": "shopify://products/marzipan-luebecker-art-schwarztee-aroma",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "card_qeEywU",
+        "card_LVBRby",
+        "card_LjtHmm",
+        "card_NgNfhW",
+        "card_fai7yQ"
+      ],
+      "name": "t:sections.local-extra-words.sections.promotion-cards.name",
+      "settings": {
+        "heading": "Hier empfehlen wir unsere monatlich wechselnden Angebote und unsere Sonderaktionen zu saisonalen Tees.",
+        "subheading": "Ideal, um auch unbekannte Teesorten zu probieren!",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "100%",
+        "subtitle_size": "regular",
+        "spacing": 18,
+        "button_style": "outline",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "image_RdQ6z8": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/Header_Slider_Homepage_2048_x_500_px_2048_x_350_px.png",
+        "image_border_radius": 0,
+        "link": "shopify://collections/tee-im-glas-von-urban-tea-factory",
+        "open_in_new_window": false,
+        "image_size": "large",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "featured_collection_pJWUJG": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_EDWR3n": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_w7YzLE": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_8DGFMP": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "price_EDWR3n",
+        "title_w7YzLE",
+        "quick_buy_8DGFMP"
+      ],
+      "settings": {
+        "heading": "Tee im Glas von Urban Tea Factory",
+        "subheading": "Entdecken Sie bei uns die trendigen und viralen Tees im Glas!",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "tee-im-glas-von-urban-tea-factory",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_tDWnri": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_RgGkcm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Freisteller_Flugtee_Nepal_Guranse_Schwarztee_Tee_und_Kraeutergalerie_Teeladen_ludwigsburg_1.webp",
+            "title": "Flugtee Nepal Guranse handrolled first flush SFTGFOP 1 | BIO | Schwarztee",
+            "caption": "Flugtee Nepal Guranse handgerollt first flush SFTGFOP 1",
+            "link": "shopify://products/flugtee-nepal-guranse-handrolled-first-flush-sftgfop-1-bio-schwarztee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_8KaHBA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/R-052.webp",
+            "title": "Flugtee Nepal Mai Tea White | BIO | Weißer Tee",
+            "caption": "BIO Weißer Tee  in höchster Qualität für feinsten Genuss! (Ernte von 2024)",
+            "link": "shopify://products/flugtee-nepal-mai-tea-white-bio-gruentee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_JRHTLN": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/FlugteeDarjeelingSteinthalfirstflushDJ0125.jpg",
+            "title": "Flugtee Darjeeling Steinthal first flush DJ 01/25 | BIO | Schwarztee",
+            "caption": "Bio Schwarztee. Ausgereift frisches Aroma mit fruchtigen Noten.",
+            "link": "shopify://products/flugtee-darjeeling-steinthal-first-flush-dj-01-25-bio-schwarztee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_7kGRjR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FreistellerShinchaMakizomoFlugtee_1.webp",
+            "title": "Flugtee Japan Shincha Makizono | BIO | Grüntee",
+            "caption": "Teekunst auf absolut höchstem Niveau! Ernte 2024",
+            "link": "shopify://products/flugtee-japan-shincha-makizono-bio-gruentee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_RgGkcm",
+        "image_8KaHBA",
+        "image_JRHTLN",
+        "image_7kGRjR"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Unsere Neuheiten",
+        "subheading": "Feinste Teeauswahl  für jede Jahreszeit.",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "text_alignment": "text-align--center",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-palm-1",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h1"
+      }
+    },
+    "media_with_text_overlay_pK8NgR": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "image_DjchCG": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Header_Slider_Homepage_2048_x_500_px_2048_x_350_px_5c4c2ec3-de33-4f7c-965b-3fac3dc9c4b8.jpg",
+            "caption": "Einfach lecker!",
+            "title": "Zaubertrunk",
+            "subtitle": "Bio-Kräutertee mit Lemonengras-Ingwer-Geschmack.",
+            "link": "shopify://products/zaubertrunk-bio-kraeutertee",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "#ffffff",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_DjchCG"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Ein Tee, den es nur bei uns gibt!",
+        "subheading": "Von unserem Lieferanten speziell für uns hergestellte Mischung.",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "full",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "60%",
+        "title_size": "heading-size--small",
+        "spacing": 18,
+        "button_style": "solid",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "remove_top_margin": false,
+        "seo_h_tag": "h1"
+      }
+    },
+    "media_with_text_overlay_xmegWr": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "image_pKamRE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Matcha_Header.jpg",
+            "caption": "Matcha Tee kalt oder heiß genießen!",
+            "title": "Matcha - Ganz im Trend",
+            "subtitle": "",
+            "link": "shopify://blogs/news/das-trend-getrank-fur-den-sommer-matcha-iced-latte",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "#ffffff",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_pKamRE"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "https://www.tee-undkraeutergalerie.de/collections",
+        "layout": "full",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "60%",
+        "title_size": "heading-size--small",
+        "spacing": 18,
+        "button_style": "solid",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "remove_top_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "featured_collection_mtEb4T": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_BYEzqT": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_XFrU4g": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price_BYEzqT",
+        "title_XFrU4g"
+      ],
+      "settings": {
+        "heading": "Matcha Kollektion",
+        "subheading": "Alles für die Zubereitung",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "matcha",
+        "gutter_decrease": false,
+        "seo_h_tag": "h1"
+      }
+    },
+    "rich_text_URWKgF": {
+      "type": "rich-text",
+      "blocks": {
+        "title_NVHpbM": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Talk about your brand",
+            "title_size": "heading-size--small",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_a8en4W": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements or welcome customers to your store.</p>",
+            "text_size": "regular"
+          }
+        },
+        "button_6bxakK": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Show more",
+            "link": "",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "title_NVHpbM",
+        "text_a8en4W",
+        "button_6bxakK"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": false,
+        "is_fullwidth": false,
+        "text_alignment": "horizontal-center",
+        "spacing": 24,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "color_hide_borders": true,
+        "gutter_decrease": true,
+        "remove_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "media_with_text_overlay_XRawyG": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "image_dXp4YY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_94b2c729-520c-449c-99f5-af8693d9e97e.jpg",
+            "caption": "",
+            "title": "Unser Tee Sortiment",
+            "subtitle": "",
+            "link": "shopify://collections",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "#ffffff",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_dXp4YY"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "https://www.tee-undkraeutergalerie.de/collections",
+        "layout": "full",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "60%",
+        "title_size": "heading-size--small",
+        "spacing": 18,
+        "button_style": "outline",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "remove_top_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_3PygVx": {
+      "type": "text-columns",
+      "blocks": {
+        "text_4zjExR": {
+          "type": "text",
+          "settings": {
+            "title": "Wir sind für Sie da",
+            "caption": "<p>Ob für Teeneulinge, Teekenner oder Teeliebhaber: Wir beraten Sie gerne und helfen Ihnen bei der Suche nach Ihrem Lieblingstee weiter!</p>",
+            "seo_h_tag": "h3"
+          }
+        },
+        "text_6rj6Y7": {
+          "type": "text",
+          "settings": {
+            "title": "Unser Tee Fachgeschäft",
+            "caption": "<p>Seit 1980 sind wir mit unserem Ladengeschäft Tee und Kräutergalerie in Ludwigsburg für Sie da und beraten Sie kompetent für höchsten Teegenuss zu unseren erlesenen und ausgewähltem Teesorten aus aller Welt.</p>",
+            "seo_h_tag": "h3"
+          }
+        },
+        "text_6fYbPg": {
+          "type": "text",
+          "settings": {
+            "title": "Wir lieben Tee",
+            "caption": "<p>Unsere Teammitglieder sind leidenschaftliche Teeliebhaber und stets bereit, neue Teesorten kennenzulernen. Diese Begeisterung für Tee spiegelt sich sowohl in ihrer fachlichen Kompetenz als auch in ihrer Freude wider, ihr Tee-Wissen zu teilen.</p>",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "text_4zjExR",
+        "text_6rj6Y7",
+        "text_6fYbPg"
+      ],
+      "settings": {
+        "layout": "grid-3 grid-lap-1",
+        "block_text_alignment": "text-align--center",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "2432a6a4-0fda-46c0-996d-ea594a89897e": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--17665760362761__2432a6a4-0fda-46c0-996d-ea594a89897e-1677595851ab0c50d5-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--17665760362761__2432a6a4-0fda-46c0-996d-ea594a89897e-1677595851ab0c50d5-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--17665760362761__2432a6a4-0fda-46c0-996d-ea594a89897e-1677595851ab0c50d5-2": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "template--17665760362761__2432a6a4-0fda-46c0-996d-ea594a89897e-1677595851ab0c50d5-1",
+        "template--17665760362761__2432a6a4-0fda-46c0-996d-ea594a89897e-1677595851ab0c50d5-0",
+        "template--17665760362761__2432a6a4-0fda-46c0-996d-ea594a89897e-1677595851ab0c50d5-2"
+      ],
+      "settings": {
+        "heading": "Unsere Bestseller",
+        "subheading": "<strong>Entdecken Sie jetzt unsere Lieblingstees</strong>",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "bestseller",
+        "gutter_decrease": false,
+        "seo_h_tag": "h1"
+      }
+    },
+    "media_with_text_overlay_j69VJh": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "image_6rALFx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7.jpg",
+            "caption": "",
+            "title": "English Afternoon",
+            "subtitle": "",
+            "link": "shopify://collections/english-afternoon",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "#ffffff",
+            "color_text_main": "#000000",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_MCa9P6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_5da36d72-ec45-4064-b5df-2314393b1113.jpg",
+            "caption": "",
+            "title": "Gentleman Tea",
+            "subtitle": "",
+            "link": "shopify://collections/gentleman-tea",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "#ffffff",
+            "color_text_main": "rgba(0,0,0,0)",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_77X3gX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_eea300a4-6e6f-4cc3-a52c-d07530191858.jpg",
+            "caption": "",
+            "title": "Ladies Tea",
+            "subtitle": "",
+            "link": "shopify://collections/frauentee",
+            "button_label": "Jetzt entdecken",
+            "color_background_main": "#ffffff",
+            "color_text_main": "rgba(0,0,0,0)",
+            "show_horizontal_line": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_6rALFx",
+        "image_MCa9P6",
+        "image_77X3gX"
+      ],
+      "settings": {
+        "heading": "Teatime",
+        "subheading": "<strong>Entdecken Sie unsere Kollektionen</strong>",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-3 grid-lap-1",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "90%",
+        "title_size": "heading-size--small",
+        "spacing": 13,
+        "button_style": "solid",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "remove_top_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "1e1a9339-1f76-4693-8d09-5c75a993c3fc": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--18027765727497__1e1a9339-1f76-4693-8d09-5c75a993c3fc-168958698085251aef-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--18027765727497__1e1a9339-1f76-4693-8d09-5c75a993c3fc-168958698085251aef-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--18027765727497__1e1a9339-1f76-4693-8d09-5c75a993c3fc-168958698085251aef-2": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "d2d7f903-c928-45b4-92a2-3c0396c8f575": {
+          "type": "icons",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--18027765727497__1e1a9339-1f76-4693-8d09-5c75a993c3fc-168958698085251aef-1",
+        "template--18027765727497__1e1a9339-1f76-4693-8d09-5c75a993c3fc-168958698085251aef-0",
+        "template--18027765727497__1e1a9339-1f76-4693-8d09-5c75a993c3fc-168958698085251aef-2",
+        "d2d7f903-c928-45b4-92a2-3c0396c8f575"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Milde Früchtetees",
+        "subheading": "<strong>Besonders mild und bekömmlich</strong>",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "milder-fruchtetee-1",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "featured_collection_U9DwML": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_QdixE8": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_qeD6H9": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_eVaTNr": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "price_QdixE8",
+        "title_qeD6H9",
+        "quick_buy_eVaTNr"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Chai & Tee",
+        "subheading": "Unsere Tees von David Rio",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 9,
+        "collection": "david-rio",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "166266065378da2b75": {
+      "type": "info-tabs",
+      "blocks": {
+        "ee1e988a-b615-4b5e-9679-53baf1a4972c": {
+          "type": "tab",
+          "settings": {
+            "title": "Frisch",
+            "caption": "<p>Wir bestellen wöchentlich unsere Tees, so bleiben sie besonders frisch. </p>",
+            "image": "shopify://shop_images/1_41aa2f34-5e58-4ff8-88e0-3e23945699d4.png",
+            "icon": "favorite"
+          }
+        },
+        "1662660652b48c92de-1": {
+          "type": "tab",
+          "settings": {
+            "title": "Natürlich",
+            "caption": "<p>Das Wort Aroma kommt aus dem Griechischen und bedeutet ursprünglich Gewürz.<br/>Ein Aroma setzt sich aus vielen einzelnen Aromastoffen zusammen. In unseren<br/>Tees befindet sich kein künstliches Aroma. Unsere Händler verwenden<br/>ausschließlich natürliche und naturidentische Aromen. </p>",
+            "image": "shopify://shop_images/2.png",
+            "icon": "favorite"
+          }
+        },
+        "1662660652b48c92de-2": {
+          "type": "tab",
+          "settings": {
+            "title": "Hochwertig",
+            "caption": "<p>Wir legen sehr großen Wert auf Qualität und wählen unsere Lieferanten sorgfältig aus.</p>",
+            "image": "shopify://shop_images/onlineshop_bilder_quadratisch.png",
+            "icon": "favorite"
+          }
+        },
+        "1662660652b48c92de-0": {
+          "type": "tab",
+          "settings": {
+            "title": "Bio-Zertifiziert",
+            "caption": "<p>Unsere Bio <a href=\"/collections/biotee\" target=\"_blank\" title=\"Alle Biotees\">Tees</a> sind nach DE-ÖKO-006 Bio zertifiziert. Mehr dazu erfahren Sie <a href=\"/pages/bio-zertifizierung\" target=\"_blank\" title=\"Bio Zertifizierung\">hier.</a></p>",
+            "image": "shopify://shop_images/bio-logo-dquadrat.png",
+            "icon": "favorite"
+          }
+        }
+      },
+      "block_order": [
+        "ee1e988a-b615-4b5e-9679-53baf1a4972c",
+        "1662660652b48c92de-1",
+        "1662660652b48c92de-2",
+        "1662660652b48c92de-0"
+      ],
+      "settings": {
+        "heading": "Ihre Vorteile",
+        "subheading": "",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "desktop_layout": "half",
+        "image_position": "left",
+        "image_aspect_ratio": "0.83333",
+        "border_radius": 0,
+        "style": "blank",
+        "autoplay_active": true,
+        "autoplay": 5,
+        "gutter_decrease": false,
+        "seo_h_tag": "h1"
+      }
+    },
+    "a2fc738d-a3ef-4d4c-a4b8-23e75b776a2d": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "952fefed-52fc-4548-99ec-18780f45edd4": {
+          "type": "image",
+          "settings": {
+            "icon": "earth-globe",
+            "crop": false,
+            "title": "",
+            "caption": "Weit über 400 verschiedene Teesorten aus Teeregionen aus aller Welt",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#637463",
+            "color_text_main": "#000000",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--16437919940841__a2fc738d-a3ef-4d4c-a4b8-23e75b776a2d-16653952481cdb62be-0": {
+          "type": "image",
+          "settings": {
+            "icon": "like-hand",
+            "crop": false,
+            "title": "",
+            "caption": "Wir legen hohen Wert auf Qualität und respektvollen Umgang mit der Natur",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#637463",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "3e0a2bdb-d051-44e4-83f3-1afa320bde87": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "crop": false,
+            "title": "",
+            "caption": "Lokaler Teeladen im Breuningerland Ludwisgburg",
+            "link": "shopify://pages/kontakt-und-anfahrt",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#637463",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "cb83a160-9292-467c-a153-9199925931bb": {
+          "type": "image",
+          "settings": {
+            "icon": "helpline",
+            "crop": true,
+            "title": "",
+            "caption": "Gerne helfen wir Ihnen auch persönlich. Infos unter den Kontaktinformationen",
+            "link": "shopify://pages/kontakt-und-anfahrt",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#637463",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "952fefed-52fc-4548-99ec-18780f45edd4",
+        "template--16437919940841__a2fc738d-a3ef-4d4c-a4b8-23e75b776a2d-16653952481cdb62be-0",
+        "3e0a2bdb-d051-44e4-83f3-1afa320bde87",
+        "cb83a160-9292-467c-a153-9199925931bb"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-palm-1",
+        "border_radius": 10,
+        "hide_borders": true,
+        "opacity_on_hover": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "1664361270539656a3": {
+      "type": "shop-the-look",
+      "blocks": {
+        "1664361270a383e7cf-0": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "1664361270a383e7cf-1": {
+          "type": "title",
+          "disabled": true,
+          "settings": {}
+        },
+        "9460eb2a-cdb3-487f-8424-bc09c7df2774": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "1664361270a383e7cf-2": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "1664361270a383e7cf-0",
+        "1664361270a383e7cf-1",
+        "9460eb2a-cdb3-487f-8424-bc09c7df2774",
+        "1664361270a383e7cf-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Testen Sie unsere Bestseller und sparen Sie",
+        "subheading": "Wir haben Ihnen unser Lieblingsset zusammengestellt.",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--two-rows",
+        "cta_label": "Jetzt entdecken",
+        "cta_url": "shopify://products/bestseller",
+        "product_list": [
+          "ingwer-zitrone-gruentee-aroma",
+          "erdbeer-popcorn-fruechtetee-mild",
+          "earl-grey-lord-of-grey-schwarztee-aroma",
+          "kraeutergarten-kraeutertee"
+        ],
+        "image": "shopify://shop_images/plint.png",
+        "hero_image_position": "left",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "cf72aa6e-9a79-4cc3-bb7d-060dd8c77cda": {
+      "type": "products-set",
+      "blocks": {
+        "template--17665760362761__cf72aa6e-9a79-4cc3-bb7d-060dd8c77cda-1676475487748e64c5-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--17665760362761__cf72aa6e-9a79-4cc3-bb7d-060dd8c77cda-1676475487748e64c5-1": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--17665760362761__cf72aa6e-9a79-4cc3-bb7d-060dd8c77cda-1676475487748e64c5-0",
+        "template--17665760362761__cf72aa6e-9a79-4cc3-bb7d-060dd8c77cda-1676475487748e64c5-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Produktset - Rabatt",
+        "subheading": "Wähle unsere Lieblingstees im August und erhalte 10% Rabatt",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "products": [
+          "schisandra-blutorange-naturliche-aromen-fruchtetee-mild",
+          "aztekengold-naturliche-aromen-fruchtetee",
+          "erdbeer-popcorn-naturliche-aromen-fruchtetee-mild"
+        ],
+        "style": "primary",
+        "style_color": "rgba(0,0,0,0)",
+        "panel_title": "Build your set",
+        "panel_subtitle": "",
+        "panel_bg_color": "#3e3e3e",
+        "panel_text_color": "#f5f5f5",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "9aeb3080-a390-4a73-aa77-65725cbeae0f": {
+      "type": "products-bundle",
+      "blocks": {
+        "template--18027765727497__9aeb3080-a390-4a73-aa77-65725cbeae0f-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--18027765727497__9aeb3080-a390-4a73-aa77-65725cbeae0f-title-1": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--18027765727497__9aeb3080-a390-4a73-aa77-65725cbeae0f-price-1",
+        "template--18027765727497__9aeb3080-a390-4a73-aa77-65725cbeae0f-title-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Im Set sparen",
+        "subheading": "Früchtetee",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "select_collection": "fruchtetee-1",
+        "collection_limit": 3,
+        "select_products": [
+          "floragold-fruechtetee-kirschenmichel",
+          "ananas-physalis-naturliche-aromen-fruchtetee-mild",
+          "berry-pomp-bio-naturliche-aromen-fruchtetee"
+        ],
+        "limit_bundles": true,
+        "discount_title": "Wählen Sie die gewünschte Menge und erhalten Sie 20% Rabatt",
+        "discount_items": 3,
+        "limit_maximum": false,
+        "panel_bg_color": "#3e3e3e",
+        "panel_text_color": "#f5f5f5",
+        "discount_opened": true,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "4d7cd95a-473c-457b-982a-b443bad987f7",
+    "slideshow_UjAynh",
+    "1662457498c47086cb",
+    "d57ade2e-d526-4303-b3d6-7463564b3a10",
+    "promotion_cards_ybpEpm",
+    "image_RdQ6z8",
+    "featured_collection_pJWUJG",
+    "text_columns_images_tDWnri",
+    "media_with_text_overlay_pK8NgR",
+    "media_with_text_overlay_xmegWr",
+    "featured_collection_mtEb4T",
+    "rich_text_URWKgF",
+    "media_with_text_overlay_XRawyG",
+    "text_columns_3PygVx",
+    "2432a6a4-0fda-46c0-996d-ea594a89897e",
+    "media_with_text_overlay_j69VJh",
+    "1e1a9339-1f76-4693-8d09-5c75a993c3fc",
+    "featured_collection_U9DwML",
+    "166266065378da2b75",
+    "a2fc738d-a3ef-4d4c-a4b8-23e75b776a2d",
+    "1664361270539656a3",
+    "cf72aa6e-9a79-4cc3-bb7d-060dd8c77cda",
+    "9aeb3080-a390-4a73-aa77-65725cbeae0f"
+  ]
+}

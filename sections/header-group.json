@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.refactor_words.labels.header_group",
+  "sections": {
+    "759d424b-734f-45f6-8f25-b8c3d4c83756": {
+      "type": "marquee",
+      "blocks": {
+        "text_gRDYBH": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "marquee_text": "Wir wünschen ein gutes neues Jahr 2026!"
+          }
+        },
+        "sections--17918810358025__759d424b-734f-45f6-8f25-b8c3d4c83756-1681388457c899aa0b-0": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "Heute versandkostenfrei ab 40 € Bestellwert, deutschlandweit!"
+          }
+        }
+      },
+      "block_order": [
+        "text_gRDYBH",
+        "sections--17918810358025__759d424b-734f-45f6-8f25-b8c3d4c83756-1681388457c899aa0b-0"
+      ],
+      "settings": {
+        "scroll_direction": "ltr",
+        "speed": 20,
+        "pause_on_hover": true,
+        "horizontal_space": "large-x-2",
+        "text_size": "text-size--small",
+        "color_background_main": "#000000",
+        "color_text_main": "#ffffff",
+        "remove_top_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header-0": {
+          "type": "menu",
+          "settings": {
+            "linklist": "main-menu-1"
+          }
+        }
+      },
+      "block_order": [
+        "header-0"
+      ],
+      "settings": {
+        "logo_src": "shopify://shop_images/Banner_45_Jahre_Jubilaum_Tee-_und_Krautergalerie_6.png",
+        "logo_height": 100,
+        "logo_mobile_src": "shopify://shop_images/Banner_45_Jahre_Jubilaum_Tee-_und_Krautergalerie_6.png",
+        "logo_mobile_height": 40,
+        "alignment": "center",
+        "label_style": "tooltip",
+        "sticky_header": true,
+        "show_header_border_bottom": true,
+        "show_header_border_top": false,
+        "custom_icon_select": "no-icon",
+        "label_text": "",
+        "custom_icon_link": "",
+        "open_in_new_window": false,
+        "header_absolute_homepage": false,
+        "header_absolute_collection": false,
+        "header_absolute_custom": "",
+        "color_text_header": "#000000",
+        "hide_header_border": true,
+        "show_locale_selector": true,
+        "show_country_selector": true,
+        "show_social_icons": true
+      }
+    }
+  },
+  "order": [
+    "759d424b-734f-45f6-8f25-b8c3d4c83756",
+    "header"
+  ]
+}

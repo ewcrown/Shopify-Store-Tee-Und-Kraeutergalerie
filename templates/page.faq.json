@@ -1,0 +1,437 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false,
+        "page_cover_metafield": "",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "cd546e5d-492e-48dd-b25b-9fd2ac20bf8d": {
+      "type": "content-toggles",
+      "blocks": {
+        "template--18027765825801__cd546e5d-492e-48dd-b25b-9fd2ac20bf8d-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Woher weiß ich, ob meine Bestellung erfolgreich war?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Nach Abschluss Ihrer Bestellung erhalten Sie eine Bestellbestätigung per E-Mail von uns.</p>"
+          }
+        },
+        "template--18027765825801__cd546e5d-492e-48dd-b25b-9fd2ac20bf8d-text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Ist es möglich, meine Bestellung noch zu ändern?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Leider ist es nicht möglich, bereits aufgegebene Bestellungen zu ändern. Am besten, Sie stornieren Ihre Bestellung und schicken Ihre Bestellung erneut ab.  </p><p>Falls Sie noch etwas zusätzlich bestellen möchten, können Sie dies einfach nachträglich bestellen. Wir versuchen, wenn möglich, die Bestellungen dann gemeinsam zu versenden.</p>"
+          }
+        },
+        "template--18027765825801__cd546e5d-492e-48dd-b25b-9fd2ac20bf8d-text-3": {
+          "type": "text",
+          "settings": {
+            "title": "Gibt es einen Mindestbestellwert?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Nein, es gibt keinen Mindestbestellwert. Ab 40 € Einkaufswert übernehmen wir Ihre Versandkosten.</p>"
+          }
+        },
+        "bfa3872d-788f-4c89-b610-01c947e01110": {
+          "type": "text",
+          "settings": {
+            "title": "Wie kann ich bezahlen?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Wählen Sie selbst, welche Zahlungsweise die bequemste für Sie ist: </p><p>- Kreditkarte (Visa, Mastercard, Amex, Maestro)</p><p>- Apple Pay</p><p>- Google Pay</p><p>- Shop Pay</p><p>- Sofort Überweisung</p><p></p><p></p>"
+          }
+        },
+        "78f09851-ddcf-4dc8-b22b-5aebe4f98e63": {
+          "type": "text",
+          "settings": {
+            "title": "Ich möchte gerne einen Artikel meiner Bestellung umtauschen, was muss ich tun?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Ein Umtausch ist leider nicht möglich. Bitte bestellen Sie Ihr Wunschprodukt erneut. Frisch abgepackte Tees können wir leider aus Hygienegründen nicht zurücknehmen. </p>"
+          }
+        },
+        "e87fd8a8-4635-44b8-88a4-0c002d0cebde": {
+          "type": "text",
+          "settings": {
+            "title": "Werden die Artikel im Warenkorb automatisch reserviert?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Artikel in den Warenkorb zu legen, ist keine Garantie dafür, dass der Artikel reserviert wird oder verfügbar ist.</p>"
+          }
+        },
+        "48ca1d4f-5d4b-41a9-a915-382bd8cfb22f": {
+          "type": "text",
+          "settings": {
+            "title": "Warum wurde meine Lieferung storniert oder teilrückerstattet?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Zur Stornierung einer Bestellung oder Teilrückerstattung kann es kommen, wenn die bestellte Ware nicht verfügbar oder fehlerbehaftet ist und uns dies vor dem Versand aufgefallen ist. In diesem Fall werden Sie selbstverständlich von uns per E-Mail benachrichtigt.</p>"
+          }
+        },
+        "b908934a-e90d-4f42-806b-11e74bda7127": {
+          "type": "text",
+          "settings": {
+            "title": "Ist die Rückgabefrist verstrichen und Sie möchten den Artikel reklamieren?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Bitte senden Sie uns eine E-Mail an shop@tee-undkraeutergalerie.de und schicken Sie uns Fotos des Artikels. Erklären Sie uns zudem bitte deutlich Ihren Reklamationsgrund. Mehr dazu finden Sie unter <a href=\"https://dquadrat-stores.myshopify.com/pages/rucksendung-ruckerstattung\" title=\"https://dquadrat-stores.myshopify.com/pages/rucksendung-ruckerstattung\">Rückerstattung.</a></p>"
+          }
+        },
+        "41054217-f84a-4b4d-a7f8-aa2006c75e44": {
+          "type": "text",
+          "settings": {
+            "title": "Kann ich meine Lieferadresse nach der Bestellung noch ändern?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Bitte melden Sie sich bei einer Adressänderung schnellstmöglich bei unserem Kundenservice.</p><p>shop@tee-undkraeutergalerie.de  oder 07141-918270</p><p>Wenn die Artikel Ihrer Bestellung noch nicht verpackt und versendet wurden, können wir Ihre Lieferadresse noch abändern. </p>"
+          }
+        },
+        "b6d6d6e8-f0b2-460a-b32c-035f7321253f": {
+          "type": "text",
+          "settings": {
+            "title": "Kann ich mir meine Bestellung zu einer Ihrer Filialen schicken lassen?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Gerne können Sie Ihre Bestellung in unserem Teeladen im Breuningerland Ludwigsburg abholen. Sie werden in diesem Fall telefonisch kontaktiert, sobald die Ware in der Filiale abholbereit ist. Bitte schließen Sie Ihre Bestellung in diesem Fall komplett online ab.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027765825801__cd546e5d-492e-48dd-b25b-9fd2ac20bf8d-text-1",
+        "template--18027765825801__cd546e5d-492e-48dd-b25b-9fd2ac20bf8d-text-2",
+        "template--18027765825801__cd546e5d-492e-48dd-b25b-9fd2ac20bf8d-text-3",
+        "bfa3872d-788f-4c89-b610-01c947e01110",
+        "78f09851-ddcf-4dc8-b22b-5aebe4f98e63",
+        "e87fd8a8-4635-44b8-88a4-0c002d0cebde",
+        "48ca1d4f-5d4b-41a9-a915-382bd8cfb22f",
+        "b908934a-e90d-4f42-806b-11e74bda7127",
+        "41054217-f84a-4b4d-a7f8-aa2006c75e44",
+        "b6d6d6e8-f0b2-460a-b32c-035f7321253f"
+      ],
+      "settings": {
+        "heading": "Bestellung",
+        "subheading": "Sie haben Fragen, rund um Ihre Bestellung? Vielleicht können wir Ihnen hier helfen.",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "form_enable": false,
+        "form_title": "Ihre Frage wurde nicht beantwortet?  Dann schreiben Sie uns gerne eine Nachricht.",
+        "style": "primary",
+        "open_first": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "16b2dba1-91cf-41a2-aace-f1795a74fd4b": {
+      "type": "content-toggles",
+      "blocks": {
+        "template--18077632758078__16b2dba1-91cf-41a2-aace-f1795a74fd4b-1677675595b001aa13-0": {
+          "type": "text",
+          "settings": {
+            "title": "Welche Zahlungsarten stehen zur Verfügung?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>- Kreditkarte (Visa, Mastercard, Amex, Maestro)</p><p>- Apple Pay</p><p>- Google Pay</p><p>- Shop Pay</p><p>- Sofort Überweisung</p>"
+          }
+        },
+        "template--18077632758078__16b2dba1-91cf-41a2-aace-f1795a74fd4b-1677675595b001aa13-1": {
+          "type": "text",
+          "settings": {
+            "title": "Wo kann ich den Rabattcode/Gutschein eingeben?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Dies ist im Warenkorb möglich.</p><p>Bitte beachten Sie, dass die korrekte Schreibweise einzuhalten ist.</p>"
+          }
+        },
+        "template--18077632758078__16b2dba1-91cf-41a2-aace-f1795a74fd4b-1677675595b001aa13-2": {
+          "type": "text",
+          "settings": {
+            "title": "Wo kann ich einen Gutschein kaufen?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Entweder in unserem lokalen Teeladen oder hier: <a href=\"/products/dquadrat-gutschein\" target=\"_blank\" title=\"DQUADRAT - Gutschein\">Gutschein</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18077632758078__16b2dba1-91cf-41a2-aace-f1795a74fd4b-1677675595b001aa13-0",
+        "template--18077632758078__16b2dba1-91cf-41a2-aace-f1795a74fd4b-1677675595b001aa13-1",
+        "template--18077632758078__16b2dba1-91cf-41a2-aace-f1795a74fd4b-1677675595b001aa13-2"
+      ],
+      "settings": {
+        "heading": "Zahlung & Gutscheine",
+        "subheading": "Sie haben Fragen, rund um Ihre Bezahlung? Vielleicht können wir Ihnen hier helfen.",
+        "section_heading_size": "text-size--large",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "form_enable": false,
+        "form_title": "Ihre Frage wurde nicht beantwortet?  Dann schreiben Sie uns gerne eine Nachricht.",
+        "style": "primary",
+        "open_first": false,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "d7bbed72-c0f1-40b8-9406-c61c1b626845": {
+      "type": "content-toggles",
+      "blocks": {
+        "template--18027765825801__d7bbed72-c0f1-40b8-9406-c61c1b626845-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Wie lange dauert der Versand meiner Bestellung?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Standardmäßig dauert der Versand innerhalb Deutschlands 2-4 Werktage.</p><p>Innerhalb der EU 3-6 Werktage, jeweils nach Zahlungseingang.</p><p><strong>Sollte ein Tee nicht ausreichend vorrätig sein, kann der Versand ggf. länger dauern. In diesem Fall werden wir Sie kontaktieren. </strong></p><p>Mehr Infos unter <a href=\"/pages/zahlung-versand\" title=\"Versand & Lieferung\">Versand & Lieferung.</a></p>"
+          }
+        },
+        "template--18027765825801__d7bbed72-c0f1-40b8-9406-c61c1b626845-text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Kann ich meine Bestellung an eine DHL-Packstation liefern lassen?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Ja, geben Sie hierzu einfach die Adresse Ihrer Packstation als Lieferadresse ein.</p>"
+          }
+        },
+        "template--18027765825801__d7bbed72-c0f1-40b8-9406-c61c1b626845-text-3": {
+          "type": "text",
+          "settings": {
+            "title": "Kann ich nachsehen wo mein Paket ist?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Grundsätzlich erhalten Sie mit der Versandbestätigung den Trackingcode Ihrer Sendung. Mit diesem können Sie bei DHL den Sendungsstatus Ihrer Bestellung abfragen.</p>"
+          }
+        },
+        "b54b4afa-faac-439e-9d8b-54cff0e25ef6": {
+          "type": "text",
+          "settings": {
+            "title": "Was kostet mich der Versand, wenn ich unter einem Wert von 40 € bestelle?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Sehen Sie dazu <a href=\"/pages/zahlung-versand\" title=\"Versand & Lieferung\">Versand & Lieferung.</a></p>"
+          }
+        },
+        "db726bb6-f813-4d53-8ee5-79a3b7791f47": {
+          "type": "text",
+          "settings": {
+            "title": "In welche Länder wird verschickt?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Wir liefern innerhalb der Europäischen Union. Außnahme ist die Schweiz. Genauere Informationen finden Sie unter <a href=\"/pages/zahlung-versand\" title=\"Versand & Lieferung\">Versand & Lieferung.</a></p><p>Sie möchten in ein anderes Land bestellen? Nehmen Sie einfach Kontakt mit uns auf und wir sehen, was wir für Sie tun können. </p><p>shop@tee-undkraeutergalerie.de</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027765825801__d7bbed72-c0f1-40b8-9406-c61c1b626845-text-1",
+        "template--18027765825801__d7bbed72-c0f1-40b8-9406-c61c1b626845-text-2",
+        "template--18027765825801__d7bbed72-c0f1-40b8-9406-c61c1b626845-text-3",
+        "b54b4afa-faac-439e-9d8b-54cff0e25ef6",
+        "db726bb6-f813-4d53-8ee5-79a3b7791f47"
+      ],
+      "settings": {
+        "heading": "Versand & Lieferung",
+        "subheading": "Sie haben Fragen zum Versand oder Lieferung, vielleicht werden Sie hier fündig.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "form_enable": false,
+        "form_title": "Contact form",
+        "style": "outline",
+        "open_first": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "2c6e4807-7f04-43b9-a130-27a537d04d6c": {
+      "type": "content-toggles",
+      "blocks": {
+        "template--18027765825801__2c6e4807-7f04-43b9-a130-27a537d04d6c-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Wie retourniere ich meine Bestellung?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p><strong>Rücksendung:</strong></p><p><strong>1.</strong> Bitte füllen Sie den beiliegenden Retourenschein vollständig aus und legen Sie diesen in Ihr  Paket.<br/><strong>2.</strong> Senden Sie das Paket an uns zurück. Die Adresse finden Sie auf dem Retourenschein. </p><p><strong>Die Versandkosten für die Retoure sind selbst zu zahlen.</strong></p><h4><strong>Allgemeine Retoureninformation:</strong></h4><p><strong>Wichtig, frisch abgepackter Tee ist aus Hygienegründen von der Rückgabe ausgeschlossen.</strong></p><p>Bitte beachten Sie, dass die Bearbeitung von Retouren bis zu 10 Werktage dauern kann. Die Rückerstattung erfolgt auf dem gleichen Zahlungsweg, wie bei Bestellabschluss.</p><p></p><p>Mehr Infos finden Sie <a href=\"/pages/rucksendung-ruckerstattung\" title=\"Rücksendung & Rückerstattung\">hier.</a></p>"
+          }
+        },
+        "template--18027765825801__2c6e4807-7f04-43b9-a130-27a537d04d6c-text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Darf ich Tee zurücksenden?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Lebensmittel, welche geöffnet wurden, sind vom Rückgaberecht ausgeschlossen. Wir füllen den Tee immer frisch für Sie ab und verschließen den Tee mit einem Verschlussstreifen. Da wir in diesem Fall nicht nachweisen können, dass der Tee nicht von Ihnen geöffnet wurde, können wir diesen Tee nicht zurücknehmen. </p><p>Teegeschirr, Zubehör und eingeschweißten Tee können Sie selbstverständlich innerhalb von 14 Tagen an uns zurücksenden. </p>"
+          }
+        },
+        "template--18027765825801__2c6e4807-7f04-43b9-a130-27a537d04d6c-text-3": {
+          "type": "text",
+          "settings": {
+            "title": "Wann erhalte ich mein Geld zurück?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Nachdem Ihre Rücksendung bei uns angekommen ist, und wir diese geprüft haben. Dies kann je nach Aufkommen bis zu 14 Tage dauern.</p>"
+          }
+        },
+        "9071355d-4c01-469a-af92-8751cbb078d7": {
+          "type": "text",
+          "settings": {
+            "title": "Wie erhalte ich mein Geld zurück?",
+            "subtitle": "",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Die Rückerstattung erfolgt auf dem gleichen Zahlungsweg, wie bei Bestellabschluss.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027765825801__2c6e4807-7f04-43b9-a130-27a537d04d6c-text-1",
+        "template--18027765825801__2c6e4807-7f04-43b9-a130-27a537d04d6c-text-2",
+        "template--18027765825801__2c6e4807-7f04-43b9-a130-27a537d04d6c-text-3",
+        "9071355d-4c01-469a-af92-8751cbb078d7"
+      ],
+      "settings": {
+        "heading": "Rücksendung & Rückerstattung",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "form_enable": true,
+        "form_title": "Ihre Frage wurde nicht beantwortet? Dann senden Sie uns bitte eine Nachricht.",
+        "style": "outline",
+        "open_first": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "e48326d5-c2cd-4c62-8aab-86ed306bc290": {
+      "type": "content-toggles",
+      "blocks": {
+        "template--18027765825801__e48326d5-c2cd-4c62-8aab-86ed306bc290-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "Shipping details",
+            "subtitle": "Question subtitle",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Write some useful information about your shipping details</p><p>Link to your <a href='#'>shipping policy</a>.</p>"
+          }
+        },
+        "template--18027765825801__e48326d5-c2cd-4c62-8aab-86ed306bc290-text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Delivery details",
+            "subtitle": "Question subtitle",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Let your customers know if you offer free delivery for certain types of orders</p><p>Link to your <a href='#'>offers page</a>.</p>"
+          }
+        },
+        "template--18027765825801__e48326d5-c2cd-4c62-8aab-86ed306bc290-text-3": {
+          "type": "text",
+          "settings": {
+            "title": "Returns details",
+            "subtitle": "Question subtitle",
+            "icon": "no-icon",
+            "button_label": "",
+            "button_link": "",
+            "body": "<p>Show customers how much time they have for testing your products</p><p>Link to your <a href='#'>returns policy</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027765825801__e48326d5-c2cd-4c62-8aab-86ed306bc290-text-1",
+        "template--18027765825801__e48326d5-c2cd-4c62-8aab-86ed306bc290-text-2",
+        "template--18027765825801__e48326d5-c2cd-4c62-8aab-86ed306bc290-text-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Tee & Besonderheiten",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "form_enable": false,
+        "form_title": "Contact form",
+        "style": "outline",
+        "open_first": false,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cd546e5d-492e-48dd-b25b-9fd2ac20bf8d",
+    "16b2dba1-91cf-41a2-aace-f1795a74fd4b",
+    "d7bbed72-c0f1-40b8-9406-c61c1b626845",
+    "2c6e4807-7f04-43b9-a130-27a537d04d6c",
+    "e48326d5-c2cd-4c62-8aab-86ed306bc290"
+  ]
+}

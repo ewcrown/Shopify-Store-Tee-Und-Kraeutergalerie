@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_n8CQe9": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/18_a5d0fea9-3364-4775-8e32-c0c9e2f6ec7a.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "image_BhfnEQ": {
+      "type": "image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Header_Slider_Homepage_2048_x_500_px_2048_x_350_px_1.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Kandis & Co.",
+        "subheading": "Süßen Sie Ihren Tee mit ausgewählten Kandissorten und Honig. Das Süßen von Tee ist eine Kunst, die so alt ist wie die Teezubereitung selbst. Kandiszucker und Honig sind zwei der beliebtesten Süßungsmittel, die nicht nur den Geschmack des Tees bereichern, sondern auch ein einzigartiges Aroma hinzufügen, das die Teetrinkerfahrung auf ein ganz neues Niveau hebt. Beide Zutaten haben ihre eigenen charakteristischen Eigenschaften und Vorteile, die sie zu hervorragenden Begleitern für eine Vielzahl von Teesorten machen. Kandiszucker, oft in schönen, kristallinen Strukturen erhältlich, löst sich langsam im heißen Tee auf und verleiht ihm eine sanfte, gleichmäßige Süße. Diese Methode des Süßens ist besonders beliebt in der traditionellen Teezeremonie in vielen Kulturen, da sie es dem Teetrinker ermöglicht, die Veränderung des Geschmacks zu beobachten und zu genießen, während der Zucker sich auflöst. Der leichte Karamellgeschmack des Kandiszuckers kann zudem die Tiefe und Komplexität von Schwarz- und Oolongtees hervorheben, ohne deren eigentlichen Charakter zu überschatten. Honig, ein Naturprodukt mit einer reichen Palette an Geschmacksnoten, von blumig bis würzig, bietet eine gesündere Alternative zu raffiniertem Zucker. Die natürliche Süße und die aromatischen Nuancen des Honigs können die sensorischen Eigenschaften eines Tees auf subtile Weise verändern, indem sie ihm eine sanfte Süße und ein leichtes Aroma verleihen, das je nach Honigsorte variieren kann. Honig harmoniert besonders gut mit grünen und Kräutertees, da seine natürlichen floralen und manchmal fruchtigen Noten die frischen, zarten Aromen dieser Teesorten ergänzen können. Egal, ob man sich für Kandiszucker oder Honig entscheidet, es ist wichtig, das Süßungsmittel sparsam zu verwenden, um die natürlichen Aromen des Tees nicht zu überdecken. Die Wahl zwischen Kandiszucker und Honig hängt letztlich von persönlichen Vorlieben und der Art des Tees ab, den man genießen möchte. Beide Süßungsmittel bieten eine köstliche Möglichkeit, den Tee zu verfeinern und ein individuelles Geschmackserlebnis zu schaffen, das die Sinne belebt und die Seele wärmt.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_n8CQe9",
+    "image_BhfnEQ",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

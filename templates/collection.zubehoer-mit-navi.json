@@ -1,0 +1,116 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_WKXdWH": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/18.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": true,
+        "remove_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_xmMbQR": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "teegeschirr"
+          }
+        },
+        "collection_tYM9b8": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "kandis-co"
+          }
+        },
+        "collection_DmWRYU": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "filter"
+          }
+        },
+        "collection_CQCKg3": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale-aktionen"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xmMbQR",
+        "collection_tYM9b8",
+        "collection_DmWRYU",
+        "collection_CQCKg3"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_WKXdWH",
+    "banner",
+    "product-grid",
+    "collection_list_yytVwE"
+  ]
+}

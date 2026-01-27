@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection_WMnr4x": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_xXfLzA": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller",
+            "image": "shopify://shop_images/Tee_maerz_2024_1.png"
+          }
+        },
+        "41d2a729-d7c5-4d4d-8327-161c8299161d": {
+          "type": "collection",
+          "settings": {
+            "collection": "biotee",
+            "image": "shopify://shop_images/Kollektionslistenseite_Tee-_und-_kraeutergalerie-biotee-Onlineshop.png"
+          }
+        },
+        "6cb267ed-5235-4f18-b016-ca57a5aa72b2": {
+          "type": "collection",
+          "settings": {
+            "collection": "fruchtetee-1",
+            "image": "shopify://shop_images/Fruechtetee.png"
+          }
+        },
+        "d174a716-1ba3-4306-9a54-484f50d68848": {
+          "type": "collection",
+          "settings": {
+            "collection": "krautertee-1",
+            "image": "shopify://shop_images/6_9ad09a59-2cb2-4162-82a6-f85d0199855c.png"
+          }
+        },
+        "d9466e4f-d65d-40b4-bcc6-f9038aa6e936": {
+          "type": "collection",
+          "settings": {
+            "collection": "gruner-tee",
+            "image": "shopify://shop_images/2_868ff04c-7aa8-4551-a917-f20388679f6c.png"
+          }
+        },
+        "cce7cd1f-d313-4dce-aeab-5068a25589c9": {
+          "type": "collection",
+          "settings": {
+            "collection": "schwarz-tee",
+            "image": "shopify://shop_images/schwarztee.png"
+          }
+        },
+        "4d3d23db-cda2-4309-af67-805dd2990c02": {
+          "type": "collection",
+          "settings": {
+            "collection": "weisser-tee",
+            "image": "shopify://shop_images/Rooibos_2.png"
+          }
+        },
+        "2fa0c034-d0a8-4aa9-b1b1-b98a13dd9978": {
+          "type": "collection",
+          "settings": {
+            "collection": "oolongtee",
+            "image": "shopify://shop_images/Kollektionslistenseite_Tee_Onlineshop.png"
+          }
+        },
+        "collection_LPt37C": {
+          "type": "collection",
+          "settings": {
+            "collection": "rooibos-honeybush",
+            "image": "shopify://shop_images/Rooibos.png"
+          }
+        },
+        "b83ddf3e-b680-4cba-bcfc-3518b26664d7": {
+          "type": "collection",
+          "settings": {
+            "collection": "raritaten",
+            "image": "shopify://shop_images/Kollektionslistenseite_Tee_Onlineshop_1.png"
+          }
+        },
+        "collection_z6kBN8": {
+          "type": "collection",
+          "settings": {
+            "collection": "tee-im-pyramidenbeutel",
+            "image": "shopify://shop_images/Tee_maerz_2024.png"
+          }
+        },
+        "collection_yGPcgA": {
+          "type": "collection",
+          "settings": {
+            "collection": "eistee",
+            "image": "shopify://shop_images/Tee_maerz_2024_3.png"
+          }
+        },
+        "collection_9AA7RX": {
+          "type": "collection",
+          "settings": {
+            "collection": "kindertee",
+            "image": "shopify://shop_images/Tee_maerz_2024_2.png"
+          }
+        },
+        "collection_UKQzB3": {
+          "type": "collection",
+          "settings": {
+            "collection": "matcha"
+          }
+        }
+      },
+      "block_order": [
+        "collection_WMnr4x",
+        "collection_xXfLzA",
+        "41d2a729-d7c5-4d4d-8327-161c8299161d",
+        "6cb267ed-5235-4f18-b016-ca57a5aa72b2",
+        "d174a716-1ba3-4306-9a54-484f50d68848",
+        "d9466e4f-d65d-40b4-bcc6-f9038aa6e936",
+        "cce7cd1f-d313-4dce-aeab-5068a25589c9",
+        "4d3d23db-cda2-4309-af67-805dd2990c02",
+        "2fa0c034-d0a8-4aa9-b1b1-b98a13dd9978",
+        "collection_LPt37C",
+        "b83ddf3e-b680-4cba-bcfc-3518b26664d7",
+        "collection_z6kBN8",
+        "collection_yGPcgA",
+        "collection_9AA7RX",
+        "collection_UKQzB3"
+      ],
+      "settings": {
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "display_type": "selected",
+        "sort": "alphabetical"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

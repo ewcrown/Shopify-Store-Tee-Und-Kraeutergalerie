@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Matcha",
+        "subheading": "Genießen Sie die authentische Grünteeerfahrung mit unseren exquisiten Sorten aus China, Japan und Nepal. Matcha Tee, ein in Japan tief verwurzeltes Getränk, hat in den letzten Jahren weltweit an Popularität gewonnen. Dieses fein gemahlene Pulver aus speziell angebauten und verarbeiteten Grünteeblättern zeichnet sich durch seine leuchtend grüne Farbe und sein vielschichtiges Geschmacksprofil aus. Die Herstellung von Matcha ist eine Kunst für sich: Die Teeblätter werden vor der Ernte beschattet, um die Produktion von Chlorophyll zu steigern, was Matcha seine charakteristische Farbe verleiht und den Aminosäuregehalt erhöht. Nach der Ernte werden die Blätter gedämpft, getrocknet und schließlich ohne Stiele und Adern zu einem feinen Pulver vermahlen.Die traditionelle Zubereitung von Matcha ist ein meditativer Prozess, der in der japanischen Teezeremonie, bekannt als Chanoyu, Sado oder einfach Ocha, zelebriert wird. Diese Zeremonie spiegelt die Prinzipien der Harmonie, Respekt, Reinheit, und Stille wider. Matcha wird mit einem Bambusbesen, dem Chasen, in einer Schale, der Chawan, mit heißem Wasser geschlagen, bis ein leicht schaumiger, cremiger Tee entsteht. Diese Zubereitungsart unterstreicht die samtige Textur und den reichen, umami-haltigen Geschmack des Matchas.Neben seinem einzigartigen Geschmack und seiner kulturellen Bedeutung wird Matcha auch wegen seiner gesundheitlichen Vorteile geschätzt. Er ist reich an Antioxidantien, insbesondere an Epigallocatechingallat (EGCG), das für seine krebsbekämpfenden Eigenschaften bekannt ist. Matcha enthält auch L-Theanin, eine Aminosäure, die die Konzentration fördert und gleichzeitig eine beruhigende Wirkung hat. Ob als morgendlicher Energieschub, für die meditative Praxis oder einfach zum Genießen der raffinierten Geschmacksnuancen – Matcha bietet eine faszinierende Verbindung von Tradition, Kultur und Gesundheit.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--two-rows",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

@@ -1,0 +1,142 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_zXYR6i": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller"
+          }
+        },
+        "collection_CBe3V7": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller-fruchtetee"
+          }
+        },
+        "collection_HMy8Yq": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller-gruntee"
+          }
+        },
+        "collection_Tihbwi": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller-krautertee"
+          }
+        },
+        "collection_WPXrpL": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller-rooibos"
+          }
+        },
+        "collection_P6fKXM": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestseller-schwarztee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_zXYR6i",
+        "collection_CBe3V7",
+        "collection_HMy8Yq",
+        "collection_Tihbwi",
+        "collection_WPXrpL",
+        "collection_P6fKXM"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Bestseller",
+        "subheading": "Tee ist nicht nur ein Getränk, es ist eine Kultur, eine Tradition und für viele ein tägliches Ritual. Im Laufe der Jahre hat sich die Welt des Tees enorm erweitert, was zu einer beeindruckenden Vielfalt an Sorten, Geschmäckern und Zubereitungsmethoden geführt hat. Unter den zahlreichen Optionen gibt es einige, die sich als Bestseller herauskristallisiert haben, sowohl wegen ihres einzigartigen Geschmacks als auch wegen ihrer gesundheitlichen Vorteile. Unsere Bestseller-Tees locken mit einer Vielzahl von Aromen, gesundheitlichen Vorteilen und einer tief verwurzelten Tradition, die sie zu einem unverzichtbaren Bestandteil des täglichen Lebens vieler Menschen macht. Diese Tees, die von grünem Tee bis hin zu exotischen Mischungen reichen, haben sich weltweit einen Namen gemacht, nicht nur wegen ihres Geschmacks, sondern auch wegen ihrer Fähigkeit, Wohlbefinden und Entspannung zu fördern. Grüner Tee, bekannt für seine antioxidativen Eigenschaften, steht oft an der Spitze der Bestseller-Listen. Er wird besonders in Ländern wie Japan und China geschätzt, wo er tief in der Kultur verwurzelt ist. Darüber hinaus haben Kräutertees wie Kamille und Pfefferminze aufgrund ihrer beruhigenden Wirkung eine treue Anhängerschaft. Diese Tees sind nicht nur köstlich, sondern bieten auch eine natürliche Unterstützung für die Verdauung und helfen beim Entspannen nach einem langen Tag. Neben den traditionellen Favoriten erfreuen sich auch spezielle Mischungen großer Beliebtheit. Chai-Tee, eine würzige und aromatische Mischung, die ursprünglich aus Indien stammt, hat international viele Anhänger gefunden. Matcha, ein fein gemahlener grüner Tee, der in der japanischen Teezeremonie eine zentrale Rolle spielt, wird ebenfalls immer beliebter, besonders unter Gesundheitsbewussten und Liebhabern von Superfoods. Diese Tees bieten nicht nur einzigartige Geschmackserlebnisse, sondern auch vielfältige gesundheitliche Vorteile, von der Verbesserung der mentalen Klarheit bis hin zur Unterstützung des Immunsystems. Mit ihrer reichen Geschichte, ihrer kulturellen Bedeutung und ihren positiven Auswirkungen auf die Gesundheit bleiben Bestseller-Tees ein wesentlicher Bestandteil der globalen Teekultur.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

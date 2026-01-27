@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": true,
+        "page_cover_metafield": "",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "356ba8ac-b5c1-4e88-8361-06ad50671a14": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/Design_ohne_Titel_17.png",
+        "image_border_radius": 12,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "compact",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "8299197d-13f5-4591-b12e-f1cd51174137": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--17809470062857__8299197d-13f5-4591-b12e-f1cd51174137-1677154210d1c6fd61-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--17809470062857__8299197d-13f5-4591-b12e-f1cd51174137-1677154210d1c6fd61-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--17809470062857__8299197d-13f5-4591-b12e-f1cd51174137-1677154210d1c6fd61-2": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "template--17809470062857__8299197d-13f5-4591-b12e-f1cd51174137-1677154210d1c6fd61-0",
+        "template--17809470062857__8299197d-13f5-4591-b12e-f1cd51174137-1677154210d1c6fd61-1",
+        "template--17809470062857__8299197d-13f5-4591-b12e-f1cd51174137-1677154210d1c6fd61-2"
+      ],
+      "settings": {
+        "heading": "Aroma - Schwarztee",
+        "subheading": "Jetzt entdecken",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "schwarzer-tee-aromatisiert",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "0528dae3-73d3-4546-8edf-d91a242fa53b": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--18027766513929__0528dae3-73d3-4546-8edf-d91a242fa53b-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--18027766513929__0528dae3-73d3-4546-8edf-d91a242fa53b-title-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--18027766513929__0528dae3-73d3-4546-8edf-d91a242fa53b-quick_buy-1": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "template--18027766513929__0528dae3-73d3-4546-8edf-d91a242fa53b-price-1",
+        "template--18027766513929__0528dae3-73d3-4546-8edf-d91a242fa53b-title-1",
+        "template--18027766513929__0528dae3-73d3-4546-8edf-d91a242fa53b-quick_buy-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Ayurveda-Tee",
+        "subheading": "jetzt etdecken",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "collection": "ayurveda",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc": {
+      "type": "featured-collection",
+      "blocks": {
+        "template--18036535853321__6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--18036535853321__6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc-title-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--18036535853321__6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc-quick_buy-1": {
+          "type": "quick_buy",
+          "settings": {
+            "show_only_available": false,
+            "variant_default": false,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "template--18036535853321__6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc-price-1",
+        "template--18036535853321__6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc-title-1",
+        "template--18036535853321__6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc-quick_buy-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Aroma - Früchtee",
+        "subheading": "Jetzt entdecken",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": true,
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 6,
+        "collection": "aroma-fruchtetee",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "356ba8ac-b5c1-4e88-8361-06ad50671a14",
+    "8299197d-13f5-4591-b12e-f1cd51174137",
+    "0528dae3-73d3-4546-8edf-d91a242fa53b",
+    "6f11b2f5-48c6-4b14-8dba-62e4f42b6ddc"
+  ]
+}

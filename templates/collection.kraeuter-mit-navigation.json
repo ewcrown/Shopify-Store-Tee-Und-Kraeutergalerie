@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_CgwEen": {
+          "type": "collection",
+          "settings": {
+            "collection": "krautertee-1"
+          }
+        },
+        "collection_KeFkce": {
+          "type": "collection",
+          "settings": {
+            "collection": "bio-krautertee"
+          }
+        },
+        "collection_DmWRYU": {
+          "type": "collection",
+          "settings": {
+            "collection": "reine-krauter"
+          }
+        },
+        "collection_N6fpiQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "ayurveda-1"
+          }
+        },
+        "collection_dPJzRQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "krautertee-aroma"
+          }
+        },
+        "collection_RJ6mdW": {
+          "type": "collection",
+          "settings": {
+            "collection": "krautermischungen-ohne-aroma"
+          }
+        },
+        "collection_MfaHJR": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-krautertee"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CgwEen",
+        "collection_KeFkce",
+        "collection_DmWRYU",
+        "collection_N6fpiQ",
+        "collection_dPJzRQ",
+        "collection_RJ6mdW",
+        "collection_MfaHJR"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Kräutertee",
+        "subheading": "Entdecken Sie die Kraft der Kräutertees und Blüten für Ihr Wohlbefinden. Kräutertee, oft als die Seele der Natur in einer Tasse beschrieben, ist weit mehr als nur ein Getränk. Er ist ein Symbol für Ruhe, Gesundheit und die heilenden Kräfte der Natur, die seit Jahrhunderten in vielen Kulturen geschätzt werden. Über die Jahre hinweg hat sich die Kunst, Kräutertee zuzubereiten, entwickelt und eine Vielzahl von Mischungen hervorgebracht, die sowohl für ihre Geschmacksvielfalt als auch für ihre therapeutischen Eigenschaften bekannt sind. Von beruhigendem Kamillentee bis hin zu belebendem Pfefferminztee – jeder Schluck bietet eine einzigartige Palette an Aromen und Wohltaten für den Körper und Geist.Die Zubereitung von Kräutertee scheint ein einfacher Prozess zu sein, doch verbirgt sich dahinter eine Welt voller Wissen und Tradition. Die Auswahl der Kräuter, ihre Kombination und das Wissen um die richtige Ziehzeit spielen eine entscheidende Rolle, um die bestmöglichen Aromen und heilenden Wirkungen zu erzielen. Die Kräuter werden oft getrocknet, um die Aromen zu konzentrieren, und dann mit heißem Wasser übergossen, wodurch ihre essenziellen Öle freigesetzt werden. Dieser sanfte Prozess erlaubt es den Aromen und Wirkstoffen, sich vollständig zu entfalten und bietet dem Genießer ein einmaliges Erlebnis.Neben dem Genuss und der Entspannung, die ein guter Kräutertee bietet, sind es vor allem die gesundheitlichen Vorteile, die ihn so wertvoll machen. Viele Kräutertees besitzen antioxidative, entzündungshemmende und beruhigende Eigenschaften. Sie können die Verdauung unterstützen, beim Stressabbau helfen und einen ruhigen Schlaf fördern. In einer Welt, die oft von Hektik und Stress geprägt ist, bietet eine Tasse Kräutertee einen Moment der Besinnung und der Rückkehr zur Natur. Es ist eine einfache, aber kraftvolle Art, für unser Wohlbefinden zu sorgen und uns an die zeitlose Weisheit der Natur zu erinnern.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

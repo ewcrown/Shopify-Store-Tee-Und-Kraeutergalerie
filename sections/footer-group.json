@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.refactor_words.labels.footer_group",
+  "sections": {
+    "custom_liquid_Pbmj4h": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-VkDx6g\"></div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "e664f4cb-6f55-4b54-9522-2e4e815777a8": {
+          "type": "menu",
+          "settings": {
+            "title": "Kundenservice",
+            "menu": "kundenservice",
+            "menu_target": false,
+            "menu_style": false
+          }
+        },
+        "footer-0": {
+          "type": "menu",
+          "settings": {
+            "title": "Top Kategorien",
+            "menu": "top-kategorien",
+            "menu_target": true,
+            "menu_style": false
+          }
+        },
+        "22690413-23dd-4b75-8ebe-24be0dcee92d": {
+          "type": "text",
+          "settings": {
+            "title": "Folgen Sie uns bei Social Media",
+            "image_heading_size": 40,
+            "content": "",
+            "show_social_icons": true
+          }
+        },
+        "payment_eM4bz7": {
+          "type": "payment",
+          "settings": {
+            "title": "Zahlungsmöglichkeiten"
+          }
+        }
+      },
+      "block_order": [
+        "e664f4cb-6f55-4b54-9522-2e4e815777a8",
+        "footer-0",
+        "22690413-23dd-4b75-8ebe-24be0dcee92d",
+        "payment_eM4bz7"
+      ],
+      "settings": {
+        "layout": "grid-4 grid-portable-2 grid-lap-1",
+        "show_locale_selector": false,
+        "show_country_selector": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "87f206e0-fa65-4c00-9cca-a3f5cebefca5": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".container--large {margin: 0 auto; width: 100%; padding: 0 0 0 0;}",
+        ".gutter-bottom--xlarge {padding-bottom: 50px;}",
+        ".gutter-top--xlarge {padding-top: 10px;}",
+        ".rich-text__container {height: 40px;}",
+        ".container--fullwidth {background-color: #637362; color: #ffffff;}",
+        "a {color: #ffffff;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"rich-text__text \n        align-content align-content--horizontal-center align-content--vertical-middle \n        \n         container--large gutter-top--xlarge gutter-bottom--xlarge \">\n        <div class=\"card__text \n          spacing--custom remove-empty-space\" style=\"--spacing:0px\"><div class=\"rte text-size--regular\">\n                  <p><a href=\"/pages/agb\" title=\"AGB\">AGB</a>  |  <a href=\"/pages/faq\" title=\"Impressum\">Impressum</a>  |  <a href=\"/pages/widerrufsbelehrung\" title=\"Widerrufsbelehrung\">Widerrufsbelehrung</a>  |  <a href=\"/pages/datenschutz\" title=\"Datenschutz\">Datenschutz</a>  |  <a href=\"/pages/cookie-richtlinien-eu\" title=\"Cookie-Richtlinien (EU)\">Cookie-Richtlinien (EU)</a></p>\n                </div>\n</div>  \n\n      </div>",
+        "full_width": true,
+        "remove_margin": true
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_Pbmj4h",
+    "footer",
+    "87f206e0-fa65-4c00-9cca-a3f5cebefca5"
+  ]
+}

@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_yytVwE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_By746g": {
+          "type": "collection",
+          "settings": {
+            "collection": "rooibos-honeybush"
+          }
+        },
+        "collection_xmMbQR": {
+          "type": "collection",
+          "settings": {
+            "collection": "rooibos"
+          }
+        },
+        "collection_tYM9b8": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "bio-rooibos"
+          }
+        },
+        "collection_DmWRYU": {
+          "type": "collection",
+          "settings": {
+            "collection": "gruner-rooibostee"
+          }
+        },
+        "collection_N6fpiQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "honeybushtee-1"
+          }
+        },
+        "collection_dPJzRQ": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "bio-honeybush"
+          }
+        },
+        "collection_kpjATY": {
+          "type": "collection",
+          "settings": {
+            "collection": "pyramidenbeutel-rooibos"
+          }
+        }
+      },
+      "block_order": [
+        "collection_By746g",
+        "collection_xmMbQR",
+        "collection_tYM9b8",
+        "collection_DmWRYU",
+        "collection_N6fpiQ",
+        "collection_dPJzRQ",
+        "collection_kpjATY"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "show_view_all": false,
+        "style": "slider",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "image_border_radius": 0,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "collection_description_6FNh84": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Rooibos & Honeybush",
+        "subheading": "Genießen Sie die beruhigende Wirkung von Rooibos Tee. Mit seinen vielfältigen gesundheitlichen Vorteilen, seinem angenehmen Geschmack und der Tatsache, dass er sowohl heiß als auch kalt genossen werden kann, ist es kein Wunder, dass Rooibostee ein beliebtes Getränk für Menschen auf der ganzen Welt geworden ist. Honeybush Tee, auch bekannt als Cyclopia, ist eine Pflanze, die in den Bergregionen Südafrikas heimisch ist. Dieser Tee ist eng mit dem Rooibos-Tee verwandt, teilt aber ein einzigartiges Aroma und Geschmacksprofil, das ihn auf der Weltbühne der Teesorten hervorhebt. Der Name \"Honeybush\" leitet sich von den süßen, honigähnlichen Düften der Blüten ab, die bei der Ernte dieser Pflanze in die Luft entlassen werden. Dieses natürliche Süße verleiht dem Tee ein besonders angenehmes Aroma und macht ihn zu einem Favoriten unter Teeliebhabern, die eine leichte, zuckerfreie Alternative suchen.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_yytVwE",
+    "banner",
+    "product-grid",
+    "collection_description_6FNh84"
+  ]
+}

@@ -1,0 +1,482 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_ywNcwY": {
+      "type": "image",
+      "settings": {
+        "image": "shopify://shop_images/5_514641e0-00a4-4ba3-943f-0223cf225a7a.jpg",
+        "image_border_radius": 0,
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "fullwidth",
+        "remove_top_margin": false,
+        "remove_bottom_margin": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "height": "small"
+      }
+    },
+    "collection_description_9WdDhQ": {
+      "type": "collection-description",
+      "disabled": true,
+      "settings": {
+        "heading": "Tee trinken wie in England",
+        "subheading": "Wir laden Sie herzlich dazu ein auf eine Teereise nach England zu gehen. In England wird die Tradition des Teetrinkens hochgeschätzt. Kaum ein anderes Land legt so viel Wert auf das traditionelle Teetrinken wie England. Der Afternoon Tea ist dort eine beliebte Tradition, bei der Tee in einer gemütlichen Atmosphäre genossen wird. Typischerweise wird der Tee in einer Teekanne serviert und in feinem Teegeschirr wie Tassen und Untertassen eingeschenkt. Dazu werden oft Gebäck wie Scones mit Clotted Cream und Marmelade gereicht. Diese Kombination aus Tee, Teegeschirr und Gebäck macht den Afternoon Tea zu einem besonderen Erlebnis, das von den Engländern sehr geschätzt wird.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_description_9pRD7N": {
+      "type": "collection-description",
+      "disabled": true,
+      "settings": {
+        "heading": "Gentleman Tee Genuss",
+        "subheading": "Erkunden Sie unsere Zusammenstellung von Gentleman-Tees! Wir haben speziell würzige und kräftige Teesorten für den Herrn ausgewählt.Jeder Schluck verspricht ein einzigartiges Geschmackserlebnis, das sowohl den Gaumen erfreut als auch den Geist belebt. Unsere Tees sind nicht nur ein Genuss, sondern auch eine Möglichkeit, sich eine wohlverdiente Auszeit zu gönnen und den Moment zu genießen.Ob Sie einen kräftigen Schwarztee bevorzugen, der Sie mit Energie versorgt, oder einen beruhigenden Kräutertee, der Ihnen hilft, nach einem langen Tag zu entspannen – in unserer Kollektion finden Sie garantiert das Richtige.Unsere Tees sind handverlesen und stammen aus den besten Teeanbaugebieten der Welt. Jede Sorte wird sorgfältig ausgewählt, um höchste Qualität und besten Geschmack zu gewährleisten.Treten Sie ein in die Welt der Gentleman-Tees und erleben Sie die Kunst des Teegenusses auf höchstem Niveau.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_XtdcrB": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_XyGjnf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Early_Morning_3.jpg",
+            "title": "Shipping",
+            "caption": "Useful information about your shipping details",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_XHXyed": {
+          "type": "image",
+          "settings": {
+            "title": "Returns",
+            "caption": "Show how much time customers have for testing your products",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_VYFUHT": {
+          "type": "image",
+          "settings": {
+            "title": "Pickup",
+            "caption": "Let your customers know about local pickup",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_AwKDCG": {
+          "type": "image",
+          "settings": {
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_XyGjnf",
+        "image_XHXyed",
+        "image_VYFUHT",
+        "image_AwKDCG"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Unsere Angebote zur Black Week",
+        "subheading": "Lassen Sie sich diese Gelegenheit nicht entgehen, Ihren Tee-Vorrat aufzufüllen und gleichzeitig von attraktiven Rabatten zu profitieren.",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "text_alignment": "text-align--center",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-palm-1",
+        "image_aspect_ratio": "1",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+            "show_only_available": false,
+            "variant_default": true,
+            "show_price": true,
+            "unavailable_variants": "hide"
+          }
+        },
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "quick_buy",
+        "7de7d863-ee35-4a4a-a402-d687a7c955cd"
+      ],
+      "disabled": true,
+      "settings": {
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filters_position": "sidebar"
+      }
+    },
+    "featured_product_rFtpnF": {
+      "type": "featured-product",
+      "blocks": {
+        "title_jUdnWj": {
+          "type": "title",
+          "settings": {
+            "seo_h_tag": "h3"
+          }
+        },
+        "price_N7inkM": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_n6tJHc": {
+          "type": "variant_picker",
+          "settings": {
+            "heading": "",
+            "variants_style": "radio",
+            "color_swatches": true,
+            "style": "primary",
+            "show_quantities": "no",
+            "unavailable_variants": "hide"
+          }
+        },
+        "buy_buttons_tqTiK6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_price": true,
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "title_jUdnWj",
+        "price_N7inkM",
+        "variant_picker_n6tJHc",
+        "buy_buttons_tqTiK6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Teeangebot des Monats",
+        "subheading": "",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "product": "english-afternoon-tea-ausgewaehlte-teemischung",
+        "gallery_layout": "one-col scroll",
+        "gallery_desktop_width": "one-half",
+        "gallery_mobile_width": 90,
+        "gallery_aspect_ratio": "1",
+        "gallery_fit": false,
+        "gallery_padding": 0,
+        "gallery_background": "rgba(0,0,0,0)",
+        "gallery_border": "rgba(0,0,0,0)",
+        "border_radius": 0,
+        "show_thumbnails": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "default_to_first_variant": true,
+        "gutter_decrease": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "promotion_cards_ppyLnt": {
+      "type": "promotion-cards",
+      "blocks": {
+        "card_9h3ENF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Freisteller_Beerenkuss_Fruechtetee_Tee_und_Kraeutergalerie_Teeladen_ludwigsburg.jpg",
+            "caption": "100g 5,90 € anstatt 6,60 €",
+            "title": "Tee des Monats",
+            "subtitle": "Beerenkuss® | BIO | Früchtetee | Mild",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/beerenkuss-bio-fruechtetee-mild",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_BPmjaU": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Wuerzige_Beere_1.jpg",
+            "caption": "100g 2,85 € anstatt 5,70 €  MHD 10/25",
+            "title": "Angebot",
+            "subtitle": "Würzige Beere | Früchtetee",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/wuerzige-beere-fruechtetee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_dBGnJC": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/RedMango_1.jpg",
+            "caption": "100g 3,48 € anstatt 6,95 €  MHD 10/25",
+            "title": "Angebot",
+            "subtitle": "Red Mango | BIO | Früchtetee",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/red-mango-bio-fruechtetee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_hz6kQj": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/AnanasKaramell_1.jpg",
+            "caption": "100g 2,80 € anstatt 5,60 €  MHD 10/25",
+            "title": "Angebot",
+            "subtitle": "Ananas Karamell | Früchtetee | Mild",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/ananas-karamell-fruechtetee-mild",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_VYwgXk": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/OmasMandelplaetzchen_1_99c7e34d-41d8-4698-bd98-e15df604f6b2.webp",
+            "caption": "100g 3,40 € anstatt 5,00 € MHD 11/25",
+            "title": "Angebot",
+            "subtitle": "Omas Mandelplätzchen® | Grüntee | Aroma",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/omas-mandelplaetzchen-gruentee-aroma",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_qYfE7z": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/LirschMarzipan_1.webp",
+            "caption": "200g für 5,90 € anstatt 8,45 €",
+            "title": "Angebot",
+            "subtitle": "Kirsch Marzipan Früchtetee",
+            "button_label": "Jetzt entdecken!",
+            "button_link": "shopify://products/kirsch-marzipan-fruechtetee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_YTLYPQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/KopievonDesignohneTitel_5c4c11d6-63d0-4a4c-bcca-5bed38968fe0.jpg",
+            "caption": "100g 13,25 € anstatt 18,90 €",
+            "title": "Angebot",
+            "subtitle": "Flugtee Nepal Mai Tea White I BIO Grüntee",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/flugtee-nepal-mai-tea-white-bio-gruentee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_kUbyHX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/RedMango_1.jpg",
+            "caption": "100g 4,85 € anstatt 6,95 €",
+            "title": "Angebot",
+            "subtitle": "BIO Red Mango",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/red-mango-bio-fruechtetee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_VhaBbA": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Wuerzige_Beere_1.jpg",
+            "caption": "100g 3,95 € anstatt 5,70 €",
+            "title": "Angebot",
+            "subtitle": "Würzige Beere",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/wuerzige-beere-fruechtetee",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_HzHPCJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/GluecksgeheimnisMilderFruechteteeTeeundKraeutergalerie.jpg",
+            "caption": "100g 3,65 € anstatt 5,20 €",
+            "title": "Angebot",
+            "subtitle": "Glücksgeheimnis | Früchtetee | Mild",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/gluecksgeheimnis-fruechtetee-mild",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_Q4dxMU": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/WeisseSchokoladeOliveRoiboosKraeutertee.jpg",
+            "caption": "100g 4,45 € anstatt 4,95 €",
+            "title": "Angebot",
+            "subtitle": "Weiße Schokolade Olive | Rooibos",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/weisse-schokolade-olive-rooibos",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "card_eQfVmR": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/SweetChamomile_1.jpg",
+            "caption": "100g 5,90 € anstatt 8,40 €",
+            "title": "Angebot",
+            "subtitle": "Sweet Chamomile | BIO | Kräutertee | Aroma",
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/sweet-chamomile-bio-kraeutertee-aroma",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "card_9h3ENF",
+        "card_BPmjaU",
+        "card_dBGnJC",
+        "card_hz6kQj",
+        "card_VYwgXk",
+        "card_qYfE7z",
+        "card_YTLYPQ",
+        "card_kUbyHX",
+        "card_VhaBbA",
+        "card_HzHPCJ",
+        "card_Q4dxMU",
+        "card_eQfVmR"
+      ],
+      "settings": {
+        "heading": "Hier empfehlen wir unsere monatlich wechselnden Angebote und unsere Sonderaktionen zu saisonalen Tees.",
+        "subheading": "Ideal, um auch unbekannte Teesorten zu probieren!",
+        "section_heading_size": "text-size--regular",
+        "section_heading_layout": "section-heading--left section-heading--one-row",
+        "cta_label": "",
+        "cta_url": "",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "100%",
+        "subtitle_size": "regular",
+        "spacing": 18,
+        "button_style": "outline",
+        "border_radius": 0,
+        "gutter_decrease": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "image_ywNcwY",
+    "banner",
+    "collection_description_9WdDhQ",
+    "collection_description_9pRD7N",
+    "text_columns_images_XtdcrB",
+    "product-grid",
+    "featured_product_rFtpnF",
+    "promotion_cards_ppyLnt"
+  ]
+}
