@@ -1059,17 +1059,29 @@
 			{
 				"type": "range",
 				"id": "custom_integer",
-				"label": "Custom value",
+				"label": "Minimum cart total (€)",
 				"min": 0,
 				"max": 100,
 				"step": 1,
-				"default": 0,
-				"info": "Choose a value between 0 and 100."
+				"default": 49,
+				"unit": "€",
+				"info": "Offer the free product only when cart total is at least this amount (e.g. 49 = €49)."
+			},
+			{
+				"type": "header",
+				"content": "Free product offer"
 			},
 			{
 				"type": "product",
-				"id": "custom_product",
-				"label": "Custom product"
+				"id": "custom_free_product",
+				"label": "Free product",
+				"info": "The product offered for free when the trigger product is in the cart."
+			},
+			{
+				"type": "product",
+				"id": "custom_trigger_product",
+				"label": "Trigger product",
+				"info": "When this product is in the cart, the free product is offered. Otherwise, no free product."
 			}
 		]
 	}

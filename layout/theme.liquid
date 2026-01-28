@@ -140,6 +140,20 @@
     <link rel="stylesheet" href="{{ 'component-modal.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
   
+    {%- liquid
+      assign custom_free_variant_id = nil
+      if settings.custom_free_product
+        for v in settings.custom_free_product.variants
+          if v.option1 == 'Free' or v.option2 == 'Free' or v.option3 == 'Free' or v.title == 'Free'
+            assign custom_free_variant_id = v.id
+            break
+          endif
+        endfor
+        if custom_free_variant_id == nil and settings.custom_free_product.selected_or_first_available_variant
+          assign custom_free_variant_id = settings.custom_free_product.selected_or_first_available_variant.id
+        endif
+      endif
+    -%}
     <script type="text/javascript">
   
       KROWN = {  
@@ -197,7 +211,16 @@
           predictive_search_enabled: "true",
           predictive_search_script: "{{ 'component-predictive-search.js' | asset_url }}",
           predictive_search_placeholder: `<div class="search-results"><div class="search-block"><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a></div></div>`,
-          cart_image_ratio: (1 / {{ settings.cart_image_ratio }})
+          cart_image_ratio: (1 / {{ settings.cart_image_ratio }}),
+          custom: {
+            integer: {{ settings.custom_integer | default: 0 }},
+            free_product_id: {% if settings.custom_free_product %}{{ settings.custom_free_product.id }}{% else %}null{% endif %},
+            free_product_handle: {% if settings.custom_free_product %}'{{ settings.custom_free_product.handle }}'{% else %}null{% endif %},
+            free_product_variant_id: {% if custom_free_variant_id %}{{ custom_free_variant_id }}{% else %}null{% endif %},
+            free_product_title: {% if settings.custom_free_product %}'{{ settings.custom_free_product.title | escape }}'{% else %}null{% endif %},
+            trigger_product_id: {% if settings.custom_trigger_product %}{{ settings.custom_trigger_product.id }}{% else %}null{% endif %},
+            trigger_product_handle: {% if settings.custom_trigger_product %}'{{ settings.custom_trigger_product.handle }}'{% else %}null{% endif %}
+          }
         }
       }
       

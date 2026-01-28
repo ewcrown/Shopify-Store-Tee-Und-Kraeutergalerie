@@ -145,6 +145,27 @@
 
 	</form>
 
+	{%- liquid
+      assign custom_free_variant_id = nil
+      if settings.custom_free_product
+        for v in settings.custom_free_product.variants
+          if v.option1 == 'Free' or v.option2 == 'Free' or v.option3 == 'Free' or v.title == 'Free'
+            assign custom_free_variant_id = v.id
+            break
+          endif
+        endfor
+        if custom_free_variant_id == nil and settings.custom_free_product.selected_or_first_available_variant
+          assign custom_free_variant_id = settings.custom_free_product.selected_or_first_available_variant.id
+        endif
+      endif
+    -%}
+	{%- if settings.custom_free_product and settings.custom_trigger_product and custom_free_variant_id -%}
+		<div id="custom-free-product-offer" class="custom-free-product-offer hide-if-empty-cart" style="display: none; margin-top: 1rem; padding: 1rem; border: 1px solid var(--color-borders-main, #eee); border-radius: 6px;" data-free-variant-id="{{ custom_free_variant_id }}" data-free-product-title="{{ settings.custom_free_product.title | escape }}">
+			<p class="text-size--small" style="margin: 0 0 0.5rem 0;"><strong>{{ settings.custom_free_product.title }}</strong> — Kostenlos dazu!</p>
+			<button type="button" class="button button--regular button--outline" data-js-add-free-product>Kostenlos hinzufügen</button>
+		</div>
+	{%- endif -%}
+
 	<span class="cart__count hidden" aria-hidden="true" data-cart-count>{{ cart.item_count }}</span>
 	<span class="cart__total hidden" aria-hidden="true" data-cart-total>{{ cart.total_price | money }}</span>
 
