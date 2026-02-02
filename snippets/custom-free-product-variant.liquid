@@ -1,0 +1,18 @@
+{% comment %}
+  Outputs the variant ID for a free gift product.
+  Prefers variant with "Free" in title/options, else first available.
+  Usage: {% capture vid %}{% render 'custom-free-product-variant', product: some_product %}{% endcapture %}
+{% endcomment %}
+{% assign custom_free_vid = nil %}
+{% if product and product != blank %}
+  {% for v in product.variants %}
+    {% if v.option1 == 'Free' or v.option2 == 'Free' or v.option3 == 'Free' or v.title == 'Free' %}
+      {% assign custom_free_vid = v.id %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if custom_free_vid == nil and product.selected_or_first_available_variant %}
+    {% assign custom_free_vid = product.selected_or_first_available_variant.id %}
+  {% endif %}
+{% endif %}
+{{ custom_free_vid }}

@@ -173,23 +173,49 @@
 	</form>
 
 	{%- liquid
-      assign custom_free_variant_id = nil
-      if settings.custom_free_product
-        for v in settings.custom_free_product.variants
-          if v.option1 == 'Free' or v.option2 == 'Free' or v.option3 == 'Free' or v.title == 'Free'
-            assign custom_free_variant_id = v.id
-            break
-          endif
-        endfor
-        if custom_free_variant_id == nil and settings.custom_free_product.selected_or_first_available_variant
-          assign custom_free_variant_id = settings.custom_free_product.selected_or_first_available_variant.id
-        endif
-      endif
+      assign custom_free_has_any = false
+      assign custom_free_product_1 = settings.custom_free_product_1
+      assign custom_free_product_2 = settings.custom_free_product_2
+      assign custom_free_product_3 = settings.custom_free_product_3
     -%}
-	{%- if settings.custom_free_product and custom_free_variant_id -%}
-		<div id="custom-free-product-offer" class="custom-free-product-offer hide-if-empty-cart" style="display: none; margin-top: 1rem; padding: 1rem; border: 1px solid var(--color-borders-main, #eee); border-radius: 6px;" data-free-variant-id="{{ custom_free_variant_id }}" data-free-product-title="{{ settings.custom_free_product.title | escape }}">
-			<p class="text-size--small" style="margin: 0 0 0.5rem 0;"><strong>{{ settings.custom_free_product.title }}</strong> — Kostenlos dazu!</p>
-			<button type="button" class="button button--regular button--outline" data-js-add-free-product>Kostenlos hinzufügen</button>
+	{%- capture custom_free_vid_1 -%}{% render 'custom-free-product-variant', product: custom_free_product_1 %}{%- endcapture -%}
+	{%- capture custom_free_vid_2 -%}{% render 'custom-free-product-variant', product: custom_free_product_2 %}{%- endcapture -%}
+	{%- capture custom_free_vid_3 -%}{% render 'custom-free-product-variant', product: custom_free_product_3 %}{%- endcapture -%}
+	{%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
+	{%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
+	{%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
+	{%- if custom_free_has_any -%}
+		<div id="custom-free-product-offer" class="custom-free-product-offer hide-if-empty-cart" style="display: none; margin-top: 1rem; padding: 1rem; border: 1px solid var(--color-borders-main, #eee); border-radius: 6px;">
+			<p class="text-size--small text-weight--bold" style="margin: 0 0 0.75rem 0;">Wählen Sie Ihr kostenloses Geschenk:</p>
+			<div class="custom-free-product-choices" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem;">
+				{%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}
+				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
+					<a href="{{ custom_free_product_1.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
+						{%- render 'lazy-image-small', image: custom_free_product_1.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
+					</a>
+					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_1.title }}</p>
+					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_1 }}" data-free-product-id="{{ custom_free_product_1.id }}">Kostenlos hinzufügen</button>
+				</div>
+				{%- endif -%}
+				{%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}
+				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
+					<a href="{{ custom_free_product_2.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
+						{%- render 'lazy-image-small', image: custom_free_product_2.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
+					</a>
+					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_2.title }}</p>
+					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_2 }}" data-free-product-id="{{ custom_free_product_2.id }}">Kostenlos hinzufügen</button>
+				</div>
+				{%- endif -%}
+				{%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}
+				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
+					<a href="{{ custom_free_product_3.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
+						{%- render 'lazy-image-small', image: custom_free_product_3.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
+					</a>
+					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_3.title }}</p>
+					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_3 }}" data-free-product-id="{{ custom_free_product_3.id }}">Kostenlos hinzufügen</button>
+				</div>
+				{%- endif -%}
+			</div>
 		</div>
 	{%- endif -%}
 

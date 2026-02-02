@@ -1,13 +1,13 @@
 /**
- * Custom free-product offer: automatically add free product when cart total
- * >= minimum (custom_integer in €). Uses KROWN.settings.custom.
+ * Custom free-product offer: show 3 free product choices when cart total
+ * >= minimum (custom_integer in €). User chooses which one to add.
+ * When cart drops below minimum, free gift is auto-removed.
  */
 (function () {
   'use strict';
 
   const CART_JSON = '/cart.js';
   const OFFER_ID = 'custom-free-product-offer';
-  var autoAddInProgress = false;
   var autoRemoveInProgress = false;
 
   function getConfig() {
@@ -16,50 +16,55 @@
 
   function isConfigured(config) {
     return config &&
-      config.free_product_id &&
-      config.free_product_variant_id;
+      config.free_products &&
+      Array.isArray(config.free_products) &&
+      config.free_products.length > 0;
   }
 
   function fetchCart() {
     return fetch(CART_JSON).then(function (r) { return r.json(); });
   }
 
-  function freeInCart(cart, freeId) {
-    return cart.items && cart.items.some(function (item) {
-      return String(item.product_id) === String(freeId);
+  function hasAnyFreeProductInCart(cart, freeProductIds) {
+    if (!cart.items || !freeProductIds || freeProductIds.length === 0) return false;
+    return cart.items.some(function (item) {
+      return freeProductIds.indexOf(String(item.product_id)) !== -1;
     });
   }
 
-  function getFreeProductLineItem(cart, freeId) {
-    if (!cart.items) return null;
+  function getFreeProductLineItemInCart(cart, freeProductIds) {
+    if (!cart.items || !freeProductIds) return null;
     for (var i = 0; i < cart.items.length; i++) {
-      if (String(cart.items[i].product_id) === String(freeId)) {
+      if (freeProductIds.indexOf(String(cart.items[i].product_id)) !== -1) {
         return cart.items[i];
       }
     }
     return null;
   }
 
-  /** Cart total in cents must be >= minimum (config.integer in €, so * 100). */
   function cartTotalMeetsMinimum(cart, minEuro) {
     var minCents = (parseInt(minEuro, 10) || 0) * 100;
     return cart.total_price >= minCents;
   }
 
+  function getFreeProductIds(config) {
+    if (!config || !config.free_products) return [];
+    return config.free_products.map(function (p) { return String(p.id); });
+  }
+
   function updateOfferUi(show, config) {
-    const el = document.getElementById(OFFER_ID);
+    var el = document.getElementById(OFFER_ID);
     if (!el) return;
     el.style.display = show ? 'block' : 'none';
   }
 
   function addFreeProduct(variantId) {
-    const id = parseInt(String(variantId), 10);
+    var id = parseInt(String(variantId), 10);
     if (!id) return Promise.reject(new Error('Invalid variant id'));
-    const addUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_add_url) || '/cart/add';
-    const body = JSON.stringify({
+    var addUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_add_url) || '/cart/add';
+    var body = JSON.stringify({
       items: [{ id: id, quantity: 1 }]
     });
-
     return fetch(addUrl + '.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -67,8 +72,8 @@
     }).then(function (r) { return r.json(); });
   }
 
-  function removeFreeProduct(cart, freeProductId) {
-    var lineItem = getFreeProductLineItem(cart, freeProductId);
+  function removeFreeProduct(cart, freeProductIds) {
+    var lineItem = getFreeProductLineItemInCart(cart, freeProductIds);
     if (!lineItem || !lineItem.key) return Promise.reject(new Error('Free product not in cart'));
     var changeUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_change_url) || '/cart/change';
     var body = JSON.stringify({ id: lineItem.key, quantity: 0 });
@@ -86,35 +91,20 @@
   }
 
   function run() {
-    const config = getConfig();
+    var config = getConfig();
     if (!isConfigured(config)) return;
-    if (autoAddInProgress || autoRemoveInProgress) return;
+    if (autoRemoveInProgress) return;
+
+    var freeProductIds = getFreeProductIds(config);
 
     fetchCart().then(function (cart) {
-      const hasFree = freeInCart(cart, config.free_product_id);
-      const meetsMinimum = cartTotalMeetsMinimum(cart, config.integer);
-      const show = meetsMinimum && !hasFree;
+      var hasFree = hasAnyFreeProductInCart(cart, freeProductIds);
+      var meetsMinimum = cartTotalMeetsMinimum(cart, config.integer);
+      var show = meetsMinimum && !hasFree;
 
-      if (meetsMinimum && !hasFree) {
-        autoAddInProgress = true;
-        addFreeProduct(config.free_product_variant_id).then(function (res) {
-          if (res.status && (res.status === 422 || res.message)) {
-            autoAddInProgress = false;
-            updateOfferUi(true, config);
-            return;
-          }
-          refreshCart();
-          setTimeout(function () {
-            autoAddInProgress = false;
-            run();
-          }, 600);
-        }).catch(function () {
-          autoAddInProgress = false;
-          updateOfferUi(true, config);
-        });
-      } else if (!meetsMinimum && hasFree) {
+      if (!meetsMinimum && hasFree) {
         autoRemoveInProgress = true;
-        removeFreeProduct(cart, config.free_product_id).then(function (res) {
+        removeFreeProduct(cart, freeProductIds).then(function (res) {
           if (res.status && (res.status === 422 || res.message)) {
             autoRemoveInProgress = false;
             return;
@@ -136,17 +126,14 @@
   }
 
   function onAddFreeClick(e) {
-    const btn = e.target.closest('[data-js-add-free-product]');
+    var btn = e.target.closest('[data-js-add-free-product]');
     if (!btn) return;
 
-    const offer = document.getElementById(OFFER_ID);
-    if (!offer) return;
-
-    const variantId = offer.getAttribute('data-free-variant-id');
+    var variantId = btn.getAttribute('data-free-variant-id');
     if (!variantId) return;
 
-    const config = getConfig();
-    if (!config || !config.free_product_variant_id) return;
+    var config = getConfig();
+    if (!config) return;
 
     btn.disabled = true;
     btn.textContent = '…';

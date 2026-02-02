@@ -1065,17 +1065,30 @@
 				"step": 1,
 				"default": 49,
 				"unit": "€",
-				"info": "Free product is automatically added when cart total reaches this amount (e.g. 49 = €49)."
+				"info": "Free gift options appear when cart total reaches this amount (e.g. 49 = €49)."
 			},
 			{
 				"type": "header",
-				"content": "Free product offer"
+				"content": "Free gift choices"
+			},
+			{
+				"type": "paragraph",
+				"content": "Show 3 free product options when cart meets minimum. User chooses which one to add."
 			},
 			{
 				"type": "product",
-				"id": "custom_free_product",
-				"label": "Free product",
-				"info": "Automatically added to cart when cart total meets the minimum above."
+				"id": "custom_free_product_1",
+				"label": "Free product option 1"
+			},
+			{
+				"type": "product",
+				"id": "custom_free_product_2",
+				"label": "Free product option 2"
+			},
+			{
+				"type": "product",
+				"id": "custom_free_product_3",
+				"label": "Free product option 3"
 			}
 		]
 	}

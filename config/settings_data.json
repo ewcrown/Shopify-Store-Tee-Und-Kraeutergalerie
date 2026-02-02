@@ -168,7 +168,9 @@
     "social_vimeo": "",
     "social_twitter": "",
     "custom_integer": 49,
-    "custom_free_product": "test-free-gift-product",
+    "custom_free_product_1": "test-free-gift-product",
+    "custom_free_product_2": "test-free-gift-product-2",
+    "custom_free_product_3": "test-free-gift-product-3",
     "checkout_header_image": "shopify://shop_images/Design_ohne_Titel_13.png",
     "checkout_logo_image": "shopify://shop_images/bildmarke-weiss.png",
     "checkout_logo_position": "center",
@@ -293,11 +295,6 @@
         "settings": {
           "hide_label": false
         }
-      },
-      "1932496262343429097": {
-        "type": "shopify://apps/bogox-free-gift/blocks/app/4254c128-561c-4a78-b553-cfcb302243bb",
-        "disabled": true,
-        "settings": {}
       }
     }
   }
