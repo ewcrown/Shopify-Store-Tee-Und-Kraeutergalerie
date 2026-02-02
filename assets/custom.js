@@ -1,13 +1,14 @@
 /**
- * Custom free-product offer: show "Add free" when trigger product is in cart
- * and cart total >= minimum (custom value in €). Adds the "Free" variant of the
- * free gift product. Uses KROWN.settings.custom.
+ * Custom free-product offer: automatically add free product when cart total
+ * >= minimum (custom_integer in €). Uses KROWN.settings.custom.
  */
 (function () {
   'use strict';
 
   const CART_JSON = '/cart.js';
   const OFFER_ID = 'custom-free-product-offer';
+  var autoAddInProgress = false;
+  var autoRemoveInProgress = false;
 
   function getConfig() {
     return window.KROWN && window.KROWN.settings && window.KROWN.settings.custom;
@@ -15,7 +16,6 @@
 
   function isConfigured(config) {
     return config &&
-      config.trigger_product_id &&
       config.free_product_id &&
       config.free_product_variant_id;
   }
@@ -24,16 +24,20 @@
     return fetch(CART_JSON).then(function (r) { return r.json(); });
   }
 
-  function triggerInCart(cart, triggerId) {
-    return cart.items && cart.items.some(function (item) {
-      return String(item.product_id) === String(triggerId);
-    });
-  }
-
   function freeInCart(cart, freeId) {
     return cart.items && cart.items.some(function (item) {
       return String(item.product_id) === String(freeId);
     });
+  }
+
+  function getFreeProductLineItem(cart, freeId) {
+    if (!cart.items) return null;
+    for (var i = 0; i < cart.items.length; i++) {
+      if (String(cart.items[i].product_id) === String(freeId)) {
+        return cart.items[i];
+      }
+    }
+    return null;
   }
 
   /** Cart total in cents must be >= minimum (config.integer in €, so * 100). */
@@ -63,6 +67,18 @@
     }).then(function (r) { return r.json(); });
   }
 
+  function removeFreeProduct(cart, freeProductId) {
+    var lineItem = getFreeProductLineItem(cart, freeProductId);
+    if (!lineItem || !lineItem.key) return Promise.reject(new Error('Free product not in cart'));
+    var changeUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_change_url) || '/cart/change';
+    var body = JSON.stringify({ id: lineItem.key, quantity: 0 });
+    return fetch(changeUrl + '.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: body
+    }).then(function (r) { return r.json(); });
+  }
+
   function refreshCart() {
     if (typeof window.refreshCart === 'function') {
       window.refreshCart();
@@ -72,13 +88,48 @@
   function run() {
     const config = getConfig();
     if (!isConfigured(config)) return;
+    if (autoAddInProgress || autoRemoveInProgress) return;
 
     fetchCart().then(function (cart) {
-      const hasTrigger = triggerInCart(cart, config.trigger_product_id);
       const hasFree = freeInCart(cart, config.free_product_id);
       const meetsMinimum = cartTotalMeetsMinimum(cart, config.integer);
-      const show = hasTrigger && meetsMinimum && !hasFree;
-      updateOfferUi(show, config);
+      const show = meetsMinimum && !hasFree;
+
+      if (meetsMinimum && !hasFree) {
+        autoAddInProgress = true;
+        addFreeProduct(config.free_product_variant_id).then(function (res) {
+          if (res.status && (res.status === 422 || res.message)) {
+            autoAddInProgress = false;
+            updateOfferUi(true, config);
+            return;
+          }
+          refreshCart();
+          setTimeout(function () {
+            autoAddInProgress = false;
+            run();
+          }, 600);
+        }).catch(function () {
+          autoAddInProgress = false;
+          updateOfferUi(true, config);
+        });
+      } else if (!meetsMinimum && hasFree) {
+        autoRemoveInProgress = true;
+        removeFreeProduct(cart, config.free_product_id).then(function (res) {
+          if (res.status && (res.status === 422 || res.message)) {
+            autoRemoveInProgress = false;
+            return;
+          }
+          refreshCart();
+          setTimeout(function () {
+            autoRemoveInProgress = false;
+            run();
+          }, 600);
+        }).catch(function () {
+          autoRemoveInProgress = false;
+        });
+      } else {
+        updateOfferUi(show, config);
+      }
     }).catch(function () {
       updateOfferUi(false);
     });

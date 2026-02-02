@@ -217,9 +217,7 @@
             free_product_id: {% if settings.custom_free_product %}{{ settings.custom_free_product.id }}{% else %}null{% endif %},
             free_product_handle: {% if settings.custom_free_product %}'{{ settings.custom_free_product.handle }}'{% else %}null{% endif %},
             free_product_variant_id: {% if custom_free_variant_id %}{{ custom_free_variant_id }}{% else %}null{% endif %},
-            free_product_title: {% if settings.custom_free_product %}'{{ settings.custom_free_product.title | escape }}'{% else %}null{% endif %},
-            trigger_product_id: {% if settings.custom_trigger_product %}{{ settings.custom_trigger_product.id }}{% else %}null{% endif %},
-            trigger_product_handle: {% if settings.custom_trigger_product %}'{{ settings.custom_trigger_product.handle }}'{% else %}null{% endif %}
+            free_product_title: {% if settings.custom_free_product %}'{{ settings.custom_free_product.title | escape }}'{% else %}null{% endif %}
           }
         }
       }

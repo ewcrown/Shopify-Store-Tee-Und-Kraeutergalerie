@@ -1065,7 +1065,7 @@
 				"step": 1,
 				"default": 49,
 				"unit": "€",
-				"info": "Offer the free product only when cart total is at least this amount (e.g. 49 = €49)."
+				"info": "Free product is automatically added when cart total reaches this amount (e.g. 49 = €49)."
 			},
 			{
 				"type": "header",
@@ -1075,13 +1075,7 @@
 				"type": "product",
 				"id": "custom_free_product",
 				"label": "Free product",
-				"info": "The product offered for free when the trigger product is in the cart."
-			},
-			{
-				"type": "product",
-				"id": "custom_trigger_product",
-				"label": "Trigger product",
-				"info": "When this product is in the cart, the free product is offered. Otherwise, no free product."
+				"info": "Automatically added to cart when cart total meets the minimum above."
 			}
 		]
 	}
