@@ -2,19 +2,19 @@
 
 	{%- if type == 'page' -%}
 
-		{%- if settings.cart_free_shipping -%}
+		{%- liquid
+			assign show_cart_notices = false
+			if settings.cart_free_shipping
+				assign show_cart_notices = true
+			endif
+			if settings.custom_free_product_1 != blank or settings.custom_free_product_2 != blank or settings.custom_free_product_3 != blank
+				assign show_cart_notices = true
+			endif
+		-%}
+		{%- if show_cart_notices -%}
 			<div class="sidebar-widget sidebar-widget--outline gutter-regular margin-bottom--regular">
 				<div class="sidebar-widget__content">
-					<shipping-notice
-						data-free-shipping="{{ settings.cart_free_shipping_amount | times: 100 }}"
-						data-cart-total="{{ cart.total_price }}"
-					>
-						<span data-js-free-shipping-text></span>
-						<span class="cart-notice__slider">
-							<span class="cart-notice__slider-bar" data-js-free-shipping-slider></span>
-						</span>
-					</shipping-notice>
-					<script src="{{ 'component-shipping-notice.js' | asset_url }}" defer></script>
+					{%- render 'cart-progress-goals' -%}
 				</div>
 			</div>
 		{%- endif -%}

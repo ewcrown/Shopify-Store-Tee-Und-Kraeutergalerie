@@ -1,0 +1,52 @@
+{% comment %}
+  Merged progress bar showing free shipping and free gift goals with milestone markers.
+{% endcomment %}
+{%- liquid
+  assign show_progress = false
+  assign shipping_goal_cents = 0
+  assign gift_goal_cents = 0
+  if settings.cart_free_shipping and settings.cart_free_shipping_amount
+    assign shipping_goal_cents = settings.cart_free_shipping_amount | times: 100
+    assign show_progress = true
+  endif
+  assign has_free_products = false
+  if settings.custom_free_product_1 != blank or settings.custom_free_product_2 != blank or settings.custom_free_product_3 != blank
+    assign has_free_products = true
+  endif
+  if settings.custom_integer and settings.custom_integer > 0 and has_free_products
+    assign gift_goal_cents = settings.custom_integer | times: 100
+    assign show_progress = true
+  endif
+  assign max_goal_cents = shipping_goal_cents
+  if gift_goal_cents > shipping_goal_cents
+    assign max_goal_cents = gift_goal_cents
+  endif
+-%}
+{%- if show_progress and max_goal_cents > 0 -%}
+  <div class="cart-progress-goals-wrapper cart-notice text-size--small hide-if-empty-cart">
+    <cart-progress-goals
+      class="cart-progress-goals"
+      data-cart-total="{{ cart.total_price | default: 0 }}"
+      data-shipping-goal="{{ shipping_goal_cents }}"
+      data-gift-goal="{{ gift_goal_cents }}"
+      data-max-goal="{{ max_goal_cents }}"
+      data-text-progress="%current% von %goal%"
+      data-text-shipping-remaining="Noch %amount% bis kostenloser Versand"
+      data-text-shipping-done="✓ Kostenloser Versand"
+      data-text-gift-remaining="Noch %amount% bis Gratisgeschenk"
+      data-text-gift-done="✓ Gratisgeschenk"
+    >
+      <div class="cart-progress-goals__text" data-js-cart-progress-text></div>
+      <div class="cart-progress-goals__bar-holder cart-notice__slider">
+        <span class="cart-progress-goals__fill cart-notice__slider-bar" data-js-cart-progress-fill></span>
+        {%- if shipping_goal_cents > 0 -%}
+          <span class="cart-progress-goals__marker cart-progress-goals__marker--shipping" data-js-marker-shipping title="Kostenloser Versand"></span>
+        {%- endif -%}
+        {%- if gift_goal_cents > 0 and gift_goal_cents != shipping_goal_cents -%}
+          <span class="cart-progress-goals__marker cart-progress-goals__marker--gift" data-js-marker-gift title="Gratisgeschenk"></span>
+        {%- endif -%}
+      </div>
+      <div class="cart-progress-goals__labels" data-js-cart-progress-labels></div>
+    </cart-progress-goals>
+  </div>
+{%- endif -%}

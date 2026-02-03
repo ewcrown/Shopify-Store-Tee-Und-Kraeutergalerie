@@ -170,6 +170,52 @@ html[dir=ltr] .cart-notice__slider-bar {
   left: 0;
 }
 
+/* Free gift progress bar (legacy - kept for reference) */
+.free-gift-progress-wrapper {
+  display: block;
+}
+.free-gift-progress__bar {
+  background: var(--color-accent-main, var(--color-text-main));
+}
+
+/* Merged cart progress goals */
+.cart-progress-goals__bar-holder {
+  position: relative;
+  overflow: visible;
+}
+.cart-progress-goals__fill {
+  background: var(--color-accent-main, var(--color-text-main));
+  transition: width 0.3s ease;
+}
+.cart-progress-goals__marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 12px;
+  background: var(--color-text-main);
+  border-radius: 2px;
+  opacity: 0.6;
+  z-index: 2;
+  pointer-events: none;
+}
+.cart-progress-goals__marker--shipping {
+  background: var(--color-accent-main, #637463);
+}
+.cart-progress-goals__marker--gift {
+  background: var(--color-accent-main, #de7a22);
+  height: 14px;
+}
+.cart-progress-goals__labels {
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  color: var(--color-text-main);
+  opacity: 0.9;
+}
+.cart-progress-goals__label {
+  display: inline;
+}
+
 .cart__form.processing {
   opacity: 0.36;
   pointer-events: none;

@@ -1,19 +1,6 @@
 <cart-form id="AjaxCartForm">
 
-	{%- if template != 'cart' and settings.cart_free_shipping -%}
-		<div class="cart-notice text-size--small hide-if-empty-cart">
-			<shipping-notice
-				data-free-shipping="{{ settings.cart_free_shipping_amount | times: 100 }}"
-				data-cart-total="{{ cart.total_price }}"
-			>
-				<span data-js-free-shipping-text></span>
-				<span class="cart-notice__slider">
-					<span class="cart-notice__slider-bar" data-js-free-shipping-slider></span>
-				</span>
-			</shipping-notice>
-		</div>
-		<script src="{{ 'component-shipping-notice.js' | asset_url }}" defer></script>
-	{%- endif -%}
+	{%- render 'cart-progress-goals' -%}
 
 	<form action="{{ routes.cart_url }}" method="post" novalidate class="cart__form {% if cart.item_count == 0 %} cart--empty {% endif %}" id="cart">
 	

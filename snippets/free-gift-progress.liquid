@@ -1,0 +1,27 @@
+{% comment %}
+  Free gift progress bar. Renders when free products are configured.
+{% endcomment %}
+{%- liquid
+  assign has_free_products = false
+  if settings.custom_free_product_1 != blank or settings.custom_free_product_2 != blank or settings.custom_free_product_3 != blank
+    assign has_free_products = true
+  endif
+  assign goal_euros = settings.custom_integer | default: 0
+-%}
+{%- if has_free_products and goal_euros > 0 -%}
+  {%- assign goal_cents = goal_euros | times: 100 -%}
+  <div class="free-gift-progress-wrapper cart-notice text-size--small hide-if-empty-cart">
+    <free-gift-progress
+      class="free-gift-progress"
+      data-goal="{{ goal_cents }}"
+      data-cart-total="{{ cart.total_price | default: 0 }}"
+      data-text-remaining="Noch %amount% bis zu Ihrem Gratisgeschenk"
+      data-text-qualified="Sie haben sich ein Gratisgeschenk verdient!"
+    >
+      <span data-js-free-gift-text class="free-gift-progress__text"></span>
+      <span class="free-gift-progress__slider cart-notice__slider">
+        <span class="free-gift-progress__bar cart-notice__slider-bar" data-js-free-gift-slider></span>
+      </span>
+    </free-gift-progress>
+  </div>
+{%- endif -%}

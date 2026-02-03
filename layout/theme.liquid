@@ -353,6 +353,7 @@
     <script src="{{ 'component-quantity-selector.js' | asset_url }}" defer></script>
     {%- if settings.cart_action == "overlay" or template.name contains "cart" -%}
       <script src="{{ 'component-cart.js' | asset_url }}" defer></script>
+      <script src="{{ 'component-cart-progress-goals.js' | asset_url }}" defer></script>
     {%- endif -%}
   
     <link rel="stylesheet" href="{{ 'component-sidebar.css' | asset_url }}" media="print" onload="this.media='all';">
