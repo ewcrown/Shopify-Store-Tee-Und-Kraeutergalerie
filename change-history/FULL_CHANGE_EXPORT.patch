@@ -1,0 +1,2133 @@
+# Tee und Kräutergalerie — full code diff export
+# Generated: 2026-05-11T10:37:05Z
+
+############################################
+# SECTION A: Committed after 'First Commit'
+# Range: ff03568..HEAD (git diff ff03568 HEAD)
+# Stats:  17 files changed, 1085 insertions(+), 439 deletions(-)
+############################################
+
+diff --git a/assets/component-cart-progress-goals.js b/assets/component-cart-progress-goals.js
+new file mode 100644
+index 0000000..89f0505
+--- /dev/null
++++ b/assets/component-cart-progress-goals.js
+@@ -0,0 +1,95 @@
++if (typeof CartProgressGoals !== 'function') {
++
++  function formatMoney(cents, format) {
++    if (typeof cents === 'string') cents = cents.replace('.', '');
++    var value = '';
++    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
++    var formatString = format || '{{amount}}';
++
++    function formatWithDelimiters(number, precision, thousands, decimal) {
++      thousands = thousands || ',';
++      decimal = decimal || '.';
++      if (isNaN(number) || number === null) return '0';
++      number = (number / 100.0).toFixed(precision);
++      var parts = number.split('.');
++      var dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
++      var centsAmount = parts[1] ? decimal + parts[1] : '';
++      return dollarsAmount + centsAmount;
++    }
++
++    var match = formatString.match(placeholderRegex);
++    if (match) {
++      switch (match[1]) {
++        case 'amount': value = formatWithDelimiters(cents, 2); break;
++        case 'amount_no_decimals': value = formatWithDelimiters(cents, 0); break;
++        case 'amount_with_comma_separator': value = formatWithDelimiters(cents, 2, '.', ','); break;
++        case 'amount_no_decimals_with_comma_separator': value = formatWithDelimiters(cents, 0, '.', ','); break;
++        case 'amount_no_decimals_with_space_separator': value = formatWithDelimiters(cents, 0, ' '); break;
++        case 'amount_with_apostrophe_separator': value = formatWithDelimiters(cents, 2, "'"); break;
++        default: value = formatWithDelimiters(cents, 2);
++      }
++      return formatString.replace(placeholderRegex, value);
++    }
++    return (cents / 100).toFixed(2).replace('.', ',') + ' €';
++  }
++
++  class CartProgressGoals extends HTMLElement {
++    constructor() {
++      super();
++      this.init();
++    }
++
++    init() {
++      var cartTotal = parseInt(this.getAttribute('data-cart-total'), 10) || 0;
++      var shippingGoal = parseInt(this.getAttribute('data-shipping-goal'), 10) || 0;
++      var giftGoal = parseInt(this.getAttribute('data-gift-goal'), 10) || 0;
++      var maxGoal = parseInt(this.getAttribute('data-max-goal'), 10) || Math.max(shippingGoal, giftGoal, 1);
++      var moneyFormat = (window.KROWN && window.KROWN.settings && window.KROWN.settings.shop_money_format) || '{{amount}}';
++
++      var textEl = this.querySelector('[data-js-cart-progress-text]');
++      var fillEl = this.querySelector('[data-js-cart-progress-fill]');
++      var labelsEl = this.querySelector('[data-js-cart-progress-labels]');
++      var markerShipping = this.querySelector('[data-js-marker-shipping]');
++      var markerGift = this.querySelector('[data-js-marker-gift]');
++
++      var progressPct = Math.min(100, Math.round((cartTotal / maxGoal) * 100));
++      if (fillEl) fillEl.style.width = progressPct + '%';
++
++      var fmt = function(c) { return formatMoney(c, moneyFormat); };
++
++      var parts = [];
++      if (textEl) {
++        var textProgress = (this.getAttribute('data-text-progress') || '%current% von %goal%')
++          .replace('%current%', fmt(cartTotal))
++          .replace('%goal%', fmt(maxGoal));
++        textEl.textContent = textProgress;
++      }
++
++      if (labelsEl && (shippingGoal > 0 || giftGoal > 0)) {
++        var labels = [];
++        if (shippingGoal > 0) {
++          var shippingReached = cartTotal >= shippingGoal;
++          labels.push(shippingReached ? (this.getAttribute('data-text-shipping-done') || '✓ Kostenloser Versand') : (this.getAttribute('data-text-shipping-remaining') || 'Noch %amount% bis kostenloser Versand').replace('%amount%', fmt(shippingGoal - cartTotal)));
++        }
++        if (giftGoal > 0) {
++          var giftReached = cartTotal >= giftGoal;
++          labels.push(giftReached ? (this.getAttribute('data-text-gift-done') || '✓ Gratisgeschenk') : (this.getAttribute('data-text-gift-remaining') || 'Noch %amount% bis Gratisgeschenk').replace('%amount%', fmt(giftGoal - cartTotal)));
++        }
++        labelsEl.innerHTML = labels.map(function(l) {
++          return '<span class="cart-progress-goals__label">' + l + '</span>';
++        }).join(' • ');
++      }
++
++      if (markerShipping && shippingGoal > 0 && maxGoal > 0) {
++        markerShipping.style.left = Math.min(100, (shippingGoal / maxGoal) * 100) + '%';
++      }
++      if (markerGift && giftGoal > 0 && maxGoal > 0 && giftGoal !== shippingGoal) {
++        markerGift.style.left = Math.min(100, (giftGoal / maxGoal) * 100) + '%';
++      }
++    }
++  }
++
++  if (typeof customElements.get('cart-progress-goals') === 'undefined') {
++    customElements.define('cart-progress-goals', CartProgressGoals);
++  }
++}
+diff --git a/assets/component-cart.css b/assets/component-cart.css
+index 6be1b57..30ea383 100644
+--- a/assets/component-cart.css
++++ b/assets/component-cart.css
+@@ -170,6 +170,52 @@ html[dir=ltr] .cart-notice__slider-bar {
+   left: 0;
+ }
+ 
++/* Free gift progress bar (legacy - kept for reference) */
++.free-gift-progress-wrapper {
++  display: block;
++}
++.free-gift-progress__bar {
++  background: var(--color-accent-main, var(--color-text-main));
++}
++
++/* Merged cart progress goals */
++.cart-progress-goals__bar-holder {
++  position: relative;
++  overflow: visible;
++}
++.cart-progress-goals__fill {
++  background: var(--color-accent-main, var(--color-text-main));
++  transition: width 0.3s ease;
++}
++.cart-progress-goals__marker {
++  position: absolute;
++  top: 50%;
++  transform: translate(-50%, -50%);
++  width: 4px;
++  height: 12px;
++  background: var(--color-text-main);
++  border-radius: 2px;
++  opacity: 0.6;
++  z-index: 2;
++  pointer-events: none;
++}
++.cart-progress-goals__marker--shipping {
++  background: var(--color-accent-main, #637463);
++}
++.cart-progress-goals__marker--gift {
++  background: var(--color-accent-main, #de7a22);
++  height: 14px;
++}
++.cart-progress-goals__labels {
++  margin-top: 0.5rem;
++  font-size: 0.85em;
++  color: var(--color-text-main);
++  opacity: 0.9;
++}
++.cart-progress-goals__label {
++  display: inline;
++}
++
+ .cart__form.processing {
+   opacity: 0.36;
+   pointer-events: none;
+diff --git a/assets/component-free-gift-progress.js b/assets/component-free-gift-progress.js
+new file mode 100644
+index 0000000..95098fb
+--- /dev/null
++++ b/assets/component-free-gift-progress.js
+@@ -0,0 +1,93 @@
++if (typeof FreeGiftProgress !== 'function') {
++
++  function formatMoney(cents, format) {
++    if (typeof cents === 'string') {
++      cents = cents.replace('.', '');
++    }
++    var value = '';
++    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
++    var formatString = format || '{{amount}}';
++
++    function formatWithDelimiters(number, precision, thousands, decimal) {
++      thousands = thousands || ',';
++      decimal = decimal || '.';
++      if (isNaN(number) || number === null) return 0;
++      number = (number / 100.0).toFixed(precision);
++      var parts = number.split('.');
++      var dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
++      var centsAmount = parts[1] ? decimal + parts[1] : '';
++      return dollarsAmount + centsAmount;
++    }
++
++    var match = formatString.match(placeholderRegex);
++    if (match) {
++      switch (match[1]) {
++        case 'amount':
++          value = formatWithDelimiters(cents, 2);
++          break;
++        case 'amount_no_decimals':
++          value = formatWithDelimiters(cents, 0);
++          break;
++        case 'amount_with_comma_separator':
++          value = formatWithDelimiters(cents, 2, '.', ',');
++          break;
++        case 'amount_no_decimals_with_comma_separator':
++          value = formatWithDelimiters(cents, 0, '.', ',');
++          break;
++        case 'amount_no_decimals_with_space_separator':
++          value = formatWithDelimiters(cents, 0, ' ');
++          break;
++        case 'amount_with_apostrophe_separator':
++          value = formatWithDelimiters(cents, 2, "'");
++          break;
++        default:
++          value = formatWithDelimiters(cents, 2);
++      }
++      return formatString.replace(placeholderRegex, value);
++    }
++    return String(cents / 100);
++  }
++
++  class FreeGiftProgress extends HTMLElement {
++    constructor() {
++      super();
++      this.init();
++    }
++
++    init() {
++      var goalCents = parseInt(this.getAttribute('data-goal'), 10) || 0;
++      var cartTotal = parseInt(this.getAttribute('data-cart-total'), 10) || 0;
++      var moneyFormat = (window.KROWN && window.KROWN.settings && window.KROWN.settings.shop_money_format) || '{{amount}}';
++
++      if (goalCents <= 0) {
++        this.style.display = 'none';
++        return;
++      }
++
++      var textEl = this.querySelector('[data-js-free-gift-text]');
++      var barEl = this.querySelector('[data-js-free-gift-slider]');
++
++      var remaining = goalCents - cartTotal;
++      var progressPct;
++
++      if (remaining <= 0) {
++        progressPct = 100;
++        if (textEl) textEl.textContent = this.getAttribute('data-text-qualified') || 'Sie haben sich ein Gratisgeschenk verdient!';
++      } else {
++        progressPct = Math.min(100, Math.round((cartTotal / goalCents) * 100));
++        var formattedRemaining = formatMoney(remaining, moneyFormat);
++        if (!formattedRemaining && formattedRemaining !== 0) {
++          formattedRemaining = (remaining / 100).toFixed(2).replace('.', ',') + ' €';
++        }
++        var textTemplate = this.getAttribute('data-text-remaining') || 'Noch %amount% bis zu Ihrem Gratisgeschenk';
++        if (textEl) textEl.textContent = textTemplate.replace(/%amount%/g, formattedRemaining);
++      }
++
++      if (barEl) barEl.style.width = progressPct + '%';
++    }
++  }
++
++  if (typeof customElements.get('free-gift-progress') === 'undefined') {
++    customElements.define('free-gift-progress', FreeGiftProgress);
++  }
++}
+diff --git a/assets/custom.js b/assets/custom.js
+index e69de29..3330efe 100644
+--- a/assets/custom.js
++++ b/assets/custom.js
+@@ -0,0 +1,198 @@
++/**
++ * Custom free-product offer: show 3 free product choices when cart total
++ * >= minimum (custom_integer in €). User chooses which one to add.
++ * When cart drops below minimum, free gift is auto-removed.
++ */
++(function () {
++  'use strict';
++
++  const CART_JSON = '/cart.js';
++  const OFFER_ID = 'custom-free-product-offer';
++  var autoRemoveInProgress = false;
++
++  function getConfig() {
++    return window.KROWN && window.KROWN.settings && window.KROWN.settings.custom;
++  }
++
++  function isConfigured(config) {
++    return config &&
++      config.free_products &&
++      Array.isArray(config.free_products) &&
++      config.free_products.length > 0;
++  }
++
++  function fetchCart() {
++    return fetch(CART_JSON).then(function (r) { return r.json(); });
++  }
++
++  function hasAnyFreeProductInCart(cart, freeProductIds) {
++    if (!cart.items || !freeProductIds || freeProductIds.length === 0) return false;
++    return cart.items.some(function (item) {
++      return freeProductIds.indexOf(String(item.product_id)) !== -1;
++    });
++  }
++
++  function getFreeProductLineItemInCart(cart, freeProductIds) {
++    if (!cart.items || !freeProductIds) return null;
++    for (var i = 0; i < cart.items.length; i++) {
++      if (freeProductIds.indexOf(String(cart.items[i].product_id)) !== -1) {
++        return cart.items[i];
++      }
++    }
++    return null;
++  }
++
++  function cartTotalMeetsMinimum(cart, minEuro) {
++    var minCents = (parseInt(minEuro, 10) || 0) * 100;
++    return cart.total_price >= minCents;
++  }
++
++  function getFreeProductIds(config) {
++    if (!config || !config.free_products) return [];
++    return config.free_products.map(function (p) { return String(p.id); });
++  }
++
++  function updateOfferUi(show, config) {
++    var el = document.getElementById(OFFER_ID);
++    if (!el) return;
++    el.style.display = show ? 'block' : 'none';
++  }
++
++  function addFreeProduct(variantId) {
++    var id = parseInt(String(variantId), 10);
++    if (!id) return Promise.reject(new Error('Invalid variant id'));
++    var addUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_add_url) || '/cart/add';
++    var body = JSON.stringify({
++      items: [{ id: id, quantity: 1 }]
++    });
++    return fetch(addUrl + '.js', {
++      method: 'POST',
++      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
++      body: body
++    }).then(function (r) { return r.json(); });
++  }
++
++  function removeFreeProduct(cart, freeProductIds) {
++    var lineItem = getFreeProductLineItemInCart(cart, freeProductIds);
++    if (!lineItem || !lineItem.key) return Promise.reject(new Error('Free product not in cart'));
++    var changeUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_change_url) || '/cart/change';
++    var body = JSON.stringify({ id: lineItem.key, quantity: 0 });
++    return fetch(changeUrl + '.js', {
++      method: 'POST',
++      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
++      body: body
++    }).then(function (r) { return r.json(); });
++  }
++
++  function refreshCart() {
++    if (typeof window.refreshCart === 'function') {
++      window.refreshCart();
++    }
++  }
++
++  function run() {
++    var config = getConfig();
++    if (!isConfigured(config)) return;
++    if (autoRemoveInProgress) return;
++
++    var freeProductIds = getFreeProductIds(config);
++
++    fetchCart().then(function (cart) {
++      var hasFree = hasAnyFreeProductInCart(cart, freeProductIds);
++      var meetsMinimum = cartTotalMeetsMinimum(cart, config.integer);
++      var show = meetsMinimum && !hasFree;
++
++      if (!meetsMinimum && hasFree) {
++        autoRemoveInProgress = true;
++        removeFreeProduct(cart, freeProductIds).then(function (res) {
++          if (res.status && (res.status === 422 || res.message)) {
++            autoRemoveInProgress = false;
++            return;
++          }
++          refreshCart();
++          setTimeout(function () {
++            autoRemoveInProgress = false;
++            run();
++          }, 600);
++        }).catch(function () {
++          autoRemoveInProgress = false;
++        });
++      } else {
++        updateOfferUi(show, config);
++      }
++    }).catch(function () {
++      updateOfferUi(false);
++    });
++  }
++
++  function onAddFreeClick(e) {
++    var btn = e.target.closest('[data-js-add-free-product]');
++    if (!btn) return;
++
++    var variantId = btn.getAttribute('data-free-variant-id');
++    if (!variantId) return;
++
++    var config = getConfig();
++    if (!config) return;
++
++    btn.disabled = true;
++    btn.textContent = '…';
++
++    addFreeProduct(variantId).then(function (res) {
++      if (res.status && (res.status === 422 || res.message)) {
++        btn.disabled = false;
++        btn.textContent = 'Kostenlos hinzufügen';
++        if (typeof alert !== 'undefined') alert(res.description || res.message);
++        return;
++      }
++      refreshCart();
++      setTimeout(run, 600);
++      btn.disabled = false;
++      btn.textContent = 'Kostenlos hinzufügen';
++    }).catch(function () {
++      btn.disabled = false;
++      btn.textContent = 'Kostenlos hinzufügen';
++    });
++  }
++
++  function bind() {
++    document.removeEventListener('click', onAddFreeClick);
++    document.addEventListener('click', onAddFreeClick);
++  }
++
++  function debounce(fn, ms) {
++    var t;
++    return function () {
++      clearTimeout(t);
++      t = setTimeout(fn, ms);
++    };
++  }
++
++  function observeCartForm() {
++    var form = document.getElementById('AjaxCartForm');
++    if (!form || form._customFreeOfferObserved) return;
++    form._customFreeOfferObserved = true;
++    var runDebounced = debounce(run, 150);
++    var observer = new MutationObserver(function () {
++      runDebounced();
++    });
++    observer.observe(form, { childList: true, subtree: true });
++  }
++
++  function init() {
++    bind();
++    run();
++    observeCartForm();
++
++    var form = document.getElementById('AjaxCartForm');
++    if (form) {
++      form.addEventListener('cart-updated', run);
++    }
++  }
++
++  if (document.readyState === 'loading') {
++    document.addEventListener('DOMContentLoaded', init);
++  } else {
++    init();
++  }
++})();
+diff --git a/config/markets.json b/config/markets.json
+new file mode 100644
+index 0000000..95f1c40
+--- /dev/null
++++ b/config/markets.json
+@@ -0,0 +1,16 @@
++/*
++ * ------------------------------------------------------------
++ * IMPORTANT: The contents of this file are auto-generated.
++ *
++ * This file may be updated by the Shopify admin theme editor
++ * or related systems. Please exercise caution as any changes
++ * made to this file may be overwritten.
++ * ------------------------------------------------------------
++ */
++{
++  "markets": {
++    "de": {
++      "parent": "@default"
++    }
++  }
++}
+diff --git a/config/settings_data.json b/config/settings_data.json
+index 83fc6ad..37d7ee7 100644
+--- a/config/settings_data.json
++++ b/config/settings_data.json
+@@ -167,6 +167,10 @@
+     "social_pinterest": "",
+     "social_vimeo": "",
+     "social_twitter": "",
++    "custom_integer": 49,
++    "custom_free_product_1": "test-free-gift-product",
++    "custom_free_product_2": "test-free-gift-product-2",
++    "custom_free_product_3": "test-free-gift-product-3",
+     "checkout_header_image": "shopify://shop_images/Design_ohne_Titel_13.png",
+     "checkout_logo_image": "shopify://shop_images/bildmarke-weiss.png",
+     "checkout_logo_position": "center",
+@@ -291,11 +295,6 @@
+         "settings": {
+           "hide_label": false
+         }
+-      },
+-      "1932496262343429097": {
+-        "type": "shopify://apps/bogox-free-gift/blocks/app/4254c128-561c-4a78-b553-cfcb302243bb",
+-        "disabled": true,
+-        "settings": {}
+       }
+     }
+   }
+diff --git a/config/settings_schema.json b/config/settings_schema.json
+index 2cc7cce..bc882b4 100644
+--- a/config/settings_schema.json
++++ b/config/settings_schema.json
+@@ -1059,17 +1059,36 @@
+ 			{
+ 				"type": "range",
+ 				"id": "custom_integer",
+-				"label": "Custom value",
++				"label": "Minimum cart total (€)",
+ 				"min": 0,
+ 				"max": 100,
+ 				"step": 1,
+-				"default": 0,
+-				"info": "Choose a value between 0 and 100."
++				"default": 49,
++				"unit": "€",
++				"info": "Free gift options appear when cart total reaches this amount (e.g. 49 = €49)."
++			},
++			{
++				"type": "header",
++				"content": "Free gift choices"
++			},
++			{
++				"type": "paragraph",
++				"content": "Show 3 free product options when cart meets minimum. User chooses which one to add."
++			},
++			{
++				"type": "product",
++				"id": "custom_free_product_1",
++				"label": "Free product option 1"
++			},
++			{
++				"type": "product",
++				"id": "custom_free_product_2",
++				"label": "Free product option 2"
+ 			},
+ 			{
+ 				"type": "product",
+-				"id": "custom_product",
+-				"label": "Custom product"
++				"id": "custom_free_product_3",
++				"label": "Free product option 3"
+ 			}
+ 		]
+ 	}
+diff --git a/layout/theme.liquid b/layout/theme.liquid
+index d5035e1..5270def 100644
+--- a/layout/theme.liquid
++++ b/layout/theme.liquid
+@@ -1,377 +1,406 @@
+-<!doctype html>
+-  {%- liquid
+-    assign direction = 'ltr'
+-    assign rtl_iso_codes = 'ar,he,ur,fa,pa,sd,ku' | split: ','
+-    if rtl_iso_codes contains request.locale.iso_code
+-      assign direction = 'rtl'
+-    endif
+-  -%}
+-  <html id="html" class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
+-  <head>{% render "load-metafields" %}
+-  
+-    <meta charset="utf-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0">
+-  
+-    {%- if settings.favicon -%}
+-      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 48, height: 48 }}" type="image/png" />
+-    {%- endif -%}
+-  
+-    {%- capture seo_title -%}
+-      {%- if template contains 'search' -%}
+-        {{ search.terms | replace: '*', '' | split: ' AND ' | last }} - {{ shop.name | escape }}
+-      {%- else -%}
+-        {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name | escape }}{% endunless %}
+-      {%- endif -%}
+-    {%- endcapture -%}
+-  
+-    <title>{{ seo_title }}</title>
+-  
+-    {%- if page_description -%}
+-      <meta name="description" content="{{ page_description | escape }}">
+-    {%- endif -%}
+-  
+-    {%- liquid
+-      render 'open-graph'
+-      unless settings.disable_microdata 
+-        render 'microdata-schema'
+-      endunless
+-    -%}
+-  
+-    <link rel="canonical" href="{{ canonical_url }}">
+-  
+-    <link rel="preconnect" href="https://cdn.shopify.com">
+-    {%- unless settings.headings_font.system? and settings.body_font.system? -%}
+-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+-    {%- endunless -%}
+-      
+-    {%- render 'head-variables' -%}
+-    {%- render 'head-preloader' -%}
+-  
+-    {{ 'theme.css' | asset_url | stylesheet_tag }}
+-  
+-    {{ content_for_header }}
+-  
+-    <script>
+-  
+-      /* js helpers */
+-      const debounce = (fn, wait) => {
+-        let t;
+-        return (...args) => {
+-          clearTimeout(t);
+-          t = setTimeout(() => fn.apply(this, args), wait);
+-        };
+-      }
+-      window.KEYCODES = {
+-        TAB: 9,
+-        ESC: 27,
+-        DOWN: 40,
+-        RIGHT: 39,
+-        UP: 38,
+-        LEFT: 37,
+-        RETURN: 13
+-      };
+-  
+-      /* background image sizes */
+-      const rbi = [];
+-      const rbiSetSize = (img) => {
+-        if ( img.offsetWidth / img.dataset.ratio < img.offsetHeight ) {
+-          img.setAttribute('sizes', `${Math.ceil(img.offsetHeight * img.dataset.ratio)}px`);
+-        } else {
+-          img.setAttribute('sizes', `${Math.ceil(img.offsetWidth)}px`);
+-        }
+-      }
+-      window.addEventListener('resize', debounce(()=>{
+-        for ( let img of rbi ) {
+-          rbiSetSize(img);
+-        }
+-      }, 250));
+-  
+-      /* lazy looad images reveal effect */
+-      const imageReveal = new IntersectionObserver((entries, observer)=>{
+-        entries.forEach(entry=>{
+-          if ( entry.isIntersecting ) {
+-            setTimeout(()=>{
+-              entry.target.classList.remove('lazy-image--to-reveal');
+-            }, 500);
+-            entry.target.classList.add('lazy-image--revealed');
+-            observer.unobserve(entry.target);
+-          }
+-        });
+-      }, {rootMargin: '20px 0px 0px 0px'});
+-
+-    </script>
+-    
+-    {%- if template == 'customers/addresses' or request.design_mode -%}
+-      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+-    {%- endif -%}
+-  
+-    <noscript>
+-      <link rel="stylesheet" href="{{ 'theme-noscript.css' | asset_url }}">
+-    </noscript>
+-  
+-  </head>
+-  
+-  <body id="{{ page_title | handle }}" class="{% if customer %} customer-logged-in {% endif %} template-{{ template.name }} template-{{ template | replace: '.', ' ' | handle }} no-touchevents">
+-    
+-    <script type="text/javascript">
+-      if ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) { document.querySelector('body').classList.remove('no-touchevents'); document.querySelector('body').classList.add('touchevents'); } 
+-    </script>
+-  
+-    <a href="#main" class="visually-hidden skip-to-content" tabindex="0" data-js-inert>{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+-    <div id="screen-reader-info" aria-live="polite" class="visually-hidden"></div>
+-  
+-    {%- sections 'header-group' -%}
+-  
+-    {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+-    <script src="{{ 'section-slider-vertical.js' | asset_url }}"></script>
+-    
+-    {{ 'component-product-item.css' | asset_url | stylesheet_tag }}
+-    {{ 'component-product-variants.css' | asset_url | stylesheet_tag }}
+-
+-    <main id="main" class="main-content">
+-      {{ content_for_layout }}
+-    </main>
+-  
+-    {%- sections 'footer-group' -%}
+-    {%- section 'popups' -%}
+-    
+-    <script src="{{ 'component-modal.js' | asset_url }}" defer></script>
+-    <link rel="stylesheet" href="{{ 'component-modal.css' | asset_url }}" media="print" onload="this.media='all'">
+-    <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
+-  
+-    <script type="text/javascript">
+-  
+-      KROWN = {  
+-        themeName: "Combine",
+-        themeVersion: "2.3.1",
+-        settings: {
+-          shop_money_format: '{{ shop.money_format }}',
+-          cart_action: "{{ settings.cart_action }}",
+-          cart_popup: "{{ settings.cart_mini_enabled }}",
+-          routes: {
+-            cart_url: "{{ routes.cart_url }}",
+-            cart_add_url: "{{ routes.cart_add_url }}",
+-            cart_change_url: "{{ routes.cart_change_url }}",
+-            search_url: "{{ routes.search_url }}",
+-            predictive_search_url: "{{ routes.predictive_search_url }}",
+-            product_recommendations_url: "{{ routes.product_recommendations_url }}"
+-          },
+-          locales: {
+-            products_preorder_button: `{{ 'products.page.preorder_button' | t }}`,
+-            products_add_to_cart_button: `{{ 'products.page.add_to_cart_button' | t }}`,
+-            products_add_to_bundle_button: `{{ 'products.bundles.add_product_to_bundle' | t }}`,
+-            products_sold_out_variant: `{{ 'products.page.inventory.sold_out_variant' | t }}`,
+-            products_unavailable_variant: `{{ 'products.page.inventory.unavailable_variant' | t }}`,
+-            products_variant_required: `{{ 'products.grid.choose_variant_first' | t }}`,
+-            sets_choose_products: `{{ 'products.bundles.choose_products_first' | t }}`,
+-            sets_add_to_cart: `{{ 'products.bundles.add_all_to_cart' | t }}`,
+-            products_one_product: `{{ 'products.page.inventory.one_product' | t }}`,
+-            products_few_products: `{{ 'products.page.inventory.few_products' | t }}`,
+-            products_many_products: `{{ 'products.page.inventory.many_products' | t }}`,
+-            products_no_products: `{{ 'products.page.inventory.no_products' | t }}`,
+-            products_preorder: `{{ 'products.page.inventory.preoder' | t }}`,
+-            products_enough_products: `{{ 'products.page.inventory.enough_products' | t }}`,
+-            product_sku: `{{ 'products.page.sku' | t }}`,
+-            product_barcode: `{{ 'products.page.barcode' | t }}`,
+-            product_compare_price: `{{ 'products.page.sales_amount_html' | t: amount: '$SAVE_PRICE' }}`,
+-            cart_add_error: `<span class="alert__icon">{%- render 'theme-symbols', icon: 'alert-error' -%}</span>{{ 'cart.add_error' | t }}`,
+-            cart_general_error: `{{ 'cart.general_error' | t }}`, 
+-            cart_added_items_count: `{{ 'cart.added_items_count.other_html' | t }}`,
+-            cart_announcement: `{{ 'general.accessibility_labels.item_added' | t }}`,
+-            shipping_calculator_results_heading_one: `{{ 'cart.shipping_calculator.results_heading_one' | t }}`,
+-            shipping_calculator_results_heading_multiple: `{{ 'cart.shipping_calculator.results_heading_multiple' | t }}`,
+-            shipping_notice_remaining_to_free: `{{ 'cart.free_shipping_remaining_html' | t }}`,
+-            shipping_notice_eligible_for_free: `{{ 'cart.free_shipping_eligible' | t }}`,
+-            show_more: `{{ 'general.accessibility_labels.show_more' | t }}`,
+-            show_less: `{{ 'general.accessibility_labels.show_less' | t }}`
+-          },
+-          symbols: {
+-            zoom_out: `{%- render 'theme-symbols', icon: 'zoom-out' -%}`,
+-            zoom_in: `{%- render 'theme-symbols', icon: 'zoom-in' -%}`,
+-            zoom_loader: `<svg class="zoom__loader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>`,
+-            close: `{%- render 'theme-symbols', icon: 'close' -%}`,
+-            toggle_pack: `<span class="toggle__icon"><span class="toggle__icon--plus">{%- render 'theme-symbols', icon: 'plus' -%}</span><span class="toggle__icon--minus">{%- render 'theme-symbols', icon: 'minus' -%}</span></span>`,
+-            toggle_pack_alternate: `<span class="toggle__icon-alternate"><span class="toggle__icon--plus">{%- render 'theme-symbols', icon: 'plus' -%}</span><span class="toggle__icon--minus">{%- render 'theme-symbols', icon: 'minus' -%}</span></span>`
+-          },
+-          predictive_search_enabled: "true",
+-          predictive_search_script: "{{ 'component-predictive-search.js' | asset_url }}",
+-          predictive_search_placeholder: `<div class="search-results"><div class="search-block"><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a></div></div>`,
+-          cart_image_ratio: (1 / {{ settings.cart_image_ratio }})
+-        }
+-      }
+-      
+-    </script>
+-  
+-    <script src="{{ 'component-slider.js' | asset_url }}" defer></script>
+-    <script src="{{ 'component-product-form.js' | asset_url }}" defer></script>
+-    <script src="{{ 'component-quick-buy.js' | asset_url }}" defer></script>
+-    {%- if settings.cart_notes_enable -%}
+-      <script src="{{ 'component-order-instructions.js' | asset_url }}" defer></script>
+-    {%- endif -%}
+-  
+-    {%- if request.design_mode -%}
+-      <script src="{{ 'section-announcement-bar.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-toggle.js' | asset_url }}" defer></script>
+-      <script src="{{ 'section-main-product.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-video.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-localization-form.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-predictive-search.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-image-hotspots.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-before-after.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-shipping-calculator.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-countdown-clock.js' | asset_url }}" defer></script>
+-      <script src="{{ 'component-scrolling-text.js' | asset_url }}" defer></script>
+-      <script src="{{ 'theme-editor.js' | asset_url }}" defer></script>
+-    {%- endif -%}
+-    
+-    {%- unless settings.cart_action == "no-overlay" or template.name contains "cart" -%}
+-  
+-      <sidebar-drawer id="site-cart-sidebar" class="sidebar sidebar--right {% if cart.item_count == 0 %} cart-is-empty {% endif %}" tabindex="-1" role="dialog" aria-modal="true" data-cart-items="{{ cart.item_count }}" style="display:none" data-js-site-cart-sidebar>
+-        
+-        <div class="sidebar__header">
+-          <span class="sidebar__title">
+-            {{ 'cart.title' | t }}
+-            (<span data-header-cart-count>{{ cart.item_count }}</span>)
+-          </span>
+-          <button class="sidebar__close" data-js-close>
+-            <span class="visually-hidden">{{ 'general.accessibility_labels.close_sidebar' | t }}</span>
+-            <span aria-hidden="true" aria-role="img">{%- render 'theme-symbols', icon: 'close' -%}</span>
+-          </button>
+-        </div>
+-  
+-        <div class="sidebar__body">
+-  
+-          <div class="cart-form sidebar-large-padding">
+-            {%- render 'cart-form', type: 'sidebar' -%}
+-            <a href="{{ routes.all_products_collection_url }}" class="cart-continue button button--fullwidth button--solid button--regular">
+-              {{ 'cart.continue_browsing' | t }}
+-            </a>
+-          </div>
+-
+-          {%- liquid
+-            unless settings.cart_upsell_product == blank
+-              render 'product-cross-sell', heading: settings.cart_upsell_heading, product: settings.cart_upsell_product, id: 'cart-individual-product-cross-sell', widget_style: 'outline', heading_position: 'outside', style: 'margin-bottom: var(--sidebar-gutter);padding-bottom: 5px;', class: 'cart-individual-product-recommendation hide-if-empty-cart' 
+-            endunless
+-          -%}
+-
+-          {%- if settings.cart_recommendations -%}
+-            <cart-recommendations class="hide-if-empty-cart" id="cart-recommendations-sidebar" data-section="cart-recommendations" data-limit="6"></cart-recommendations>
+-            <script src="{{ 'component-cart-recommendations.js' | asset_url }}" defer></script>
+-          {%- endif -%}
+-  
+-          {%- if settings.cart_notes_enable -%}
+-            <div class="cart-instructions sidebar-large-padding hide-if-empty-cart"
+-              style="border-top: 0;margin-top:-24px;"
+-            >
+-              <div class="form-field">
+-                <label for="cartSpecialInstructions">{{ 'cart.note' | t }}</label>
+-                <textarea name="note" id="cartSpecialInstructions" form="cart">{{ cart.note }}</textarea>
+-              </div>
+-            </div>
+-          {%- endif -%}
+-  
+-        </div>
+-
+-        {%- render 'cart-gift-wrapping', class: 'cart-wrapping--sidebar' -%}
+-  
+-        <div class="sidebar__footer hide-if-empty-cart" style="background-color:var(--color-background-main-alternate)">
+-          {%- render 'cart-subtotal', type: 'sidebar' -%}
+-        </div>
+-  
+-      </sidebar-drawer>
+-  
+-      <script>
+-        new MutationObserver((mutations, observer) => {
+-          if ( document.getElementById('cart').classList.contains('cart--empty') ) {
+-            document.getElementById('site-cart-sidebar').classList.add('cart-is-empty');
+-          } else {
+-            document.getElementById('site-cart-sidebar').classList.remove('cart-is-empty');
+-          }
+-        }).observe(document.querySelector('.cart-form'), {
+-          attributes: false, childList: true, subtree: true
+-        })
+-      </script>
+-  
+-    {%- endunless -%}
+-  
+-    <sidebar-drawer id="site-search-sidebar" class="sidebar sidebar--left" tabindex="-1" role="dialog" aria-modal="true" style="display:none">
+-      <div class="sidebar__header">
+-        <span class="sidebar__title">
+-          {{ 'search.drawer.title' | t }}
+-        </span>
+-        <button class="sidebar__close" data-js-close>
+-          <span class="visually-hidden">{{ 'general.accessibility_labels.close_sidebar' | t }}</span>
+-          <span aria-hidden="true" aria-role="img">{%- render 'theme-symbols', icon: 'close' -%}</span>
+-        </button>
+-      </div>
+-      <div class="sidebar__body">
+-        
+-        <search-form class="sidebar-large-padding">
+-          <form action="{{ routes.search_url }}" method="get" class="input-group search-bar ajax subtitle" role="search" autocomplete="off">
+-            <label for="search-form-sidebar" class="visually-hidden">{{ 'search.drawer.title' | t }}</label>
+-            <input id="search-form-sidebar" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.drawer.placeholder' | t }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-js-search-input>
+-          </form>
+-          <div class="top">
+-            <div id="search-results" class="search-results predictive-search" data-js-search-results></div>
+-          </div>
+-        </search-form>
+-
+-      </div>
+-    </sidebar-drawer>
+-    
+-    <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}" media="print" onload="this.media='all'">
+-  
+-    <script src="{{ 'component-quantity-selector.js' | asset_url }}" defer></script>
+-    {%- if settings.cart_action == "overlay" or template.name contains "cart" -%}
+-      <script src="{{ 'component-cart.js' | asset_url }}" defer></script>
+-    {%- endif -%}
+-  
+-    <link rel="stylesheet" href="{{ 'component-sidebar.css' | asset_url }}" media="print" onload="this.media='all';">
+-    <script src="{{ 'section-header.js' | asset_url }}" defer></script>
+-  
+-    {%- if template contains 'product' -%}
+-      <script>
+-        if ( document.getElementById('shopify-product-reviews') ) {
+-          var element = document.createElement("link");
+-          element.setAttribute("rel", "stylesheet");
+-          element.setAttribute("type", "text/css");
+-          element.setAttribute("href", "{{ 'component-shopify-reviews.css' | asset_url }}");
+-          document.body.appendChild(element);
+-        }
+-      </script>
+-    {%- endif -%}
+-  
+-    <div class="site-overlay" style="display:none"></div>
+-  
+-    <link rel="stylesheet" href="{{ 'section-main-product.css' | asset_url }}" media="print" onload="this.media='all';">
+-
+-    {%- if settings.show_gotop -%}
+-      <span id="go-top" class="main-go-top"
+-        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+-      >
+-        <span class="visually-hidden">{{ 'general.accessibility_labels.go_to_top' | t }}</span>
+-        <span class="main-go-top__icon" aria-hidden="true">{%- render 'theme-symbols', icon: 'chevron' -%}</span>
+-        <span class="main-go-top__text">{{ 'general.accessibility_labels.top' | t }}</span>
+-      </span>
+-      <script>
+-        window.addEventListener('scroll', ()=>{
+-          if ( window.scrollY > 500 ) {
+-            document.getElementById('go-top').classList.add('show');
+-          } else {
+-            document.getElementById('go-top').classList.remove('show');
+-          }
+-        }, {passive: true});
+-      </script>
+-    {%- endif -%}
+-    
+-    <script>
+-      document.querySelectorAll('.rte a img').forEach(function(elm){
+-        elm.parentNode.style.border = 'none';
+-      });
+-    </script>
+-  
+-  {% render "bc_banner" %}
+-  {{ 'custom.js' | asset_url | script_tag }}
+-</body>
++<!doctype html>
++  {%- liquid
++    assign direction = 'ltr'
++    assign rtl_iso_codes = 'ar,he,ur,fa,pa,sd,ku' | split: ','
++    if rtl_iso_codes contains request.locale.iso_code
++      assign direction = 'rtl'
++    endif
++  -%}
++  <html id="html" class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
++  <head>{% render "load-metafields" %}
++  
++    <meta charset="utf-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0">
++  
++    {%- if settings.favicon -%}
++      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 48, height: 48 }}" type="image/png" />
++    {%- endif -%}
++  
++    {%- capture seo_title -%}
++      {%- if template contains 'search' -%}
++        {{ search.terms | replace: '*', '' | split: ' AND ' | last }} - {{ shop.name | escape }}
++      {%- else -%}
++        {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name | escape }}{% endunless %}
++      {%- endif -%}
++    {%- endcapture -%}
++  
++    <title>{{ seo_title }}</title>
++  
++    {%- if page_description -%}
++      <meta name="description" content="{{ page_description | escape }}">
++    {%- endif -%}
++  
++    {%- liquid
++      render 'open-graph'
++      unless settings.disable_microdata 
++        render 'microdata-schema'
++      endunless
++    -%}
++  
++    <link rel="canonical" href="{{ canonical_url }}">
++  
++    <link rel="preconnect" href="https://cdn.shopify.com">
++    {%- unless settings.headings_font.system? and settings.body_font.system? -%}
++      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
++    {%- endunless -%}
++      
++    {%- render 'head-variables' -%}
++    {%- render 'head-preloader' -%}
++  
++    {{ 'theme.css' | asset_url | stylesheet_tag }}
++  
++    {{ content_for_header }}
++  
++    <script>
++  
++      /* js helpers */
++      const debounce = (fn, wait) => {
++        let t;
++        return (...args) => {
++          clearTimeout(t);
++          t = setTimeout(() => fn.apply(this, args), wait);
++        };
++      }
++      window.KEYCODES = {
++        TAB: 9,
++        ESC: 27,
++        DOWN: 40,
++        RIGHT: 39,
++        UP: 38,
++        LEFT: 37,
++        RETURN: 13
++      };
++  
++      /* background image sizes */
++      const rbi = [];
++      const rbiSetSize = (img) => {
++        if ( img.offsetWidth / img.dataset.ratio < img.offsetHeight ) {
++          img.setAttribute('sizes', `${Math.ceil(img.offsetHeight * img.dataset.ratio)}px`);
++        } else {
++          img.setAttribute('sizes', `${Math.ceil(img.offsetWidth)}px`);
++        }
++      }
++      window.addEventListener('resize', debounce(()=>{
++        for ( let img of rbi ) {
++          rbiSetSize(img);
++        }
++      }, 250));
++  
++      /* lazy looad images reveal effect */
++      const imageReveal = new IntersectionObserver((entries, observer)=>{
++        entries.forEach(entry=>{
++          if ( entry.isIntersecting ) {
++            setTimeout(()=>{
++              entry.target.classList.remove('lazy-image--to-reveal');
++            }, 500);
++            entry.target.classList.add('lazy-image--revealed');
++            observer.unobserve(entry.target);
++          }
++        });
++      }, {rootMargin: '20px 0px 0px 0px'});
++
++    </script>
++    
++    {%- if template == 'customers/addresses' or request.design_mode -%}
++      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
++    {%- endif -%}
++  
++    <noscript>
++      <link rel="stylesheet" href="{{ 'theme-noscript.css' | asset_url }}">
++    </noscript>
++  
++  </head>
++  
++  <body id="{{ page_title | handle }}" class="{% if customer %} customer-logged-in {% endif %} template-{{ template.name }} template-{{ template | replace: '.', ' ' | handle }} no-touchevents">
++    
++    <script type="text/javascript">
++      if ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) { document.querySelector('body').classList.remove('no-touchevents'); document.querySelector('body').classList.add('touchevents'); } 
++    </script>
++  
++    <a href="#main" class="visually-hidden skip-to-content" tabindex="0" data-js-inert>{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
++    <div id="screen-reader-info" aria-live="polite" class="visually-hidden"></div>
++  
++    {%- sections 'header-group' -%}
++  
++    {{ 'component-slider.css' | asset_url | stylesheet_tag }}
++    <script src="{{ 'section-slider-vertical.js' | asset_url }}"></script>
++    
++    {{ 'component-product-item.css' | asset_url | stylesheet_tag }}
++    {{ 'component-product-variants.css' | asset_url | stylesheet_tag }}
++
++    <main id="main" class="main-content">
++      {{ content_for_layout }}
++    </main>
++  
++    {%- sections 'footer-group' -%}
++    {%- section 'popups' -%}
++    
++    <script src="{{ 'component-modal.js' | asset_url }}" defer></script>
++    <link rel="stylesheet" href="{{ 'component-modal.css' | asset_url }}" media="print" onload="this.media='all'">
++    <link rel="stylesheet" href="{{ 'component-popup.css' | asset_url }}" media="print" onload="this.media='all'">
++  
++    {%- liquid
++      assign custom_free_products_json = '[]'
++      assign custom_free_products_arr = ''
++      assign custom_free_product_1 = settings.custom_free_product_1
++      assign custom_free_product_2 = settings.custom_free_product_2
++      assign custom_free_product_3 = settings.custom_free_product_3
++    -%}
++    {%- capture custom_free_vid_1 -%}{% render 'custom-free-product-variant', product: custom_free_product_1 %}{%- endcapture -%}
++    {%- capture custom_free_vid_2 -%}{% render 'custom-free-product-variant', product: custom_free_product_2 %}{%- endcapture -%}
++    {%- capture custom_free_vid_3 -%}{% render 'custom-free-product-variant', product: custom_free_product_3 %}{%- endcapture -%}
++    {%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}
++      {%- capture custom_free_products_arr -%}{"id":{{ custom_free_product_1.id }},"variant_id":{{ custom_free_vid_1 }},"title":{{ custom_free_product_1.title | json }}}{%- endcapture -%}
++    {%- endif -%}
++    {%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}
++      {%- if custom_free_products_arr != '' -%}{%- assign custom_free_products_arr = custom_free_products_arr | append: ',' -%}{%- endif -%}
++      {%- capture custom_free_products_arr -%}{{ custom_free_products_arr }}{"id":{{ custom_free_product_2.id }},"variant_id":{{ custom_free_vid_2 }},"title":{{ custom_free_product_2.title | json }}}{%- endcapture -%}
++    {%- endif -%}
++    {%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}
++      {%- if custom_free_products_arr != '' -%}{%- assign custom_free_products_arr = custom_free_products_arr | append: ',' -%}{%- endif -%}
++      {%- capture custom_free_products_arr -%}{{ custom_free_products_arr }}{"id":{{ custom_free_product_3.id }},"variant_id":{{ custom_free_vid_3 }},"title":{{ custom_free_product_3.title | json }}}{%- endcapture -%}
++    {%- endif -%}
++    {%- if custom_free_products_arr != '' -%}
++      {%- assign custom_free_products_json = custom_free_products_arr | prepend: '[' | append: ']' -%}
++    {%- endif -%}
++    <script type="text/javascript">
++  
++      KROWN = {  
++        themeName: "Combine",
++        themeVersion: "2.3.1",
++        settings: {
++          shop_money_format: '{{ shop.money_format }}',
++          cart_action: "{{ settings.cart_action }}",
++          cart_popup: "{{ settings.cart_mini_enabled }}",
++          routes: {
++            cart_url: "{{ routes.cart_url }}",
++            cart_add_url: "{{ routes.cart_add_url }}",
++            cart_change_url: "{{ routes.cart_change_url }}",
++            search_url: "{{ routes.search_url }}",
++            predictive_search_url: "{{ routes.predictive_search_url }}",
++            product_recommendations_url: "{{ routes.product_recommendations_url }}"
++          },
++          locales: {
++            products_preorder_button: `{{ 'products.page.preorder_button' | t }}`,
++            products_add_to_cart_button: `{{ 'products.page.add_to_cart_button' | t }}`,
++            products_add_to_bundle_button: `{{ 'products.bundles.add_product_to_bundle' | t }}`,
++            products_sold_out_variant: `{{ 'products.page.inventory.sold_out_variant' | t }}`,
++            products_unavailable_variant: `{{ 'products.page.inventory.unavailable_variant' | t }}`,
++            products_variant_required: `{{ 'products.grid.choose_variant_first' | t }}`,
++            sets_choose_products: `{{ 'products.bundles.choose_products_first' | t }}`,
++            sets_add_to_cart: `{{ 'products.bundles.add_all_to_cart' | t }}`,
++            products_one_product: `{{ 'products.page.inventory.one_product' | t }}`,
++            products_few_products: `{{ 'products.page.inventory.few_products' | t }}`,
++            products_many_products: `{{ 'products.page.inventory.many_products' | t }}`,
++            products_no_products: `{{ 'products.page.inventory.no_products' | t }}`,
++            products_preorder: `{{ 'products.page.inventory.preoder' | t }}`,
++            products_enough_products: `{{ 'products.page.inventory.enough_products' | t }}`,
++            product_sku: `{{ 'products.page.sku' | t }}`,
++            product_barcode: `{{ 'products.page.barcode' | t }}`,
++            product_compare_price: `{{ 'products.page.sales_amount_html' | t: amount: '$SAVE_PRICE' }}`,
++            cart_add_error: `<span class="alert__icon">{%- render 'theme-symbols', icon: 'alert-error' -%}</span>{{ 'cart.add_error' | t }}`,
++            cart_general_error: `{{ 'cart.general_error' | t }}`, 
++            cart_added_items_count: `{{ 'cart.added_items_count.other_html' | t }}`,
++            cart_announcement: `{{ 'general.accessibility_labels.item_added' | t }}`,
++            shipping_calculator_results_heading_one: `{{ 'cart.shipping_calculator.results_heading_one' | t }}`,
++            shipping_calculator_results_heading_multiple: `{{ 'cart.shipping_calculator.results_heading_multiple' | t }}`,
++            shipping_notice_remaining_to_free: `{{ 'cart.free_shipping_remaining_html' | t }}`,
++            shipping_notice_eligible_for_free: `{{ 'cart.free_shipping_eligible' | t }}`,
++            show_more: `{{ 'general.accessibility_labels.show_more' | t }}`,
++            show_less: `{{ 'general.accessibility_labels.show_less' | t }}`
++          },
++          symbols: {
++            zoom_out: `{%- render 'theme-symbols', icon: 'zoom-out' -%}`,
++            zoom_in: `{%- render 'theme-symbols', icon: 'zoom-in' -%}`,
++            zoom_loader: `<svg class="zoom__loader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>`,
++            close: `{%- render 'theme-symbols', icon: 'close' -%}`,
++            toggle_pack: `<span class="toggle__icon"><span class="toggle__icon--plus">{%- render 'theme-symbols', icon: 'plus' -%}</span><span class="toggle__icon--minus">{%- render 'theme-symbols', icon: 'minus' -%}</span></span>`,
++            toggle_pack_alternate: `<span class="toggle__icon-alternate"><span class="toggle__icon--plus">{%- render 'theme-symbols', icon: 'plus' -%}</span><span class="toggle__icon--minus">{%- render 'theme-symbols', icon: 'minus' -%}</span></span>`
++          },
++          predictive_search_enabled: "true",
++          predictive_search_script: "{{ 'component-predictive-search.js' | asset_url }}",
++          predictive_search_placeholder: `<div class="search-results"><div class="search-block"><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a><a class="search-item search-item--blank"><div class="thumbnail"></div><div class="content"><span class="title"></span><span class="caption"></span></div></a></div></div>`,
++          cart_image_ratio: (1 / {{ settings.cart_image_ratio }}),
++          custom: {
++            integer: {{ settings.custom_integer | default: 0 }},
++            free_products: {{ custom_free_products_json }}
++          }
++        }
++      }
++      
++    </script>
++  
++    <script src="{{ 'component-slider.js' | asset_url }}" defer></script>
++    <script src="{{ 'component-product-form.js' | asset_url }}" defer></script>
++    <script src="{{ 'component-quick-buy.js' | asset_url }}" defer></script>
++    {%- if settings.cart_notes_enable -%}
++      <script src="{{ 'component-order-instructions.js' | asset_url }}" defer></script>
++    {%- endif -%}
++  
++    {%- if request.design_mode -%}
++      <script src="{{ 'section-announcement-bar.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-toggle.js' | asset_url }}" defer></script>
++      <script src="{{ 'section-main-product.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-video.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-localization-form.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-predictive-search.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-image-hotspots.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-before-after.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-shipping-calculator.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-countdown-clock.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-scrolling-text.js' | asset_url }}" defer></script>
++      <script src="{{ 'theme-editor.js' | asset_url }}" defer></script>
++    {%- endif -%}
++    
++    {%- unless settings.cart_action == "no-overlay" or template.name contains "cart" -%}
++  
++      <sidebar-drawer id="site-cart-sidebar" class="sidebar sidebar--right {% if cart.item_count == 0 %} cart-is-empty {% endif %}" tabindex="-1" role="dialog" aria-modal="true" data-cart-items="{{ cart.item_count }}" style="display:none" data-js-site-cart-sidebar>
++        
++        <div class="sidebar__header">
++          <span class="sidebar__title">
++            {{ 'cart.title' | t }}
++            (<span data-header-cart-count>{{ cart.item_count }}</span>)
++          </span>
++          <button class="sidebar__close" data-js-close>
++            <span class="visually-hidden">{{ 'general.accessibility_labels.close_sidebar' | t }}</span>
++            <span aria-hidden="true" aria-role="img">{%- render 'theme-symbols', icon: 'close' -%}</span>
++          </button>
++        </div>
++  
++        <div class="sidebar__body">
++  
++          <div class="cart-form sidebar-large-padding">
++            {%- render 'cart-form', type: 'sidebar' -%}
++            <a href="{{ routes.all_products_collection_url }}" class="cart-continue button button--fullwidth button--solid button--regular">
++              {{ 'cart.continue_browsing' | t }}
++            </a>
++          </div>
++
++          {%- liquid
++            unless settings.cart_upsell_product == blank
++              render 'product-cross-sell', heading: settings.cart_upsell_heading, product: settings.cart_upsell_product, id: 'cart-individual-product-cross-sell', widget_style: 'outline', heading_position: 'outside', style: 'margin-bottom: var(--sidebar-gutter);padding-bottom: 5px;', class: 'cart-individual-product-recommendation hide-if-empty-cart' 
++            endunless
++          -%}
++
++          {%- if settings.cart_recommendations -%}
++            <cart-recommendations class="hide-if-empty-cart" id="cart-recommendations-sidebar" data-section="cart-recommendations" data-limit="6"></cart-recommendations>
++            <script src="{{ 'component-cart-recommendations.js' | asset_url }}" defer></script>
++          {%- endif -%}
++  
++          {%- if settings.cart_notes_enable -%}
++            <div class="cart-instructions sidebar-large-padding hide-if-empty-cart"
++              style="border-top: 0;margin-top:-24px;"
++            >
++              <div class="form-field">
++                <label for="cartSpecialInstructions">{{ 'cart.note' | t }}</label>
++                <textarea name="note" id="cartSpecialInstructions" form="cart">{{ cart.note }}</textarea>
++              </div>
++            </div>
++          {%- endif -%}
++  
++        </div>
++
++        {%- render 'cart-gift-wrapping', class: 'cart-wrapping--sidebar' -%}
++  
++        <div class="sidebar__footer hide-if-empty-cart" style="background-color:var(--color-background-main-alternate)">
++          {%- render 'cart-subtotal', type: 'sidebar' -%}
++        </div>
++  
++      </sidebar-drawer>
++  
++      <script>
++        new MutationObserver((mutations, observer) => {
++          if ( document.getElementById('cart').classList.contains('cart--empty') ) {
++            document.getElementById('site-cart-sidebar').classList.add('cart-is-empty');
++          } else {
++            document.getElementById('site-cart-sidebar').classList.remove('cart-is-empty');
++          }
++        }).observe(document.querySelector('.cart-form'), {
++          attributes: false, childList: true, subtree: true
++        })
++      </script>
++  
++    {%- endunless -%}
++  
++    <sidebar-drawer id="site-search-sidebar" class="sidebar sidebar--left" tabindex="-1" role="dialog" aria-modal="true" style="display:none">
++      <div class="sidebar__header">
++        <span class="sidebar__title">
++          {{ 'search.drawer.title' | t }}
++        </span>
++        <button class="sidebar__close" data-js-close>
++          <span class="visually-hidden">{{ 'general.accessibility_labels.close_sidebar' | t }}</span>
++          <span aria-hidden="true" aria-role="img">{%- render 'theme-symbols', icon: 'close' -%}</span>
++        </button>
++      </div>
++      <div class="sidebar__body">
++        
++        <search-form class="sidebar-large-padding">
++          <form action="{{ routes.search_url }}" method="get" class="input-group search-bar ajax subtitle" role="search" autocomplete="off">
++            <label for="search-form-sidebar" class="visually-hidden">{{ 'search.drawer.title' | t }}</label>
++            <input id="search-form-sidebar" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.drawer.placeholder' | t }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-js-search-input>
++          </form>
++          <div class="top">
++            <div id="search-results" class="search-results predictive-search" data-js-search-results></div>
++          </div>
++        </search-form>
++
++      </div>
++    </sidebar-drawer>
++    
++    <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}" media="print" onload="this.media='all'">
++  
++    <script src="{{ 'component-quantity-selector.js' | asset_url }}" defer></script>
++    {%- if settings.cart_action == "overlay" or template.name contains "cart" -%}
++      <script src="{{ 'component-cart.js' | asset_url }}" defer></script>
++      <script src="{{ 'component-cart-progress-goals.js' | asset_url }}" defer></script>
++    {%- endif -%}
++  
++    <link rel="stylesheet" href="{{ 'component-sidebar.css' | asset_url }}" media="print" onload="this.media='all';">
++    <script src="{{ 'section-header.js' | asset_url }}" defer></script>
++  
++    {%- if template contains 'product' -%}
++      <script>
++        if ( document.getElementById('shopify-product-reviews') ) {
++          var element = document.createElement("link");
++          element.setAttribute("rel", "stylesheet");
++          element.setAttribute("type", "text/css");
++          element.setAttribute("href", "{{ 'component-shopify-reviews.css' | asset_url }}");
++          document.body.appendChild(element);
++        }
++      </script>
++    {%- endif -%}
++  
++    <div class="site-overlay" style="display:none"></div>
++  
++    <link rel="stylesheet" href="{{ 'section-main-product.css' | asset_url }}" media="print" onload="this.media='all';">
++
++    {%- if settings.show_gotop -%}
++      <span id="go-top" class="main-go-top"
++        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
++      >
++        <span class="visually-hidden">{{ 'general.accessibility_labels.go_to_top' | t }}</span>
++        <span class="main-go-top__icon" aria-hidden="true">{%- render 'theme-symbols', icon: 'chevron' -%}</span>
++        <span class="main-go-top__text">{{ 'general.accessibility_labels.top' | t }}</span>
++      </span>
++      <script>
++        window.addEventListener('scroll', ()=>{
++          if ( window.scrollY > 500 ) {
++            document.getElementById('go-top').classList.add('show');
++          } else {
++            document.getElementById('go-top').classList.remove('show');
++          }
++        }, {passive: true});
++      </script>
++    {%- endif -%}
++    
++    <script>
++      document.querySelectorAll('.rte a img').forEach(function(elm){
++        elm.parentNode.style.border = 'none';
++      });
++    </script>
++  
++  {% render "bc_banner" %}
++  {{ 'custom.js' | asset_url | script_tag }}
++</body>
+   </html>
+\ No newline at end of file
+diff --git a/snippets/cart-form-page.liquid b/snippets/cart-form-page.liquid
+index 44bfb39..fabd3b5 100644
+--- a/snippets/cart-form-page.liquid
++++ b/snippets/cart-form-page.liquid
+@@ -172,6 +172,53 @@
+ 
+ 	</form>
+ 
++	{%- liquid
++      assign custom_free_has_any = false
++      assign custom_free_product_1 = settings.custom_free_product_1
++      assign custom_free_product_2 = settings.custom_free_product_2
++      assign custom_free_product_3 = settings.custom_free_product_3
++    -%}
++	{%- capture custom_free_vid_1 -%}{% render 'custom-free-product-variant', product: custom_free_product_1 %}{%- endcapture -%}
++	{%- capture custom_free_vid_2 -%}{% render 'custom-free-product-variant', product: custom_free_product_2 %}{%- endcapture -%}
++	{%- capture custom_free_vid_3 -%}{% render 'custom-free-product-variant', product: custom_free_product_3 %}{%- endcapture -%}
++	{%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
++	{%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
++	{%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
++	{%- if custom_free_has_any -%}
++		<div id="custom-free-product-offer" class="custom-free-product-offer hide-if-empty-cart" style="display: none; margin-top: 1rem; padding: 1rem; border: 1px solid var(--color-borders-main, #eee); border-radius: 6px;">
++			<p class="text-size--small text-weight--bold" style="margin: 0 0 0.75rem 0;">Wählen Sie Ihr kostenloses Geschenk:</p>
++			<div class="custom-free-product-choices" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem;">
++				{%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}
++				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
++					<a href="{{ custom_free_product_1.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
++						{%- render 'lazy-image-small', image: custom_free_product_1.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
++					</a>
++					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_1.title }}</p>
++					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_1 }}" data-free-product-id="{{ custom_free_product_1.id }}">Kostenlos hinzufügen</button>
++				</div>
++				{%- endif -%}
++				{%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}
++				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
++					<a href="{{ custom_free_product_2.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
++						{%- render 'lazy-image-small', image: custom_free_product_2.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
++					</a>
++					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_2.title }}</p>
++					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_2 }}" data-free-product-id="{{ custom_free_product_2.id }}">Kostenlos hinzufügen</button>
++				</div>
++				{%- endif -%}
++				{%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}
++				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
++					<a href="{{ custom_free_product_3.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
++						{%- render 'lazy-image-small', image: custom_free_product_3.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
++					</a>
++					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_3.title }}</p>
++					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_3 }}" data-free-product-id="{{ custom_free_product_3.id }}">Kostenlos hinzufügen</button>
++				</div>
++				{%- endif -%}
++			</div>
++		</div>
++	{%- endif -%}
++
+ 	<span class="cart__count hidden" aria-hidden="true" data-cart-count>{{ cart.item_count }}</span>
+ 	<span class="cart__total hidden" aria-hidden="true" data-cart-total>{{ cart.total_price | money }}</span>
+ 
+diff --git a/snippets/cart-form.liquid b/snippets/cart-form.liquid
+index 0822bec..fa8eafe 100644
+--- a/snippets/cart-form.liquid
++++ b/snippets/cart-form.liquid
+@@ -1,19 +1,6 @@
+ <cart-form id="AjaxCartForm">
+ 
+-	{%- if template != 'cart' and settings.cart_free_shipping -%}
+-		<div class="cart-notice text-size--small hide-if-empty-cart">
+-			<shipping-notice
+-				data-free-shipping="{{ settings.cart_free_shipping_amount | times: 100 }}"
+-				data-cart-total="{{ cart.total_price }}"
+-			>
+-				<span data-js-free-shipping-text></span>
+-				<span class="cart-notice__slider">
+-					<span class="cart-notice__slider-bar" data-js-free-shipping-slider></span>
+-				</span>
+-			</shipping-notice>
+-		</div>
+-		<script src="{{ 'component-shipping-notice.js' | asset_url }}" defer></script>
+-	{%- endif -%}
++	{%- render 'cart-progress-goals' -%}
+ 
+ 	<form action="{{ routes.cart_url }}" method="post" novalidate class="cart__form {% if cart.item_count == 0 %} cart--empty {% endif %}" id="cart">
+ 	
+@@ -145,6 +132,53 @@
+ 
+ 	</form>
+ 
++	{%- liquid
++      assign custom_free_has_any = false
++      assign custom_free_product_1 = settings.custom_free_product_1
++      assign custom_free_product_2 = settings.custom_free_product_2
++      assign custom_free_product_3 = settings.custom_free_product_3
++    -%}
++	{%- capture custom_free_vid_1 -%}{% render 'custom-free-product-variant', product: custom_free_product_1 %}{%- endcapture -%}
++	{%- capture custom_free_vid_2 -%}{% render 'custom-free-product-variant', product: custom_free_product_2 %}{%- endcapture -%}
++	{%- capture custom_free_vid_3 -%}{% render 'custom-free-product-variant', product: custom_free_product_3 %}{%- endcapture -%}
++	{%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
++	{%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
++	{%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}{%- assign custom_free_has_any = true -%}{%- endif -%}
++	{%- if custom_free_has_any -%}
++		<div id="custom-free-product-offer" class="custom-free-product-offer hide-if-empty-cart" style="display: none; margin-top: 1rem; padding: 1rem; border: 1px solid var(--color-borders-main, #eee); border-radius: 6px;">
++			<p class="text-size--small text-weight--bold" style="margin: 0 0 0.75rem 0;">Wählen Sie Ihr kostenloses Geschenk:</p>
++			<div class="custom-free-product-choices" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); gap: 0.75rem;">
++				{%- if custom_free_product_1 != blank and custom_free_vid_1 != blank -%}
++				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
++					<a href="{{ custom_free_product_1.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
++						{%- render 'lazy-image-small', image: custom_free_product_1.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
++					</a>
++					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_1.title }}</p>
++					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_1 }}" data-free-product-id="{{ custom_free_product_1.id }}">Kostenlos hinzufügen</button>
++				</div>
++				{%- endif -%}
++				{%- if custom_free_product_2 != blank and custom_free_vid_2 != blank -%}
++				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
++					<a href="{{ custom_free_product_2.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
++						{%- render 'lazy-image-small', image: custom_free_product_2.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
++					</a>
++					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_2.title }}</p>
++					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_2 }}" data-free-product-id="{{ custom_free_product_2.id }}">Kostenlos hinzufügen</button>
++				</div>
++				{%- endif -%}
++				{%- if custom_free_product_3 != blank and custom_free_vid_3 != blank -%}
++				<div class="custom-free-choice" style="border: 1px solid var(--color-borders-main, #eee); border-radius: 6px; padding: 0.5rem; text-align: center;">
++					<a href="{{ custom_free_product_3.url }}" class="custom-free-choice__image" style="display: block; margin-bottom: 0.5rem;">
++						{%- render 'lazy-image-small', image: custom_free_product_3.featured_image, aspect_ratio: 1, fit: true, class: 'lazy-image--scale-animation' -%}
++					</a>
++					<p class="text-size--small" style="margin: 0 0 0.5rem 0;">{{ custom_free_product_3.title }}</p>
++					<button type="button" class="button button--regular button--outline button--small" data-js-add-free-product data-free-variant-id="{{ custom_free_vid_3 }}" data-free-product-id="{{ custom_free_product_3.id }}">Kostenlos hinzufügen</button>
++				</div>
++				{%- endif -%}
++			</div>
++		</div>
++	{%- endif -%}
++
+ 	<span class="cart__count hidden" aria-hidden="true" data-cart-count>{{ cart.item_count }}</span>
+ 	<span class="cart__total hidden" aria-hidden="true" data-cart-total>{{ cart.total_price | money }}</span>
+ 
+diff --git a/snippets/cart-progress-goals.liquid b/snippets/cart-progress-goals.liquid
+new file mode 100644
+index 0000000..342177b
+--- /dev/null
++++ b/snippets/cart-progress-goals.liquid
+@@ -0,0 +1,52 @@
++{% comment %}
++  Merged progress bar showing free shipping and free gift goals with milestone markers.
++{% endcomment %}
++{%- liquid
++  assign show_progress = false
++  assign shipping_goal_cents = 0
++  assign gift_goal_cents = 0
++  if settings.cart_free_shipping and settings.cart_free_shipping_amount
++    assign shipping_goal_cents = settings.cart_free_shipping_amount | times: 100
++    assign show_progress = true
++  endif
++  assign has_free_products = false
++  if settings.custom_free_product_1 != blank or settings.custom_free_product_2 != blank or settings.custom_free_product_3 != blank
++    assign has_free_products = true
++  endif
++  if settings.custom_integer and settings.custom_integer > 0 and has_free_products
++    assign gift_goal_cents = settings.custom_integer | times: 100
++    assign show_progress = true
++  endif
++  assign max_goal_cents = shipping_goal_cents
++  if gift_goal_cents > shipping_goal_cents
++    assign max_goal_cents = gift_goal_cents
++  endif
++-%}
++{%- if show_progress and max_goal_cents > 0 -%}
++  <div class="cart-progress-goals-wrapper cart-notice text-size--small hide-if-empty-cart">
++    <cart-progress-goals
++      class="cart-progress-goals"
++      data-cart-total="{{ cart.total_price | default: 0 }}"
++      data-shipping-goal="{{ shipping_goal_cents }}"
++      data-gift-goal="{{ gift_goal_cents }}"
++      data-max-goal="{{ max_goal_cents }}"
++      data-text-progress="%current% von %goal%"
++      data-text-shipping-remaining="Noch %amount% bis kostenloser Versand"
++      data-text-shipping-done="✓ Kostenloser Versand"
++      data-text-gift-remaining="Noch %amount% bis Gratisgeschenk"
++      data-text-gift-done="✓ Gratisgeschenk"
++    >
++      <div class="cart-progress-goals__text" data-js-cart-progress-text></div>
++      <div class="cart-progress-goals__bar-holder cart-notice__slider">
++        <span class="cart-progress-goals__fill cart-notice__slider-bar" data-js-cart-progress-fill></span>
++        {%- if shipping_goal_cents > 0 -%}
++          <span class="cart-progress-goals__marker cart-progress-goals__marker--shipping" data-js-marker-shipping title="Kostenloser Versand"></span>
++        {%- endif -%}
++        {%- if gift_goal_cents > 0 and gift_goal_cents != shipping_goal_cents -%}
++          <span class="cart-progress-goals__marker cart-progress-goals__marker--gift" data-js-marker-gift title="Gratisgeschenk"></span>
++        {%- endif -%}
++      </div>
++      <div class="cart-progress-goals__labels" data-js-cart-progress-labels></div>
++    </cart-progress-goals>
++  </div>
++{%- endif -%}
+diff --git a/snippets/cart-subtotal.liquid b/snippets/cart-subtotal.liquid
+index 708813e..735a220 100644
+--- a/snippets/cart-subtotal.liquid
++++ b/snippets/cart-subtotal.liquid
+@@ -2,19 +2,19 @@
+ 
+ 	{%- if type == 'page' -%}
+ 
+-		{%- if settings.cart_free_shipping -%}
++		{%- liquid
++			assign show_cart_notices = false
++			if settings.cart_free_shipping
++				assign show_cart_notices = true
++			endif
++			if settings.custom_free_product_1 != blank or settings.custom_free_product_2 != blank or settings.custom_free_product_3 != blank
++				assign show_cart_notices = true
++			endif
++		-%}
++		{%- if show_cart_notices -%}
+ 			<div class="sidebar-widget sidebar-widget--outline gutter-regular margin-bottom--regular">
+ 				<div class="sidebar-widget__content">
+-					<shipping-notice
+-						data-free-shipping="{{ settings.cart_free_shipping_amount | times: 100 }}"
+-						data-cart-total="{{ cart.total_price }}"
+-					>
+-						<span data-js-free-shipping-text></span>
+-						<span class="cart-notice__slider">
+-							<span class="cart-notice__slider-bar" data-js-free-shipping-slider></span>
+-						</span>
+-					</shipping-notice>
+-					<script src="{{ 'component-shipping-notice.js' | asset_url }}" defer></script>
++					{%- render 'cart-progress-goals' -%}
+ 				</div>
+ 			</div>
+ 		{%- endif -%}
+diff --git a/snippets/custom-free-product-variant.liquid b/snippets/custom-free-product-variant.liquid
+new file mode 100644
+index 0000000..2c106d5
+--- /dev/null
++++ b/snippets/custom-free-product-variant.liquid
+@@ -0,0 +1,18 @@
++{% comment %}
++  Outputs the variant ID for a free gift product.
++  Prefers variant with "Free" in title/options, else first available.
++  Usage: {% capture vid %}{% render 'custom-free-product-variant', product: some_product %}{% endcapture %}
++{% endcomment %}
++{% assign custom_free_vid = nil %}
++{% if product and product != blank %}
++  {% for v in product.variants %}
++    {% if v.option1 == 'Free' or v.option2 == 'Free' or v.option3 == 'Free' or v.title == 'Free' %}
++      {% assign custom_free_vid = v.id %}
++      {% break %}
++    {% endif %}
++  {% endfor %}
++  {% if custom_free_vid == nil and product.selected_or_first_available_variant %}
++    {% assign custom_free_vid = product.selected_or_first_available_variant.id %}
++  {% endif %}
++{% endif %}
++{{ custom_free_vid }}
+diff --git a/snippets/free-gift-progress.liquid b/snippets/free-gift-progress.liquid
+new file mode 100644
+index 0000000..2e93e05
+--- /dev/null
++++ b/snippets/free-gift-progress.liquid
+@@ -0,0 +1,27 @@
++{% comment %}
++  Free gift progress bar. Renders when free products are configured.
++{% endcomment %}
++{%- liquid
++  assign has_free_products = false
++  if settings.custom_free_product_1 != blank or settings.custom_free_product_2 != blank or settings.custom_free_product_3 != blank
++    assign has_free_products = true
++  endif
++  assign goal_euros = settings.custom_integer | default: 0
++-%}
++{%- if has_free_products and goal_euros > 0 -%}
++  {%- assign goal_cents = goal_euros | times: 100 -%}
++  <div class="free-gift-progress-wrapper cart-notice text-size--small hide-if-empty-cart">
++    <free-gift-progress
++      class="free-gift-progress"
++      data-goal="{{ goal_cents }}"
++      data-cart-total="{{ cart.total_price | default: 0 }}"
++      data-text-remaining="Noch %amount% bis zu Ihrem Gratisgeschenk"
++      data-text-qualified="Sie haben sich ein Gratisgeschenk verdient!"
++    >
++      <span data-js-free-gift-text class="free-gift-progress__text"></span>
++      <span class="free-gift-progress__slider cart-notice__slider">
++        <span class="free-gift-progress__bar cart-notice__slider-bar" data-js-free-gift-slider></span>
++      </span>
++    </free-gift-progress>
++  </div>
++{%- endif -%}
+diff --git a/templates/product.ausgewaehlte-teemischung.json b/templates/product.ausgewaehlte-teemischung.json
+index 6c50695..f3fc6be 100644
+--- a/templates/product.ausgewaehlte-teemischung.json
++++ b/templates/product.ausgewaehlte-teemischung.json
+@@ -21,16 +21,6 @@
+           "type": "title",
+           "settings": {}
+         },
+-        "533f2fef-5113-4186-8d6b-aaf40836d3d6": {
+-          "type": "shopify://apps/product-reviews/blocks/star_rating/bae150af-8da8-48b2-9867-398188115e5f",
+-          "settings": {
+-            "stars_fill_color": "{{ shop.brand.colors.primary[0].background }}",
+-            "star_size": 15,
+-            "text_align": "flex-start",
+-            "product": "{{product}}",
+-            "stars_text_empty": "Wir freuen uns auf Ihre Bewertung"
+-          }
+-        },
+         "variant_picker": {
+           "type": "variant_picker",
+           "settings": {
+@@ -83,7 +73,6 @@
+       "block_order": [
+         "vendor",
+         "title",
+-        "533f2fef-5113-4186-8d6b-aaf40836d3d6",
+         "variant_picker",
+         "buy_buttons",
+         "description",
+diff --git a/templates/product.bio-ausg-teemischung.json b/templates/product.bio-ausg-teemischung.json
+index a4f5725..67e8aa0 100644
+--- a/templates/product.bio-ausg-teemischung.json
++++ b/templates/product.bio-ausg-teemischung.json
+@@ -32,16 +32,6 @@
+             "text_transform": true
+           }
+         },
+-        "533f2fef-5113-4186-8d6b-aaf40836d3d6": {
+-          "type": "shopify://apps/product-reviews/blocks/star_rating/bae150af-8da8-48b2-9867-398188115e5f",
+-          "settings": {
+-            "stars_fill_color": "{{ shop.brand.colors.primary[0].background }}",
+-            "star_size": 15,
+-            "text_align": "flex-start",
+-            "product": "{{product}}",
+-            "stars_text_empty": "Wir freuen uns auf Ihre Bewertung"
+-          }
+-        },
+         "variant_picker": {
+           "type": "variant_picker",
+           "settings": {
+@@ -111,7 +101,6 @@
+         "vendor",
+         "title",
+         "330dbe5e-bd36-4021-bd03-eebf9c9098a7",
+-        "533f2fef-5113-4186-8d6b-aaf40836d3d6",
+         "variant_picker",
+         "buy_buttons",
+         "description",
+diff --git a/templates/product.teeproben.json b/templates/product.teeproben.json
+index 59349e6..47164bb 100644
+--- a/templates/product.teeproben.json
++++ b/templates/product.teeproben.json
+@@ -56,10 +56,6 @@
+         "share": {
+           "type": "share",
+           "settings": {}
+-        },
+-        "avada_order_limits_app_block_gxyUyc": {
+-          "type": "shopify://apps/avada-order-limits/blocks/app-block/d3021427-4f7b-49c8-8963-29d1d52b8956",
+-          "settings": {}
+         }
+       },
+       "block_order": [
+@@ -69,8 +65,7 @@
+         "variant_picker",
+         "buy_buttons",
+         "description",
+-        "share",
+-        "avada_order_limits_app_block_gxyUyc"
++        "share"
+       ],
+       "settings": {
+         "gallery_layout": "one-col scroll",
+
+############################################
+# SECTION B: Uncommitted working tree
+# (git diff — not yet committed)
+############################################
+
+diff --git a/config/settings_data.json b/config/settings_data.json
+index 37d7ee7..72fc6dd 100644
+--- a/config/settings_data.json
++++ b/config/settings_data.json
+@@ -158,7 +158,7 @@
+     "cart_image_ratio": "0.83333",
+     "cart_recommendations_heading": "DAS KÖNNTE IHNEN AUCH GEFALLEN.",
+     "cart_free_shipping": true,
+-    "cart_free_shipping_amount": "30",
++    "cart_free_shipping_amount": "40",
+     "show_breadcrumb": false,
+     "show_gotop": true,
+     "within_filter_enabled": true,
+@@ -168,9 +168,9 @@
+     "social_vimeo": "",
+     "social_twitter": "",
+     "custom_integer": 49,
+-    "custom_free_product_1": "test-free-gift-product",
+-    "custom_free_product_2": "test-free-gift-product-2",
+-    "custom_free_product_3": "test-free-gift-product-3",
++    "custom_free_product_1": "kandis-krumelkandis-braun-kandiszucker-teezubehor-gratis-ab-49-euro-bestellwert",
++    "custom_free_product_2": "tasse-ohne-henkel-lasiert-rosa-motiv-herz",
++    "custom_free_product_3": "tasse-ohne-henkel-lasiert-grun-motiv-kleeblatt",
+     "checkout_header_image": "shopify://shop_images/Design_ohne_Titel_13.png",
+     "checkout_logo_image": "shopify://shop_images/bildmarke-weiss.png",
+     "checkout_logo_position": "center",
+diff --git a/sections/header-group.json b/sections/header-group.json
+index 6bbe745..8a20a09 100644
+--- a/sections/header-group.json
++++ b/sections/header-group.json
+@@ -36,8 +36,8 @@
+         "scroll_direction": "ltr",
+         "speed": 20,
+         "pause_on_hover": true,
+-        "horizontal_space": "large-x-2",
+-        "text_size": "text-size--small",
++        "horizontal_space": "regular-x-2",
++        "text_size": "text-size--large",
+         "color_background_main": "#000000",
+         "color_text_main": "#ffffff",
+         "remove_top_margin": true,
+diff --git a/templates/blog.json b/templates/blog.json
+index d9ff9aa..0975919 100644
+--- a/templates/blog.json
++++ b/templates/blog.json
+@@ -103,12 +103,12 @@
+         "summary"
+       ],
+       "settings": {
+-        "enable_tags": false,
++        "enable_tags": true,
+         "layout": "grid-2 grid-lap-1",
+         "post_limit": 12,
+         "blog_show_image": true,
+-        "image_aspect_ratio": "1.33333",
+-        "image_border_radius": 0
++        "image_aspect_ratio": "1",
++        "image_border_radius": 4
+       }
+     },
+     "promotion_cards_jbqc9J": {
+diff --git a/templates/index.json b/templates/index.json
+index 357a143..65aa2b9 100644
+--- a/templates/index.json
++++ b/templates/index.json
+@@ -12,45 +12,45 @@
+     "4d7cd95a-473c-457b-982a-b443bad987f7": {
+       "type": "slideshow",
+       "blocks": {
+-        "image_QGhHyQ": {
++        "image_9qAhAE": {
+           "type": "image",
+-          "disabled": true,
+           "settings": {
+-            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_26.png",
+-            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_26.png",
+-            "caption": "Liebevoll zusammengestellt",
+-            "title": "Unsere Weihnachtsgeschenke",
+-            "link": "shopify://collections/geschenke-1",
++            "image": "shopify://shop_images/generated-image.png",
++            "mobile_image": "shopify://shop_images/generated-image.png",
++            "caption": "",
++            "title": "Matcha - Ganz im Trend",
++            "link": "https://www.tee-undkraeutergalerie.de/collections/matcha?_pos=1&_psq=matcha&_ss=e&_v=1.0",
+             "button_label": "Jetzt entdecken",
+             "color_background_main": "rgba(0,0,0,0)",
+-            "color_text_main": "rgba(0,0,0,0)",
++            "color_text_main": "#ffffff",
+             "seo_h_tag": "h2"
+           }
+         },
+-        "image_9qAhAE": {
++        "image_QGhHyQ": {
+           "type": "image",
++          "disabled": true,
+           "settings": {
+-            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_2.png",
+-            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_2.png",
+-            "caption": "Lassen Sie Ihren Tee erblühen!",
+-            "title": "Erblühtee - Teeblumen",
+-            "link": "https://www.tee-undkraeutergalerie.de/search?q=erbl%C3%BChtee",
++            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_26.png",
++            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_26.png",
++            "caption": "Liebevoll zusammengestellt",
++            "title": "Unsere Weihnachtsgeschenke",
++            "link": "shopify://collections/geschenke-1",
+             "button_label": "Jetzt entdecken",
+             "color_background_main": "rgba(0,0,0,0)",
+             "color_text_main": "rgba(0,0,0,0)",
+             "seo_h_tag": "h2"
+           }
+         },
+-        "image_f77f6z": {
++        "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-1": {
+           "type": "image",
+           "settings": {
+-            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_33.png",
+-            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_33.png",
++            "image": "shopify://shop_images/bio-tee.png",
++            "mobile_image": "shopify://shop_images/bio-tee.png",
+             "caption": "",
+-            "title": "Unsere neuen Flugtees",
+-            "link": "shopify://collections/flugtee",
++            "title": "Große Auswahl an Bio-Tees",
++            "link": "shopify://collections/biotee",
+             "button_label": "Jetzt entdecken",
+-            "color_background_main": "#757575",
++            "color_background_main": "rgba(0,0,0,0)",
+             "color_text_main": "#f1eeec",
+             "seo_h_tag": "h2"
+           }
+@@ -58,26 +58,27 @@
+         "image_qLJnJn": {
+           "type": "image",
+           "settings": {
+-            "image": "shopify://shop_images/Header_Slider_Homepage_2048_x_500_px_2048_x_350_px_1_bf63fa61-1042-493f-8df1-928341a9cfc1.jpg",
+-            "caption": "Direkt von der Messe",
++            "image": "shopify://shop_images/verschiedene-sorten-tee-in-sch-lchen-mit-dunklem-hintergrund.png",
++            "mobile_image": "shopify://shop_images/verschiedene-sorten-tee-in-sch-lchen-mit-dunklem-hintergrund.png",
++            "caption": "",
+             "title": "Teeneuheiten",
+             "link": "shopify://collections/messe-neuheiten-februar-2025",
+             "button_label": "Jetzt entdecken",
+             "color_background_main": "rgba(0,0,0,0)",
+-            "color_text_main": "#000000",
++            "color_text_main": "#ffffff",
+             "seo_h_tag": "h2"
+           }
+         },
+-        "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-1": {
++        "image_f77f6z": {
+           "type": "image",
+           "settings": {
+-            "image": "shopify://shop_images/Bio-Tees.jpg",
+-            "mobile_image": "shopify://shop_images/Unbenannt-1_e236862e-28dc-40c6-bbb6-835517c0a22b.jpg",
++            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_64.png",
++            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_64.png",
+             "caption": "",
+-            "title": "Große Auswahl an Bio-Tees",
+-            "link": "shopify://collections/biotee",
++            "title": "Unsere neuen Flugtees",
++            "link": "shopify://collections/flugtee",
+             "button_label": "Jetzt entdecken",
+-            "color_background_main": "rgba(0,0,0,0)",
++            "color_background_main": "#757575",
+             "color_text_main": "#f1eeec",
+             "seo_h_tag": "h2"
+           }
+@@ -85,8 +86,8 @@
+         "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-2": {
+           "type": "image",
+           "settings": {
+-            "image": "shopify://shop_images/5_4213275e-e9b6-4daa-b321-fa3ffa7355a9.png",
+-            "mobile_image": "shopify://shop_images/Unbenannt-1_9059776c-b865-4c61-81c9-71ac52ae2196.jpg",
++            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_66.png",
++            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_1024_66.png",
+             "caption": "",
+             "title": "Das passende Teezubehör",
+             "link": "shopify://collections/teegeschirr",
+@@ -98,11 +99,11 @@
+         }
+       },
+       "block_order": [
+-        "image_QGhHyQ",
+         "image_9qAhAE",
+-        "image_f77f6z",
+-        "image_qLJnJn",
++        "image_QGhHyQ",
+         "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-1",
++        "image_qLJnJn",
++        "image_f77f6z",
+         "template--17665760362761__4d7cd95a-473c-457b-982a-b443bad987f7-167647497525bc7856-2"
+       ],
+       "settings": {
+@@ -110,9 +111,9 @@
+         "mobile_height": "40vh",
+         "is_fullwidth": true,
+         "alignment": "horizontal-left align-content--vertical-bottom",
+-        "caption_size": "text-size--large",
+-        "title_size": "heading-size--regular",
+-        "spacing": 18,
++        "caption_size": "text-size--small",
++        "title_size": "heading-size--small",
++        "spacing": 35,
+         "width": "100%",
+         "button_style": "solid",
+         "remove_margin": false
+@@ -139,12 +140,12 @@
+         "image_Cj6QEA": {
+           "type": "image",
+           "settings": {
+-            "image": "shopify://shop_images/Rot_Beige_Ordentlich_Standard_Zu_Verkaufen_Immobilien_Banner_13d15dc7-b977-43f0-9ab2-0773a755a4f4.png",
+-            "mobile_image": "shopify://shop_images/Rot_Beige_Ordentlich_Standard_Zu_Verkaufen_Immobilien_Banner_1.png",
++            "image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_44.png",
++            "mobile_image": "shopify://shop_images/Banner_Slider_Startseite_2048_x_852_px2048_x_850_px_44.png",
+             "caption": "",
+-            "title": "",
++            "title": "Bald ist Muttertag!",
+             "link": "shopify://collections/geschenke-mit-herz",
+-            "button_label": "Geschenke mit Herz",
++            "button_label": "Entdecke Geschenke mit Herz",
+             "color_background_main": "rgba(0,0,0,0)",
+             "color_text_main": "rgba(0,0,0,0)",
+             "seo_h_tag": "h2"
+@@ -171,13 +172,13 @@
+       ],
+       "name": "t:sections.bundle-extra-words.sections.slideshow.name",
+       "settings": {
+-        "desktop_height": "80vh",
+-        "mobile_height": "60vh",
++        "desktop_height": "60vh",
++        "mobile_height": "40vh",
+         "is_fullwidth": true,
+         "alignment": "horizontal-left align-content--vertical-bottom",
+-        "caption_size": "text-size--large",
+-        "title_size": "heading-size--regular",
+-        "spacing": 18,
++        "caption_size": "text-size--small",
++        "title_size": "heading-size--small",
++        "spacing": 12,
+         "width": "100%",
+         "button_style": "solid",
+         "remove_margin": false
+@@ -286,10 +287,10 @@
+       ],
+       "settings": {
+         "heading": "Teeangebot des Monats",
+-        "subheading": "100g für 5,55€ anstatt 6,20€",
++        "subheading": "100g für 5,90 € statt 6,60 €",
+         "section_heading_size": "text-size--large",
+         "section_heading_layout": "section-heading--left section-heading--two-rows",
+-        "product": "blutorange-maracuja-fruechtetee-mild",
++        "product": "rhabarber-limo-bio-fruechtetee",
+         "gallery_layout": "one-col slider",
+         "gallery_desktop_width": "one-half",
+         "gallery_mobile_width": 90,
+@@ -310,22 +311,6 @@
+     "promotion_cards_ybpEpm": {
+       "type": "promotion-cards",
+       "blocks": {
+-        "card_qeEywU": {
+-          "type": "card",
+-          "settings": {
+-            "image": "shopify://shop_images/BlutorangeMaracujamitVitaminC_1.jpg",
+-            "caption": "100g für nur 5,55 €",
+-            "title": "Angebot des Monats",
+-            "subtitle": "Blutorange Maracuja | Früchtetee | Mild",
+-            "button_label": "Hier entdecken",
+-            "button_link": "shopify://products/blutorange-maracuja-fruechtetee-mild",
+-            "color_background_main": "rgba(0,0,0,0)",
+-            "color_text_main": "rgba(0,0,0,0)",
+-            "color_borders_main": "rgba(0,0,0,0)",
+-            "color_hide_borders": false,
+-            "seo_h_tag": "h3"
+-          }
+-        },
+         "card_LVBRby": {
+           "type": "card",
+           "settings": {
+@@ -357,47 +342,13 @@
+             "color_hide_borders": false,
+             "seo_h_tag": "h3"
+           }
+-        },
+-        "card_NgNfhW": {
+-          "type": "card",
+-          "settings": {
+-            "image": "shopify://shop_images/FreistellerOrangeGrapefruit_1.jpg",
+-            "caption": "100g für nur 4,80 €",
+-            "title": "Angebot",
+-            "subtitle": "Orange Grapefruit | Grüntee | Aroma",
+-            "button_label": "Hier entdecken",
+-            "button_link": "shopify://products/orange-grapefruit-gruentee-aroma",
+-            "color_background_main": "rgba(0,0,0,0)",
+-            "color_text_main": "rgba(0,0,0,0)",
+-            "color_borders_main": "rgba(0,0,0,0)",
+-            "color_hide_borders": false,
+-            "seo_h_tag": "h3"
+-          }
+-        },
+-        "card_fai7yQ": {
+-          "type": "card",
+-          "settings": {
+-            "image": "shopify://shop_images/Freisteller_Marzipan_Luebecker_Art_1.jpg",
+-            "caption": "100g für nur 4,50 €",
+-            "title": "Angebot",
+-            "subtitle": "Marzipan Lübecker Art",
+-            "button_label": "Hier entdecken",
+-            "button_link": "shopify://products/marzipan-luebecker-art-schwarztee-aroma",
+-            "color_background_main": "rgba(0,0,0,0)",
+-            "color_text_main": "rgba(0,0,0,0)",
+-            "color_borders_main": "rgba(0,0,0,0)",
+-            "color_hide_borders": false,
+-            "seo_h_tag": "h3"
+-          }
+         }
+       },
+       "block_order": [
+-        "card_qeEywU",
+         "card_LVBRby",
+-        "card_LjtHmm",
+-        "card_NgNfhW",
+-        "card_fai7yQ"
++        "card_LjtHmm"
+       ],
++      "disabled": true,
+       "name": "t:sections.local-extra-words.sections.promotion-cards.name",
+       "settings": {
+         "heading": "Hier empfehlen wir unsere monatlich wechselnden Angebote und unsere Sonderaktionen zu saisonalen Tees.",
+@@ -419,58 +370,6 @@
+         "seo_h_tag": "h2"
+       }
+     },
+-    "image_RdQ6z8": {
+-      "type": "image",
+-      "settings": {
+-        "image": "shopify://shop_images/Header_Slider_Homepage_2048_x_500_px_2048_x_350_px.png",
+-        "image_border_radius": 0,
+-        "link": "shopify://collections/tee-im-glas-von-urban-tea-factory",
+-        "open_in_new_window": false,
+-        "image_size": "large",
+-        "remove_top_margin": false,
+-        "remove_bottom_margin": false
+-      }
+-    },
+-    "featured_collection_pJWUJG": {
+-      "type": "featured-collection",
+-      "blocks": {
+-        "price_EDWR3n": {
+-          "type": "price",
+-          "settings": {}
+-        },
+-        "title_w7YzLE": {
+-          "type": "title",
+-          "settings": {}
+-        },
+-        "quick_buy_8DGFMP": {
+-          "type": "quick_buy",
+-          "disabled": true,
+-          "settings": {
+-            "show_only_available": false,
+-            "variant_default": false,
+-            "show_price": true,
+-            "unavailable_variants": "hide"
+-          }
+-        }
+-      },
+-      "block_order": [
+-        "price_EDWR3n",
+-        "title_w7YzLE",
+-        "quick_buy_8DGFMP"
+-      ],
+-      "settings": {
+-        "heading": "Tee im Glas von Urban Tea Factory",
+-        "subheading": "Entdecken Sie bei uns die trendigen und viralen Tees im Glas!",
+-        "section_heading_size": "text-size--large",
+-        "section_heading_layout": "section-heading--left section-heading--one-row",
+-        "show_view_all": true,
+-        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+-        "products_number": 4,
+-        "collection": "tee-im-glas-von-urban-tea-factory",
+-        "gutter_decrease": false,
+-        "seo_h_tag": "h2"
+-      }
+-    },
+     "text_columns_images_tDWnri": {
+       "type": "text-columns-images",
+       "blocks": {
+@@ -600,6 +499,7 @@
+       "blocks": {
+         "image_pKamRE": {
+           "type": "image",
++          "disabled": true,
+           "settings": {
+             "image": "shopify://shop_images/Matcha_Header.jpg",
+             "caption": "Matcha Tee kalt oder heiß genießen!",
+@@ -1295,8 +1195,6 @@
+     "1662457498c47086cb",
+     "d57ade2e-d526-4303-b3d6-7463564b3a10",
+     "promotion_cards_ybpEpm",
+-    "image_RdQ6z8",
+-    "featured_collection_pJWUJG",
+     "text_columns_images_tDWnri",
+     "media_with_text_overlay_pK8NgR",
+     "media_with_text_overlay_xmegWr",

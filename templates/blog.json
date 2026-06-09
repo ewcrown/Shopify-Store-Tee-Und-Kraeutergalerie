@@ -103,12 +103,12 @@
         "summary"
       ],
       "settings": {
-        "enable_tags": false,
+        "enable_tags": true,
         "layout": "grid-2 grid-lap-1",
         "post_limit": 12,
         "blog_show_image": true,
-        "image_aspect_ratio": "1.33333",
-        "image_border_radius": 0
+        "image_aspect_ratio": "1",
+        "image_border_radius": 4
       }
     },
     "promotion_cards_jbqc9J": {
