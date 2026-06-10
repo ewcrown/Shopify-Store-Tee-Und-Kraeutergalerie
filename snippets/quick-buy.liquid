@@ -7,7 +7,6 @@
   {%- liquid
 
     assign product_form_id = 'product-form-' | append: id
-    assign current_variant = product.selected_or_first_available_variant
     assign color_label = settings.color_swatches_labels | split: ','
 
     if product.has_only_default_variant
@@ -17,6 +16,16 @@
     endif;
 
   -%}
+
+  {%- capture purchasable_variant_id -%}{%- render 'current-purchasable-variant-id', product: product -%}{%- endcapture -%}
+  {%- assign purchasable_variant_id = purchasable_variant_id | strip | plus: 0 -%}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- for variant in product.variants -%}
+    {%- if variant.id == purchasable_variant_id -%}
+      {%- assign current_variant = variant -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
 
   <div id="product-price-{{ id }}" data-js-quick-buy-product-price style="display:none">
     {%- render 'product-price', variant: current_variant, target: current_variant -%}
@@ -59,6 +68,11 @@
       {%- for option in product.options_with_values -%}
 
         {%- assign option_downcased = option.name | downcase %}
+        {%- case option.position -%}
+          {%- when 1 -%}{%- assign current_option_value = current_variant.option1 -%}
+          {%- when 2 -%}{%- assign current_option_value = current_variant.option2 -%}
+          {%- when 3 -%}{%- assign current_option_value = current_variant.option3 -%}
+        {%- endcase -%}
         
         <div class="product-variant" data-name="product-{{ option.name | escape | downcase | strip }}-{{ id }}" data-js-product-variant>
 
@@ -75,8 +89,10 @@
             }' class="css-slider css-slider--scrollbars-visible css-slider--no-snap">
               <div class="product-variant__container product-variant__container--radio" data-js-product-variant-container="radio">
                 {%- for value in option.values -%}
+                  {%- capture is_free_variant_value -%}{%- render 'variant-is-free', value: value -%}{%- endcapture -%}
+                  {%- if is_free_variant_value contains 'true' -%}{%- continue -%}{%- endif -%}
                   <div class="product-variant__item product-variant__item--radio product-variant__item--color">
-                    <input type="radio" name="product-{{ option.name | escape | downcase | strip }}-{{ id }}" id="{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}" value="{{ value | escape }}" {% if default_to_first_variant_setting and option.selected_value == value %}checked{% endif %} class="product-variant__input product-variant-value">
+                    <input type="radio" name="product-{{ option.name | escape | downcase | strip }}-{{ id }}" id="{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}" value="{{ value | escape }}" {% if default_to_first_variant_setting and current_option_value == value %}checked{% endif %} class="product-variant__input product-variant-value">
                     <label for="{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}" class="product-variant__label">
                       {%- liquid 
                         assign color_swatch_name = value | handle | append: '.png'
@@ -111,7 +127,7 @@
                 unless default_to_first_variant_setting
                   echo 'products.grid.color_variants_count' | t: count: option.values.size
                 else
-                  echo option.selected_value
+                  echo current_option_value
                 endunless
               -%}
             </span>
@@ -123,7 +139,9 @@
                 <option class="product-variant-value" default selected disabled>{{ 'products.grid.select_variant' | t: variant: option.name }}</option>
               {%- endunless -%}
               {%- for value in option.values -%}
-                <option class="product-variant-value" value="{{ value | escape }}" {% if default_to_first_variant_setting and option.selected_value == value %}selected{% endif %}>
+                {%- capture is_free_variant_value -%}{%- render 'variant-is-free', value: value -%}{%- endcapture -%}
+                {%- if is_free_variant_value contains 'true' -%}{%- continue -%}{%- endif -%}
+                <option class="product-variant-value" value="{{ value | escape }}" {% if default_to_first_variant_setting and current_option_value == value %}selected{% endif %}>
                   {{ value | escape }}
                 </option>
               {%- endfor -%}
@@ -140,8 +158,10 @@
           }' class="css-slider css-slider--scrollbars-visible css-slider--no-snap">
             <div class="product-variant__container product-variant__container--radio" data-js-product-variant-container="radio">
               {%- for value in option.values -%}
+                {%- capture is_free_variant_value -%}{%- render 'variant-is-free', value: value -%}{%- endcapture -%}
+                {%- if is_free_variant_value contains 'true' -%}{%- continue -%}{%- endif -%}
                 <div class="product-variant__item product-variant__item--radio">
-                  <input type="radio" name="product-{{ option.name | escape | downcase | strip }}-{{ id }}" id="{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}" value="{{ value | escape }}" {% if default_to_first_variant_setting and option.selected_value == value %}checked{% endif %} class="product-variant__input product-variant-value">
+                  <input type="radio" name="product-{{ option.name | escape | downcase | strip }}-{{ id }}" id="{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}" value="{{ value | escape }}" {% if default_to_first_variant_setting and current_option_value == value %}checked{% endif %} class="product-variant__input product-variant-value">
                   <label for="{{ product.handle }}-option-{{ option.name | escape | downcase | strip }}-{{ forloop.index }}-{{ id }}" class="product-variant__label text-size--small">
                     {{ value | escape }}
                   </label>
@@ -165,6 +185,8 @@
         form="{{ product_form_id }}"
       >
         {%- for variant in product.variants -%}
+          {%- capture is_free_variant -%}{%- render 'variant-is-free', variant: variant -%}{%- endcapture -%}
+          {%- if is_free_variant contains 'true' -%}{%- continue -%}{%- endif -%}
           <option
             {% if variant == current_variant %}selected="selected"{% endif %}
             {% if variant.available == false %}disabled{% endif %}
@@ -179,7 +201,7 @@
     </noscript>
 
     <script type="application/json">
-      {{ product.variants | json }}
+      {%- render 'product-variants-json', product: product -%}
     </script>
 
   </product-variants>

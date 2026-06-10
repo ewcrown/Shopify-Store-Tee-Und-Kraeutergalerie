@@ -1,0 +1,15 @@
+{% comment %}
+  Product variants JSON excluding free-gift variants.
+  Usage: {% render 'product-variants-json', product: product %}
+{% endcomment %}
+[
+{%- assign first_visible_variant = true -%}
+{%- for variant in product.variants -%}
+  {%- capture is_free -%}{%- render 'variant-is-free', variant: variant -%}{%- endcapture -%}
+  {%- unless is_free contains 'true' -%}
+    {%- unless first_visible_variant -%},{%- endunless -%}
+    {{ variant | json }}
+    {%- assign first_visible_variant = false -%}
+  {%- endunless -%}
+{%- endfor -%}
+]

@@ -1,0 +1,23 @@
+{% comment %}
+  Outputs the ID of the default purchasable variant (skips free-gift variants).
+  Usage: {% render 'current-purchasable-variant-id', product: product %}
+{% endcomment %}
+{%- liquid
+  assign result_variant = product.selected_or_first_available_variant
+-%}
+{%- capture is_selected_free -%}{%- render 'variant-is-free', variant: result_variant -%}{%- endcapture -%}
+{%- if is_selected_free contains 'true' -%}
+  {%- assign result_variant = nil -%}
+  {%- for variant in product.variants -%}
+    {%- capture is_free -%}{%- render 'variant-is-free', variant: variant -%}{%- endcapture -%}
+    {%- unless is_free contains 'true' -%}
+      {%- if variant.available -%}
+        {%- assign result_variant = variant -%}
+        {%- break -%}
+      {%- elsif result_variant == nil -%}
+        {%- assign result_variant = variant -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}
+{{ result_variant.id }}

@@ -1,0 +1,24 @@
+{% comment %}
+  Returns "true" when a variant or option value is a free-gift variant.
+  Usage:
+    {% render 'variant-is-free', variant: variant %}
+    {% render 'variant-is-free', value: value %}
+{% endcomment %}
+{%- liquid
+  assign is_free = false
+  if value != blank
+    assign value_downcased = value | downcase | strip
+    if value_downcased == 'free'
+      assign is_free = true
+    endif
+  elsif variant != blank
+    assign variant_title_downcased = variant.title | downcase | strip
+    assign option1_downcased = variant.option1 | downcase | strip
+    assign option2_downcased = variant.option2 | downcase | strip
+    assign option3_downcased = variant.option3 | downcase | strip
+    if variant_title_downcased == 'free' or option1_downcased == 'free' or option2_downcased == 'free' or option3_downcased == 'free'
+      assign is_free = true
+    endif
+  endif
+-%}
+{%- if is_free -%}true{%- endif -%}

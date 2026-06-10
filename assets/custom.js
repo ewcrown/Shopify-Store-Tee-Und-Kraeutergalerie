@@ -25,17 +25,24 @@
     return fetch(CART_JSON).then(function (r) { return r.json(); });
   }
 
-  function hasAnyFreeProductInCart(cart, freeProductIds) {
-    if (!cart.items || !freeProductIds || freeProductIds.length === 0) return false;
+  function getFreeVariantIds(config) {
+    if (!config || !config.free_products) return [];
+    return config.free_products
+      .map(function (p) { return String(p.variant_id); })
+      .filter(function (id) { return id && id !== 'undefined'; });
+  }
+
+  function hasAnyFreeVariantInCart(cart, freeVariantIds) {
+    if (!cart.items || !freeVariantIds || freeVariantIds.length === 0) return false;
     return cart.items.some(function (item) {
-      return freeProductIds.indexOf(String(item.product_id)) !== -1;
+      return freeVariantIds.indexOf(String(item.variant_id)) !== -1;
     });
   }
 
-  function getFreeProductLineItemInCart(cart, freeProductIds) {
-    if (!cart.items || !freeProductIds) return null;
+  function getFreeVariantLineItemInCart(cart, freeVariantIds) {
+    if (!cart.items || !freeVariantIds) return null;
     for (var i = 0; i < cart.items.length; i++) {
-      if (freeProductIds.indexOf(String(cart.items[i].product_id)) !== -1) {
+      if (freeVariantIds.indexOf(String(cart.items[i].variant_id)) !== -1) {
         return cart.items[i];
       }
     }
@@ -47,10 +54,6 @@
     return cart.total_price >= minCents;
   }
 
-  function getFreeProductIds(config) {
-    if (!config || !config.free_products) return [];
-    return config.free_products.map(function (p) { return String(p.id); });
-  }
 
   function updateOfferUi(show, config) {
     var el = document.getElementById(OFFER_ID);
@@ -72,9 +75,9 @@
     }).then(function (r) { return r.json(); });
   }
 
-  function removeFreeProduct(cart, freeProductIds) {
-    var lineItem = getFreeProductLineItemInCart(cart, freeProductIds);
-    if (!lineItem || !lineItem.key) return Promise.reject(new Error('Free product not in cart'));
+  function removeFreeProduct(cart, freeVariantIds) {
+    var lineItem = getFreeVariantLineItemInCart(cart, freeVariantIds);
+    if (!lineItem || !lineItem.key) return Promise.reject(new Error('Free variant not in cart'));
     var changeUrl = (window.KROWN && window.KROWN.settings && window.KROWN.settings.routes && window.KROWN.settings.routes.cart_change_url) || '/cart/change';
     var body = JSON.stringify({ id: lineItem.key, quantity: 0 });
     return fetch(changeUrl + '.js', {
@@ -95,16 +98,16 @@
     if (!isConfigured(config)) return;
     if (autoRemoveInProgress) return;
 
-    var freeProductIds = getFreeProductIds(config);
+    var freeVariantIds = getFreeVariantIds(config);
 
     fetchCart().then(function (cart) {
-      var hasFree = hasAnyFreeProductInCart(cart, freeProductIds);
+      var hasFreeVariant = hasAnyFreeVariantInCart(cart, freeVariantIds);
       var meetsMinimum = cartTotalMeetsMinimum(cart, config.integer);
-      var show = meetsMinimum && !hasFree;
+      var show = meetsMinimum && !hasFreeVariant;
 
-      if (!meetsMinimum && hasFree) {
+      if (!meetsMinimum && hasFreeVariant) {
         autoRemoveInProgress = true;
-        removeFreeProduct(cart, freeProductIds).then(function (res) {
+        removeFreeProduct(cart, freeVariantIds).then(function (res) {
           if (res.status && (res.status === 422 || res.message)) {
             autoRemoveInProgress = false;
             return;
